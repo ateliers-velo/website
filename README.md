@@ -1,4 +1,4 @@
-# atlascine-website
+# bumbum-website
 
 Contains files required to build the Atlascine website located at atlascine.org. Built using Eleventy and Nunjucks, with a custom build process to generate the site in more than one language. Redirect functionality based on [this code](https://gist.github.com/BrianMitchL/f93622a46f4476b7514995ff502d8d17).
 
