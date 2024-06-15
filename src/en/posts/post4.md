@@ -1,5 +1,5 @@
 ---
-title: 'Launch of the Atlascine Website'
+title: 'Atlas Exhibition in Kigali'
 date: '2024-06-14'
 ---
 
