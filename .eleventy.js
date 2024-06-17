@@ -38,9 +38,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	function extractExcerpt(post) {
 		if(!post.templateContent) return '';
-		if(post.templateContent.indexOf('</p>') > 0) {
-			let end = post.templateContent.indexOf('</p>');
-			return post.templateContent.substr(0, end+4);
+		// Define a regex pattern to match the first closing tag of p, a, or li
+		const match = post.templateContent.match(/<\/(p|a|li)>/);
+		if (match) {
+			let end = match.index + match[0].length;
+			return post.templateContent.substr(0, end);
 		}
 		return post.templateContent;
 	}
