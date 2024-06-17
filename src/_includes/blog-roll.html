@@ -7,7 +7,7 @@
             <a href="{{post.url}}" class="post">
                 <p class="date">{{ post.date | formatDate }}</p>
                 <h2>{{ post.data.title }}</h2>
-                {% excerpt post %}
+                <p>{{ post.content | main | safe }}</p>
             </a>
             {% if layout == "landing.html" %}
                 {% set firstPostPrinted = true %}
