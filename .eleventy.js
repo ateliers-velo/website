@@ -4,9 +4,60 @@ const { DateTime } = require("luxon");
 const markdownIt = require('markdown-it');
 const markdownItReplaceLink = require('markdown-it-replace-link');
 */
+// taken from https://11ty.rocks/eleventyjs/slugs-anchors/#enable-anchor-links-on-content-headings
+// npm install --save-dev markdown-it-anchor slugify
+// Import prior to `module.exports` within `.eleventy.js`
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+// If not already added from previous tip
+const slugify = require("slugify");
+
+const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
+  class: "anchor",
+  symbol: "<span hidden>#</span>",
+  style: "aria-labelledby",
+});
+const markdownItAnchorOptions = {
+  level: [1, 2, 3],
+  slugify: (str) =>
+    slugify(str, {
+      lower: true,
+      strict: true,
+      remove: /["]/g,
+    }),
+  tabIndex: false,
+  permalink(slug, opts, state, idx) {
+    state.tokens.splice(
+      idx,
+      0,
+      Object.assign(new state.Token("div_open", "div", 1), {
+        // Add class "header-wrapper [h1 or h2 or h3]"
+        attrs: [["class", `heading-wrapper ${state.tokens[idx].tag}`]],
+        block: true,
+      })
+    );
+
+    state.tokens.splice(
+      idx + 4,
+      0,
+      Object.assign(new state.Token("div_close", "div", -1), {
+        block: true,
+      })
+    );
+
+    linkAfterHeader(slug, opts, state, idx + 1);
+  },
+};
+
+/* Markdown Overrides */
+let markdownLibrary = markdownIt({
+  html: true,
+}).use(markdownItAnchor, markdownItAnchorOptions);
 
 module.exports = function (eleventyConfig) {
   
+  // This is the part that tells 11ty to swap to our custom config
+  eleventyConfig.setLibrary("md", markdownLibrary);
   /*
     // https://www.npmjs.com/package/markdown-it-replace-link
     eleventyConfig.setLibrary('md', markdownIt({
@@ -35,6 +86,7 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/fr/**/*.+(md|njk)");
   });
   //following snippet from https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
+  /*
   eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	function extractExcerpt(post) {
 		if(!post.templateContent) return '';
@@ -46,6 +98,11 @@ module.exports = function (eleventyConfig) {
 		}
 		return post.templateContent;
 	}
+  */
+  eleventyConfig.addFilter("excerpt", (post) => {
+    const content = post.replace(/(<([^>]+)>)/gi, "");
+    return content.substr(0, content.lastIndexOf(" ", 500)) + "...";
+  });
   // Custom data function to set the buildTime
   eleventyConfig.addGlobalData('buildTime', () => {
     return new Date().toISOString().slice(0, 10);

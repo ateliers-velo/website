@@ -24,4 +24,18 @@ document.addEventListener('DOMContentLoaded', function() {
     open.style.display = 'flex';
     close.style.display = 'none';
     });
+
+    // when user clicks on anchor-link, scroll to the heading
+    const anchorLinks = document.querySelectorAll('.heading-wrapper');
+    anchorLinks.forEach((anchorLink) => {
+        anchorLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const hashId = anchorLink.lastChild.href;
+            const heading = document.getElementById(hashId.split('#')[1]);
+            heading.scrollIntoView({ behavior: 'smooth' });
+            // append hashId to the URL
+            window.history.pushState(null, null, hashId);
+        });
+    });
+    
 });

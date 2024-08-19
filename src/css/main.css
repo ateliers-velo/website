@@ -98,14 +98,19 @@ img {
 	/*cursor: zoom-in;*/
 }
 
+.heading-wrapper {
+	cursor: pointer;
+}
+
 .content > p + img,
+.content > .heading-wrapper + img,
 .content > h1 + img,
 .content > h2 + img,
 .content > h3 + img {
 	padding: 0 0 5vh 0;
 }
 
-.content > .video + h1 {
+.content > .video + h1, .content > .video + .heading-wrapper {
 	margin-top: 4vh;
 }
 
@@ -302,12 +307,14 @@ video {
 	grid-template-columns: repeat(auto-fill, minmax(25vw, max-content));
 }
 
+.content > .heading-wrapper,
 .content > h1,
 .content > h2,
 .content > h3 {
 	grid-area: span 1 / span 2;
 }
 
+.content > .heading-wrapper + p,
 .content > h1 + p,
 .content > h2 + p,
 .content > h3 + p,
@@ -324,6 +331,7 @@ video {
 	grid-area: span 1 / span 2;
 }
 
+.content > p + .heading-wrapper,
 .content > p + h1,
 .content > p + h2,
 .content > p + h3 {
@@ -659,11 +667,11 @@ footer > .brands {
 	.grid-container div {
 		grid-column: 1 / -1
 	}
-	.content div, .content h1, .content h2, .content h3, .content p, .content iframe {
+	.content div, .content .heading-wrapper, .content h1, .content h2, .content h3, .content p, .content iframe {
 		grid-column: 1 / -1;
 		overflow-x: hidden;
 	}
-	.content h1 + p, .content h2 + p, .content h3 + p {
+	.content .heading-wrapper + p, .content h1 + p, .content h2 + p, .content h3 + p {
 		grid-column: 1 / -1;
 	}
 	.content p + p {
@@ -717,6 +725,7 @@ footer > .brands {
 	video {
 		width: 100%;
 	}
+	.content > .heading-wrapper,
 	.content > h1,
 	.content > h2,
 	.content > h3 {
