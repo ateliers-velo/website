@@ -11,9 +11,9 @@
                     <p class="date">{{ post.date | formatDate }}</p>
                     <h2>{{ post.data.title }}</h2>
                     {% if post.content | wordcount < 300 %}
-                        <p>{{ post.content | safe }}</p>
+                        {{ post.content | safe }}
                     {% else %}
-                        <p>{% excerpt post %}</p>
+                        <p>{{ post.content | excerpt }}</p>
                     {% endif %}
                 </a>
             <!-- if viewed from anywhere else (i.e. news page), show all -->
@@ -24,7 +24,7 @@
                     {% if post.content | wordcount < 300 %}
                         <p>{{ post.content | safe }}</p>
                     {% else %}
-                        <p>{% excerpt post %}</p>
+                        <p>{{ post.content | excerpt }}</p>
                     {% endif %}
                 </a>
             {% endif %}
