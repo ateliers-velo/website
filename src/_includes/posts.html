@@ -1,0 +1,35 @@
+{% if not collections.post %}
+    <p>No posts to display.</p>
+{% else %}
+    {% set firstPostPrinted = false %}
+    {% for post in collections.post | reverse %}
+        {% if not firstPostPrinted %}
+            <!-- if the blogroll is being viewed from landing page, only show latest post -->
+            {% if layout == "landing.html" %}
+                {% set firstPostPrinted = true %}
+                <a href="/{{ lang }}/news/" class="post-link">
+                    <div class="post-content">
+                        <p class="date">{{ post.date | formatDate }}</p>
+                        <h2>{{ post.data.title }}</h2>
+                        {% if post.content | wordcount < 300 %}
+                            <div>{{ post.content | safe }}</div>
+                        {% else %}
+                            <p>{{ post.content | excerpt }}</p>
+                        {% endif %}
+                    </div>
+                </a>
+            <!-- if viewed from anywhere else (i.e. news page), show all -->
+            {% else %}
+                    <div class="content" onclick="window.location.href='{{ post.url }}';">
+                        <p class="date">{{ post.date | formatDate }}</p>
+                        <h1>{{ post.data.title }}</h1>
+                        {% if post.content | wordcount < 300 %}
+                            {{ post.content | safe }}
+                        {% else %}
+                            {{ post.content | excerpt }}
+                        {% endif %}
+                    </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

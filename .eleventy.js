@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
     }));
   */
   eleventyConfig.addFilter("formatDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toISODate();
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toISODate();
   });
 
   eleventyConfig.addPassthroughCopy("src/imgs/");//add folders to public

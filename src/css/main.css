@@ -280,8 +280,25 @@ video {
 	scroll-behavior: smooth;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(25vw, max-content));
-	grid-row-gap: 5vh;
+	grid-row-gap: 3vh;
 	column-gap: 3vw;
+}
+
+.posts-overview-container {
+	grid-column: 2 / -2;
+	scroll-behavior: smooth;
+	display: grid;
+	grid-row-gap: 5vh;
+}
+
+.posts-overview-container > .content {
+	border-width: 2px 2px 2px 2px;
+	border-radius: 5px;
+	outline-style: solid;
+	cursor: pointer;
+	padding: 2vw 2vw 6vw 2vw;
+	background-color: var(--hover-bg-color);
+	outline-color: var(--hover-bg-color);
 }
 
 #gallery-content {
@@ -610,12 +627,13 @@ footer > .brands {
 	grid-column: span 2;
 }
 
-/* blogroll */
+/* posts */
 
 .date {
+	text-align: left;
 }
 
-.post {
+.post-content {
 	border-radius: 0 0 0 0;
 	border-width: 2px 2px 2px 12px;
 	border-style: solid solid dashed solid;
@@ -624,12 +642,8 @@ footer > .brands {
 	max-height: 40vh;
 	overflow-wrap: break-word;
 	overflow-y: hidden;
-	grid-column: 1 / -1;
 	text-decoration: none;
 }
-
-
-
 
 /*
 #splash-item4  {

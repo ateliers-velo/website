@@ -2,6 +2,6 @@
     "permalink": "{{ lang }}/blog/{{ title | slugify }}/",
     "tags": "post",
     "date": "Created",
-    "layout": "blog.html",
+    "layout": "post.html",
     "title": ""
 }
