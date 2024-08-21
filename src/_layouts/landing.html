@@ -5,12 +5,12 @@
 		<div class='grid-container'>
 			{% set landingpage = true %}
 			{% include 'navbar.html' %}
-			<div id="landing-content" class="content vertical-centre">
+			<div id="landing-content" class="vertical-centre">
 				{{ content | safe }}
 			</div>
 			{% include 'image.html' %}
-			<div id="gallery-content" class="content">
-				{% include 'posts.html' %}
+			{% include 'posts.html' %}
+			<div id="gallery-content">
 				{% include 'tile-gallery.html' %}
 			</div>
 		</div>

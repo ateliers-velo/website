@@ -282,16 +282,7 @@ video {
 	grid-template-columns: repeat(2, minmax(25vw, max-content));
 	grid-row-gap: 3vh;
 	column-gap: 3vw;
-}
-
-.posts-overview-container {
-	grid-column: 2 / -2;
-	scroll-behavior: smooth;
-	display: grid;
-	grid-row-gap: 5vh;
-}
-
-.posts-overview-container > .content {
+	/**/
 	border-width: 2px 2px 2px 2px;
 	border-radius: 5px;
 	outline-style: solid;
@@ -299,6 +290,13 @@ video {
 	padding: 2vw 2vw 6vw 2vw;
 	background-color: var(--hover-bg-color);
 	outline-color: var(--hover-bg-color);
+}
+
+.posts-overview-container {
+	grid-column: 2 / -2;
+	scroll-behavior: smooth;
+	display: grid;
+	grid-row-gap: 5vh;
 }
 
 #gallery-content {

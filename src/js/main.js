@@ -37,5 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             window.history.pushState(null, null, hashId);
         });
     });
-    
+    document.querySelectorAll('a').forEach(function(link) {
+        if (link.hostname !== window.location.hostname) {
+            link.setAttribute('target', '_blank');
+        }
+    });
 });
