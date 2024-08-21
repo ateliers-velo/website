@@ -286,7 +286,6 @@ video {
 	border-width: 2px 2px 2px 2px;
 	border-radius: 5px;
 	outline-style: solid;
-	cursor: pointer;
 	padding: 2vw 2vw 6vw 2vw;
 	background-color: var(--hover-bg-color);
 	outline-color: var(--hover-bg-color);
@@ -297,6 +296,10 @@ video {
 	scroll-behavior: smooth;
 	display: grid;
 	grid-row-gap: 5vh;
+}
+
+.posts-overview-container > .content {
+	cursor: pointer;
 }
 
 #gallery-content {
