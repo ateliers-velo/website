@@ -276,7 +276,7 @@ video {
 }
 
 .content {
-	grid-column: 2 / -2;
+	grid-column: 1 / -1;
 	scroll-behavior: smooth;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(25vw, max-content));
@@ -292,7 +292,7 @@ video {
 }
 
 .posts-overview-container {
-	grid-column: 2 / -2;
+	grid-column: 1 / -1;
 	scroll-behavior: smooth;
 	display: grid;
 	grid-row-gap: 5vh;
