@@ -1,5 +1,5 @@
 ---
-title: 'Literray Mapping with Atlascine'
+title: 'Literary Mapping with Atlascine'
 date: '2024-08-29'
 ---
 
