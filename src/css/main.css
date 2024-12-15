@@ -285,7 +285,7 @@ video {
 	/**/
 	border-width: 2px 2px 2px 2px;
 	border-radius: 5px;
-	outline-style: solid;
+	/*outline-style: solid;*/
 	padding: 2vw 2vw 6vw 2vw;
 	background-color: var(--hover-bg-color);
 	outline-color: var(--hover-bg-color);
