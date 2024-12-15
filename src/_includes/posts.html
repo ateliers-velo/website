@@ -10,10 +10,10 @@
                 <div class="content" onclick="window.location.href='/{{ lang }}/news/';" style="cursor: pointer;">
                     <p class="date">{{ post.date | formatDate }}</p>
                     <h1>{{ post.data.title }}</h1>
-                    {% if post.content | wordcount < 300 %}
+                    {% if post.content | wordcount < 150 %}
                         {{ post.content | safe }}
                     {% else %}
-                        {{ post.content | excerpt }}
+                        {% excerpt post %}
                     {% endif %}
                 </div>
             <!-- if viewed from anywhere else (i.e. news page), show all -->
@@ -24,7 +24,7 @@
                     {% if post.content | wordcount < 300 %}
                         {{ post.content | safe }}
                     {% else %}
-                        {{ post.content | excerpt }}
+                        {% excerpt post %}
                     {% endif %}
                 </div>
             {% endif %}

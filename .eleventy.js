@@ -86,23 +86,26 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/fr/**/*.+(md|njk)");
   });
   //following snippet from https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
-  /*
+  
   eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	function extractExcerpt(post) {
 		if(!post.templateContent) return '';
 		// Define a regex pattern to match the first closing tag of p, a, or li
-		const match = post.templateContent.match(/<\/(p|a|li)>/);
+		const match = post.templateContent.match(/<\/p>/);
 		if (match) {
 			let end = match.index + match[0].length;
-			return post.templateContent.substr(0, end);
+      let excerpt = post.templateContent.substr(0, end)
+      excerpt = excerpt.replace(/<\/p>/, ' [...]</p>');
+			return excerpt;
 		}
 		return post.templateContent;
 	}
-  */
+/*
   eleventyConfig.addFilter("excerpt", (post) => {
     const content = post.replace(/(<([^>]+)>)/gi, "");
     return content.substr(0, content.lastIndexOf(" ", 500)) + "...";
   });
+*/
   // Custom data function to set the buildTime
   eleventyConfig.addGlobalData('buildTime', () => {
     return new Date().toISOString().slice(0, 10);
