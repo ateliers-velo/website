@@ -1,0 +1,9 @@
+{
+    "permalink": "{{ fileSlug | split('.') | slice(-1) | first }}/{{ foldername }}/{{ title | slugify }}/",
+    "lang": "{{ fileSlug | split('.') | slice(-1) | first }}",
+    "date": "Created",
+    "lastModified": "Last Modified",
+    "layout": "basic.html",
+    "title": ""
+}
+  

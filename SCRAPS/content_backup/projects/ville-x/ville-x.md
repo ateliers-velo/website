@@ -1,0 +1,11 @@
+---
+tags: projects
+title: 'La Ville Extraordinaire'
+permalink: false
+redirect: 'https://rs-atlascine.concordia.ca/la-ville-extraordinaire'
+img: 'https://storytelling.concordia.ca/wp-content/uploads/2020/10/Cynthia-Hammond-Ville-extraordinaire-resized.jpg' # '/imgs/browse-villex.png'
+description: "Working with oral history and place-based research-creation methods, La Ville Extraordinaire foregrounds the urban knowledge of four diverse groups of older Montrealers through the mapping of about 80 interviews."
+date: 2023-07-11 # YYYY-MM-DD, oldest appears first in tile-gallery
+---
+
+What can the memories of older Montrealers teach us about how our city has changed over time? How have different communities shaped their neighbourhoods and produced spaces with collective significance? And how might research-creation methods facilitate a public sharing of these memories, stories, and places? Working with oral history and place-based research-creation methods, La Ville Extraordinaire foregrounds the urban knowledge of four diverse groups of older Montrealers. The project will culminate in an exhibition at Mémoire des Montréalais.es, a new museum dedicated to living memory in a multicultural city. COHDS core affiliate and former lead co-director, Dr Cynthia Hammond directs the project in collaboration with Dr Shauna Janssen, COHDS core affiliate and Concordia Research Chair in Performative Urbanism, as well as Dr Ursula Eicker, the Canada Excellence Research Chair in Smart, Sustainable and Resilient Communities and Cities, and Dr Denis Bilodeau, Professor of Architecture at Université de Montréal. The community partners include Filipino Heritage Montreal (a COHDS community affiliate), the creators of the Living History project at Atwater Library (including Eric Craven and Wendy Allen, both COHDS core affiliates), La TOHU, a circus school and environmental centre in the neighbourhood of St-Michel, and Stella: l’amie de Maimie, a sex workers’ advocacy group based in Hochelaga-Maisonneuve. La Ville Extraordinaire has been funded by the Social Sciences and Humanities Research Council of Canada, through the Partnership Development program. It is closely related to the pilot initiative, Promenade Parlante, which was presented publicly in 2018 and 2019.

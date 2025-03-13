@@ -1,0 +1,8 @@
+{
+    "permalink": "/{{ lang }}/{{ foldername }}/{{ title | slugify }}/",
+    "date": "Created",
+    "lastModified": "Last Modified",
+    "layout": "basic.html",
+    "title": ""
+}
+  
