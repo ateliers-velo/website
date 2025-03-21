@@ -75,6 +75,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("src/imgs/");//add folders to public
+  eleventyConfig.addPassthroughCopy("src/attachments/");
   eleventyConfig.addPassthroughCopy("src/js/");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy({ "en/index.md": "/index.md" });
