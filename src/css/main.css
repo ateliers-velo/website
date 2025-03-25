@@ -291,6 +291,11 @@ video {
 	outline-color: var(--hover-bg-color);
 }
 
+.content a {
+	color: var(--content-link-color);
+}
+
+
 .posts-overview-container {
 	grid-column: 1 / -1;
 	scroll-behavior: smooth;
