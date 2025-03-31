@@ -2,6 +2,7 @@
 layout: 'basic.html'
 tags: [nav-items, index-pages]
 translationKey: "about"
+title: 'About'
 date: 2023-06-14
 description: 'About Atlascine'
 ---

@@ -1,6 +1,8 @@
 ---
-layout: '../_layouts/landing.html'
+layout: 'landing.html'
+title: 'Home'
 translationKey: 'index'
+permalink: /en/
 redirect_from: /
 ---
 
