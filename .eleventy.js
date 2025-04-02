@@ -86,7 +86,7 @@ module.exports = function (eleventyConfig) {
   
   
   // Load the global page config (stored in src/pages/pages.json)
-  const globalPageConfig = require("./src/content/content.json");
+  const globalPageConfig = require("./src/content/settings.json");
 
   // Add a collection for pages
   eleventyConfig.addCollection("content", function(collection) {

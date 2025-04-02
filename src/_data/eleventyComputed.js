@@ -8,12 +8,6 @@ module.exports = function () {
   return {
     translationKey: (data) => {
       const inputPath = data.page.inputPath;
-      // Ensure the main index.njk file is placed at the root
-      if (path.basename(inputPath) === "index.njk") {
-        console.log("Redirect index.njk detected, placing at /index.html");
-        return "/index.html"; // Force top-level placement
-      }
-
       // Extract the parent folder name from the input path
       const folderName = path.basename(path.dirname(inputPath)); // Parent folder of the current file
       console.log("translationKey: ", folderName);
@@ -37,6 +31,7 @@ module.exports = function () {
         .split("/")
         .filter((segment) => segment.length > 0)
         .map(segment => slugify(segment, { lower: true, strict: true }))
+        .slice(0,-1)
         .join("/");
       console.log("folderName: ", fp)
       return fp;
@@ -46,7 +41,7 @@ module.exports = function () {
     fileName: (data) => {
       const fileNameParts = data.page.fileSlug.split(".");
       let fileName = fileNameParts.slice(0, -1).join("-") || fileNameParts[0];
-    
+      fileName = slugify(fileName, { lower: true, strict: true })
       // Ensure "index" files don’t inherit the folder name as a title
       if (fileName === "content" || fileName === "index") {
         return "";
@@ -61,8 +56,8 @@ module.exports = function () {
 
       const inputPath = data.page.inputPath;
       // Ensure the main index.njk file is placed at the root
-      if (path.basename(inputPath) === "root-redirect-to-fr.njk") {
-        console.log("Redirect root-redirect-to-fr.njk detected, placing at /index.html");
+      if (path.basename(inputPath) === "index.njk") {
+        console.log("Redirect index.njk detected, placing at /index.html");
         return "/index.html"; // Force top-level placement
       }
       

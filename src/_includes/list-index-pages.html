@@ -11,7 +11,7 @@
         </a>
     </li>
     {% else %}
-    <li><a href="/{{ lang }}/{{ p.data.title | slugify }}/">{{ p.data.title | safe }}</a></li>
+    <li><a href="{{ p.data.permalink }}">{{ p.data.title | safe }}</a></li>
     {% endif %}
 {% endif %}
 {% endfor %}
