@@ -2,7 +2,6 @@
 layout: 'landing.html'
 translationKey: 'index'
 permalink: /fr/
-redirect_from: /
 ---
 
-Atlascine is an online platform designed for annotating and mapping transcribed audiovisual media. It allows for the geographical and thematic visualization of stories through an interactive map, offering innovative ways to navigate within and between them, thereby facilitating the exploration and study of their spatial dimensions and relationships. Atlascine serves as an open-source research and exhibition tool that has been used in fields such as oral history, film studies, and urban studies, and could be relevant for a range of qualitative research projects and story-based exhibitions.
+Atlascine est une plateforme de cartographie sur Internet permettant d’annoter n’importe quel type de récit audiovisuel. Une fois annoté, les récits sont automatiquement transformés en cartes interactives qui permettent de les visualiser, mais aussi de les relier entre eux et de les écouter. Avec Atlascine, la carte ne remplace pas les récits, elle les accompagne, les supporte, les illustre, dévoile certains de leurs mystères et surtout elle nous invite à prendre le temps de les écouter.  

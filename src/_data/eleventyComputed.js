@@ -14,11 +14,11 @@ module.exports = function () {
 
       return slugify(folderName, { lower: true, strict: true });
     },
-    //generate lang var from filename, default to fr if no lang var detected in filename
+    //generate lang var from filename, default to en if no lang var detected in filename
     //filenames should not use points unless used to separate filename from lang var
     lang: (data) => {
       const fileSlugParts = data.page.fileSlug.split(".");
-      const l = fileSlugParts.length > 1 ? fileSlugParts.slice(-1)[0] : "fr";
+      const l = fileSlugParts.length > 1 ? fileSlugParts.slice(-1)[0] : "en";
       console.log("---")
       console.log("lang: ", l)
       return l;
@@ -53,6 +53,12 @@ module.exports = function () {
     
 
     permalink: (data) => {
+
+      // If permalink is explicitly set to false, return it as-is (don't generate a new one)
+      if (data.permalink === false) {
+        console.log("Permalink is explicitly false, leaving as-is.");
+        return false; // Eleventy will respect this and not generate a new one
+      }
 
       const inputPath = data.page.inputPath;
       // Ensure the main index.njk file is placed at the root

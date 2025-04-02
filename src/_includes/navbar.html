@@ -18,7 +18,7 @@
                 </svg>
             </a>
             {% else %}
-            <a class="nav-item" href="/{{ lang }}/{{ p.data.title | slugify }}/">
+            <a class="nav-item" href="{{ p.data.permalink }}">
                 {{ p.data.title | safe }}
             </a>
             {% endif %}
