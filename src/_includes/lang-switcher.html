@@ -1,6 +1,6 @@
 <div class="lang-selector">
     {% for l in site.languages %}
-        {% if l.code == lang or not translationKey is defined %}
+        {% if l.code == lang or translationKey == false %}
             <a>{{ l.code }}</a>
         {% elif translationKey is defined %}
             {% if translationKey == 'content' %}

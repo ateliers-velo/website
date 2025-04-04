@@ -81,11 +81,15 @@ module.exports = function () {
     },
     permalink: (data) => {
 
-      // If permalink is explicitly set to false, return it as-is (don't generate a new one)
+      // PERMALINK MANIPULATION EXCLUSIONS
       if (data.permalink === false) {
+        // If permalink is explicitly set to false, return it as-is (don't generate a new one)
         console.log("Permalink is explicitly false, leaving as-is.");
-        return false; // Eleventy will respect this and not generate a new one
-      }
+        return data.permalink; // Eleventy will respect this and not generate a new one
+      }// else if (data.collections.post && data.permalink) {
+        // if a blog post, leave permalinks set by posts.json
+        //return data.permalink
+      //}
 
       const inputPath = data.page.inputPath;
       // Ensure the main index.njk file is placed at the root
