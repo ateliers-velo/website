@@ -19,11 +19,6 @@ const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
   style: "aria-labelledby",
 });
 
-
-
-
-
-
 // Define options for markdown-it-anchor
 const markdownItAnchorOptions = {
   level: [1, 2, 3],
@@ -71,62 +66,12 @@ module.exports = function (eleventyConfig) {
   
   // This is the part that tells 11ty to swap to our custom config
   eleventyConfig.setLibrary("md", markdownLibrary);
-  /*
-    // https://www.npmjs.com/package/markdown-it-replace-link
-    eleventyConfig.setLibrary('md', markdownIt({
-      html: true,
-      linkify: true
-    }).use(markdownItReplaceLink, {
-      processHTML: true, // defaults to false for backwards compatibility
-      replaceLink: function (link, env, token, htmlToken) {
-        return "https://atlascine.org/en/" + link;//incomplete, need to integrate language dynamically
-      }
-    }));
-  */
+
   
-  
-  // Load the global page config (stored in src/pages/pages.json)
-  const globalPageConfig = require("./src/content/settings.json");
 
   // Add a collection for pages
   eleventyConfig.addCollection("content", function(collection) {
     return collection.getFilteredByGlob("src/content/**/*.md");
-    /*
-    return content.map(item => {
-      
-      // Get full path name minus the file's parent folder name. This ensures that a-propos.md and about.md (both contained in the same parent folder) will be visible in the permalink
-      const folderName = path.relative("src/content", path.dirname(item.inputPath))
-        .replace(/\\/g, "/") // Normalize for cross-platform use
-        .split("/")
-        .slice(0, -1)
-        .filter(segment => segment.length > 0)
-        .join("/");
-
-      // Get the language from the file name (e.g., `index.en.md` -> lang = "en")
-      const lang = item.fileSlug.split(".")[1];
-      const fileName = item.fileSlug.split(".")[0];
-      const titleSlug = fileName ? slugify(fileName, { lower: true, strict: true }) : "untitled";
-      const permalink = folderName ? `${lang}/${folderName}/${titleSlug}/` : `/${lang}/${titleSlug !== "index" ? titleSlug + "/" : ""}`;
-
-      console.log(`Processing: ${item.inputPath}`);
-      console.log(` → folderName: ${folderName}`);
-      console.log(` → titleSlug: ${titleSlug}`);
-      console.log(` → permalink: ${permalink}`);
-
-      // Assign global settings from the page config
-      item.data.layout = globalPageConfig.layout;
-      item.data.lang = lang;
-      item.data.permalink = permalink;
-
-
-      // Log the final output path
-      const outputPath = path.join("public", permalink, "index.html");
-      console.log(` → outputPath: ${outputPath}`);
-      console.log(` → Final assigned permalink for ${item.inputPath}: ${item.data.permalink}`);
-
-      return item;
-    });
-    */
   });
 
 
@@ -140,12 +85,13 @@ module.exports = function (eleventyConfig) {
   //eleventyConfig.addPassthroughCopy({ "content/index.en.md": "/index.md" });
   
   //eleventyConfig.addGlobalData("langs", ['en', 'fr']);
-  eleventyConfig.addCollection("en", function (collection) {
-    return collection.getFilteredByGlob("./src/content/**/*.en.+(md|njk)");
-  });
-  eleventyConfig.addCollection("fr", function (collection) {
-    return collection.getFilteredByGlob("./src/content/**/*.fr.+(md|njk)");
-  });
+  
+  //eleventyConfig.addCollection("en", function (collection) {
+  //  return collection.getFilteredByGlob("./src/content/**/*.en.+(md|njk)");
+  //});
+  //eleventyConfig.addCollection("fr", function (collection) {
+  //  return collection.getFilteredByGlob("./src/content/**/*.fr.+(md|njk)");
+  //});
   //following snippet from https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
   
 
