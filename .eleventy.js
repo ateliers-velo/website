@@ -12,11 +12,14 @@ const markdownItAnchor = require("markdown-it-anchor");
 // If not already added from previous tip
 const slugify = require("slugify");
 
+
 const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
   class: "anchor",
   symbol: "<span hidden>#</span>",
   style: "aria-labelledby",
 });
+
+// Define options for markdown-it-anchor
 const markdownItAnchorOptions = {
   level: [1, 2, 3],
   slugify: (str) =>
@@ -54,22 +57,24 @@ let markdownLibrary = markdownIt({
   html: true,
 }).use(markdownItAnchor, markdownItAnchorOptions);
 
+
+const path = require("path");
+const fs = require("fs");
+
+
 module.exports = function (eleventyConfig) {
   
   // This is the part that tells 11ty to swap to our custom config
   eleventyConfig.setLibrary("md", markdownLibrary);
-  /*
-    // https://www.npmjs.com/package/markdown-it-replace-link
-    eleventyConfig.setLibrary('md', markdownIt({
-      html: true,
-      linkify: true
-    }).use(markdownItReplaceLink, {
-      processHTML: true, // defaults to false for backwards compatibility
-      replaceLink: function (link, env, token, htmlToken) {
-        return "https://atlascine.org/en/" + link;//incomplete, need to integrate language dynamically
-      }
-    }));
-  */
+
+  
+
+  // Add a collection for pages
+  eleventyConfig.addCollection("content", function(collection) {
+    return collection.getFilteredByGlob("src/content/**/*.md");
+  });
+
+
   eleventyConfig.addFilter("formatDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toISODate();
   });
@@ -78,16 +83,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/attachments/");
   eleventyConfig.addPassthroughCopy("src/js/");
   eleventyConfig.addPassthroughCopy("CNAME");
-  eleventyConfig.addPassthroughCopy({ "en/index.md": "/index.md" });
+  //eleventyConfig.addPassthroughCopy({ "content/index.en.md": "/index.md" });
+  
   //eleventyConfig.addGlobalData("langs", ['en', 'fr']);
-  eleventyConfig.addCollection("en", function (collection) {
-    return collection.getFilteredByGlob("./src/en/**/*.+(md|njk)");
-  });
-  eleventyConfig.addCollection("fr", function (collection) {
-    return collection.getFilteredByGlob("./src/fr/**/*.+(md|njk)");
-  });
+  
+  //eleventyConfig.addCollection("en", function (collection) {
+  //  return collection.getFilteredByGlob("./src/content/**/*.en.+(md|njk)");
+  //});
+  //eleventyConfig.addCollection("fr", function (collection) {
+  //  return collection.getFilteredByGlob("./src/content/**/*.fr.+(md|njk)");
+  //});
   //following snippet from https://cfjedimaster.github.io/eleventy-blog-guide/guide.html
   
+
+
+
+
   eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 	function extractExcerpt(post) {
 		if(!post.templateContent) return '';
@@ -121,6 +132,7 @@ module.exports = function (eleventyConfig) {
     const parts = content.split(separator);
     return parts[1];
   });
+
   return {
     dir: {
       input: 'src',
@@ -135,3 +147,11 @@ module.exports = function (eleventyConfig) {
     dataTemplateEngine: 'njk'
   };
 };
+
+
+
+
+
+
+
+

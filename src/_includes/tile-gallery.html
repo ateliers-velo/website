@@ -1,28 +1,30 @@
 <script async type="text/javascript" src="/js/tile-gallery.js" defer></script>
 
 <div class="tile-gallery">
-{% for p in collections[lang] %}
+{% for p in collections.all %}
 {% if p.data.tags and p.data.tags.includes('projects') %}
-    {% if p.data.redirect %}
-    <a href="{{ p.data.redirect }}" target="_blank">
-    {% else %}
-    <a href="/{{ lang }}/{{ p.data.title | slugify }}/">
-    {% endif %}
-        {% if p.data.img %}
-        <div class="zoom-in" style="background-image: url('{{ p.data.img }}');">
+    {% if p.data.lang == lang or (p.data.lang != lang and p.data.translationKey == false) %}
+        {% if p.data.redirect %}
+        <a href="{{ p.data.redirect }}" target="_blank">
         {% else %}
-        <div class="zoom-in" style="background-image: url('/imgs/black.png');">
+        <a href="/{{ lang }}/{{ p.data.title | slugify }}/">
         {% endif %}
-            <div>
-                <h1>{{ p.data.title | safe }}</h1>
-                {% if p.data.description %}
-                <p>{{ p.data.description | safe }}</p>
-                {% else %}
-                <p>{{ p.content | safe }}</p>
-                {% endif %}
+            {% if p.data.img %}
+            <div class="zoom-in" style="background-image: url('{{ p.data.img }}');">
+            {% else %}
+            <div class="zoom-in" style="background-image: url('/imgs/black.png');">
+            {% endif %}
+                <div>
+                    <h1>{{ p.data.title | safe }}</h1>
+                    {% if p.data.description %}
+                    <p>{{ p.data.description | safe }}</p>
+                    {% else %}
+                    <p>{{ p.content | safe }}</p>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+    {% endif %}
 {% endif %}
 {% endfor %}
 </div>

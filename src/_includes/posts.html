@@ -4,29 +4,31 @@
     {% set firstPostPrinted = false %}
     {% for post in collections.post | reverse %}
         {% if not firstPostPrinted %}
-            <!-- if the blogroll is being viewed from landing page, only show latest post -->
-            {% if layout == "landing.html" %}
-                {% set firstPostPrinted = true %}
-                <div class="content" onclick="window.location.href='/{{ lang }}/news/';" style="cursor: pointer;">
-                    <p class="date">{{ post.date | formatDate }}</p>
-                    <h1>{{ post.data.title }}</h1>
-                    {% if post.content | wordcount < 150 %}
-                        {{ post.content | safe }}
-                    {% else %}
-                        {% excerpt post %}
-                    {% endif %}
-                </div>
-            <!-- if viewed from anywhere else (i.e. news page), show all -->
-            {% else %}
-                <div class="content" onclick="window.location.href='{{ post.url }}';">
-                    <p class="date">{{ post.date | formatDate }}</p>
-                    <h1>{{ post.data.title }}</h1>
-                    {% if post.content | wordcount < 300 %}
-                        {{ post.content | safe }}
-                    {% else %}
-                        {% excerpt post %}
-                    {% endif %}
-                </div>
+            {% if post.data.lang == lang or (post.data.lang != lang and post.data.translationKey == false) %}
+                <!-- if the blogroll is being viewed from landing page, only show latest post -->
+                {% if layout == "landing.html" %}
+                    {% set firstPostPrinted = true %}
+                    <div class="content" onclick="window.location.href='pages/news';" style="cursor: pointer;">
+                        <p class="date">{{ post.date | formatDate }}</p>
+                        <h1>{{ post.data.title }}</h1>
+                        {% if post.content | wordcount < 150 %}
+                            {{ post.content | safe }}
+                        {% else %}
+                            {% excerpt post %}
+                        {% endif %}
+                    </div>
+                <!-- if viewed from anywhere else (i.e. news page), show all -->
+                {% else %}
+                    <div class="content" onclick="window.location.href='{{ post.url }}';">
+                        <p class="date">{{ post.date | formatDate }}</p>
+                        <h1>{{ post.data.title }}</h1>
+                        {% if post.content | wordcount < 300 %}
+                            {{ post.content | safe }}
+                        {% else %}
+                            {% excerpt post %}
+                        {% endif %}
+                    </div>
+                {% endif %}
             {% endif %}
         {% endif %}
     {% endfor %}

@@ -3,6 +3,9 @@
   "description": "Atlascine is an online tool for mapping stories",
   "url": "https://atlascine.org",
   "baseUrl": "/",
+  "date": "Created",
+  "lastModified": "Last Modified",
+  "layout": "basic.html",
   "languages": [
     {
       "label": "english",
@@ -12,5 +15,6 @@
       "label": "français",
       "code": "fr"
     }
-  ]
+  ],
+  "defaultLang": "en"
 }
