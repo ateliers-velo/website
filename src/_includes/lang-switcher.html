@@ -1,15 +1,15 @@
 <div class="lang-selector">
     {% for l in site.languages %}
-        {% if l.code == lang or not translationKey is defined %}
+        {% if l.code == lang or translationKey == false %}
             <a>{{ l.code }}</a>
         {% elif translationKey is defined %}
-            {% if translationKey == 'index' %}
+            {% if translationKey == 'content' %}
                 <a href="/{{ l.code }}/">{{ l.code }}</a>
             {% else %}
                 {% set translationSucceeded = false %}
-                {% for p in collections[l.code] %}
-                    {% if p.data.translationKey == translationKey %}
-                        <a href="/{{ l.code }}/{{ p.data.title | slugify }}/">{{ l.code }}</a>
+                {% for p in collections.all %}
+                    {% if p.data.translationKey == translationKey and p.data.lang == l.code %}
+                        <a href="{{ p.data.permalink }}">{{ l.code }}</a>
                         {% set translationSucceeded = true %}
                     {% endif %}
                 {% endfor %}

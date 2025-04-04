@@ -15,7 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "markdown-it-replace-link": "^1.2.0"
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-replace-link": "^1.2.0",
+    "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
   }
 }

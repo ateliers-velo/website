@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="ltr">
+	{% include 'head.html' %}
+	<body>
+		<div class='grid-container'>
+			{% set basicpage = true %}
+			{% include 'navbar.html' %}
+			<div class="posts-overview-container">
+				{{ content | main | safe }}
+			</div>
+			<!--
+			<div class="note2">
+				<p>
+					{{ content | sidenote | safe }}
+				<p>
+			</div>
+			-->
+		</div>
+		{% include 'footer.html' %}
+	</body>
+
+</html>

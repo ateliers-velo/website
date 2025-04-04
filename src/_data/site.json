@@ -3,6 +3,9 @@
   "description": "Réseau des ateliers vélos communautaires de Montréal",
   "url": "https://atlascine.org",
   "baseUrl": "/",
+  "date": "Created",
+  "lastModified": "Last Modified",
+  "layout": "basic.html",
   "languages": [
     {
       "label": "english",
@@ -12,5 +15,6 @@
       "label": "français",
       "code": "fr"
     }
-  ]
+  ],
+  "defaultLang": "en"
 }
