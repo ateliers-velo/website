@@ -1,7 +1,0 @@
-{
-    "permalink": "{{ lang }}/blog/{{ title | slugify }}/",
-    "tags": "post",
-    "date": "Created",
-    "layout": "post.html",
-    "title": ""
-}
