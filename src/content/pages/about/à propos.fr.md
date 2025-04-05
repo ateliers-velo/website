@@ -7,3 +7,4 @@ date: 2023-06-14
 ---
 
 Nous voulons etre des BUMs
+comme vous
