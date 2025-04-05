@@ -1,7 +1,7 @@
 {
-  "title": "BUMBUM",
+  "title": "Bécyks Unis Montréal // Bikes Unite Montreal",
   "description": "Réseau des ateliers vélos communautaires de Montréal",
-  "url": "https://atlascine.org",
+  "url": "x",
   "baseUrl": "/",
   "date": "Created",
   "lastModified": "Last Modified",
@@ -16,5 +16,5 @@
       "code": "fr"
     }
   ],
-  "defaultLang": "en"
+  "defaultLang": "fr"
 }

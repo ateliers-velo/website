@@ -31,3 +31,13 @@ Contains files required to build the Atlascine website located at atlascine.org.
      - **date** is optional and can be used to modify the order in which pages appear in either the navigation menu or the pages index.
 - Once you have added the frontmatter, you can also [add some content](#to-edit-content).
   
+# Multilingual controls
+
+In `./src/_data/site.json`:
+
+- Set the website's available `languages`
+- Set the website's default language by modifying `defaultLang`
+
+A document's language is determined by its filename as long as it follows the convention *fileName.languageCode.md*. Files that don't follow this convention will default to `defaultLang`. For example, if `defaultLang` is `en`, then *index.md* will be considered to be in English, while a French document will need to be named as `index.fr.md`.
+
+Alternatively, you can define a document's language by entering the language code in the document's frontmatter (e.g. `lang: 'en'`). This frontmatter parameter will take precedence if it is defined.
