@@ -1,5 +1,6 @@
 {
-    "tags": "project",
+    "tags": "projects",
     "date": "Created",
-    "layout": "{{ site.layout }}"
+    "layout": "basic.html"
+
 }
