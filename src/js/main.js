@@ -3,6 +3,23 @@ console.log('JS loaded');
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
 
+    const light = document.getElementById('light-toggle');
+    const navWrapper = document.querySelector('.nav-items');
+
+    light.addEventListener('click', function () {
+        const themeStyle = document.getElementById('theme-style');
+        const currentTheme = themeStyle.getAttribute('href');
+        
+        if (currentTheme === '/css/dark-mode.css') {
+            themeStyle.setAttribute('href', '/css/light-mode.css');
+        } else {
+            themeStyle.setAttribute('href', '/css/dark-mode.css');
+        }
+        navWrapper.classList.toggle('activated');
+    });
+    
+
+    /*
     const open = document.getElementById('open');
     const close = document.getElementById('close');
     const navitems = document.querySelectorAll('.nav-item');
@@ -24,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     open.style.display = 'flex';
     close.style.display = 'none';
     });
+    */
 
     // when user clicks on anchor-link, scroll to the heading
     const anchorLinks = document.querySelectorAll('.heading-wrapper');

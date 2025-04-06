@@ -1,8 +1,4 @@
-/*special google fonts import*/
-/* HK grotesk on font squirrel is good too */
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
-
-body {
+:root {
 	--main-bg-color: #fff;	
 	--nav-title-color: #212529;
 	--path-color: #fff;
@@ -18,15 +14,7 @@ body {
 	--hover-bg-color: #ced4da;
 	--selection-color: #E0DFAD;
 	--map-selection-color: #ed8266;
-	--font-multiplier: 1;
-	--content-gap: 1rem;
-	--item-gap: 0.2rem;
 	--default-item-color: rgb(200,200,200);
-	--navheight: 10vh;
-	--main-font: Microsoft PhagsPa, sans-serif;
-    z-index: 1;
-    margin: auto 0; 
-	font-size: 1rem;
-	overflow-y: scroll;
-	overflow-x: hidden;
+  	--active-color: #F7C874;
+  	--inactive-color: #ccc;
 }

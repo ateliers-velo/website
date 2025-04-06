@@ -4,7 +4,7 @@ function displayDivOnHover(){
 const div = document.querySelector('.tile-gallery');
     for (let i = 0; i < div.children.length; i += 1) {
         div.children[i].addEventListener('mouseover', function() {
-            div.children[i].children[0].children[0].style.opacity = .9;
+            div.children[i].children[0].children[0].style.opacity = .8;
         });
         div.children[i].addEventListener('mouseout', function() {
             div.children[i].children[0].children[0].style.opacity = 0;
