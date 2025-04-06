@@ -6,7 +6,7 @@ date: 2023-06-14
 description: 'contact'
 ---
 
-To simply get in touch with someone from the network, send an email to <a href="mailto:convergence.velo.mtl@gmail.com">convergence.velo.mtl@gmail.com</a>.
+To simply get in touch with someone from the network, send an email to <a href="mailto:convergence.velo.mtl@gmail.com">convergence.velo.mtl@gmail.com</a>. 
 
 # Join our email network
 
