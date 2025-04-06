@@ -7,7 +7,7 @@
         {% if p.data.redirect %}
         <a href="{{ p.data.redirect }}" target="_blank">
         {% else %}
-        <a href="/{{ lang }}/{{ p.data.title | slugify }}/">
+        <a href="{{ p.data.permalink }}/">
         {% endif %}
             {% if p.data.img %}
             <div class="zoom-in" style="background-image: url('{{ p.data.img }}');">
