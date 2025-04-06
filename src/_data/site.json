@@ -8,12 +8,12 @@
   "layout": "basic.html",
   "languages": [
     {
-      "label": "english",
-      "code": "en"
-    },
-    {
       "label": "français",
       "code": "fr"
+    },
+    {
+      "label": "english",
+      "code": "en"
     }
   ],
   "defaultLang": "fr"

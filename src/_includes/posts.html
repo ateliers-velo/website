@@ -8,7 +8,7 @@
                 <!-- if the blogroll is being viewed from landing page, only show latest post -->
                 {% if layout == "landing.html" %}
                     {% set firstPostPrinted = true %}
-                    <div class="content" onclick="window.location.href='/en/pages/news';" style="cursor: pointer;">
+                    <div class="content" onclick="window.location.href='/fr/pages/actualites';" style="cursor: pointer;">
                         <p class="date">{{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 150 %}

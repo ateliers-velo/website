@@ -1,8 +1,7 @@
 ---
 layout: 'basic.html'
 tags: [nav-items, index-pages]
-title: 'About'
-date: 2023-06-14
+translationKey: "calendar"
+title: 'Calendar'
 ---
 
-We are bums yay!

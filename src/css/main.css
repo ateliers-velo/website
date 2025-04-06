@@ -377,7 +377,7 @@ header img {
 header {
 	font-family: var(--main-font);
 	color: var(--nav-title-color);
-	font-size: calc(var(--font-multiplier) * 5rem);
+	font-size: calc(var(--font-multiplier) * 9rem);
 	font-weight: bold;
 	margin: 0px 0px 0px 0px;
 	text-decoration: none;
@@ -386,7 +386,7 @@ header a {
 	text-decoration: none;
 	font-weight: bold;
 	color: var(--nav-title-color);
-	font-size: calc(var(--font-multiplier) * .8rem);
+	font-size: calc(var(--font-multiplier) * 9																																																																																																																																																																																																																																																rem);
 }
 
 /* nav-items */
@@ -394,7 +394,7 @@ header a {
 .nav-items {
 	grid-area: span 1 / span 4;
 	display: inline-grid;
-	grid-template-columns: repeat( 5, 1fr );
+	grid-template-columns: repeat( 4, 1fr );
 	/*grid-auto-rows: auto;*/
 	place-items: stretch stretch;
 	grid-column-gap: 0vw;
@@ -574,7 +574,7 @@ footer > .brands {
 .brands > div > img {
 	width: 80%;
 	margin: auto;
-    filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(.5);
 }
 
 /* tile-gallery */
