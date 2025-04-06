@@ -6,12 +6,12 @@ eleventyExcludeFromCollections: true
 <head>
   <meta charset="utf-8">
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/{{ site.defaultLang }}/index.html">
-  <script>window.location.href = "/{{ site.defaultLang }}/index.html";</script>
-  <link rel="canonical" href="/{{ site.defaultLang }}/index.html">
+  <meta http-equiv="refresh" content="0; url={{ pathPrefix }}{{ site.defaultLang }}/index.html">
+  <script>window.location.href = "{{ pathPrefix }}{{ site.defaultLang }}/index.html";</script>
+  <link rel="canonical" href="{{ pathPrefix }}{{ site.defaultLang }}/index.html">
 </head>
 <body>
   <h1>Redirecting...</h1>
-  <p><a href="/{{ site.defaultLang }}/index.html">Click here if you are not redirected.</a></p>
+  <p><a href="{{ pathPrefix }}{{ site.defaultLang }}/index.html">Click here if you are not redirected.</a></p>
 </body>
 </html>
