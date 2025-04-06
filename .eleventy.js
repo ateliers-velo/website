@@ -143,7 +143,6 @@ module.exports = async function (eleventyConfig) {
       data: '_data',
       output: 'public',
     },
-    pathPrefix: process.env.ELEVENTY_ENV === "production" ? "/mtl-avc-reseau/" : "/",
     templateFormats: ['html', 'md', 'njk','css'],//copy any files with these extensions to _site
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
