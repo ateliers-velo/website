@@ -30,7 +30,25 @@ Contains files required to build the Atlascine website located at atlascine.org.
      - **title** will render as a header at the top of your page by default. It will also be used to generate the url of the page (ex. *À Propos* will turn into the slug */à-propos*).
      - **date** is optional and can be used to modify the order in which pages appear in either the navigation menu or the pages index.
 - Once you have added the frontmatter, you can also [add some content](#to-edit-content).
-  
+
+# Required information for a page to function
+
+Each document inside /src/content/ that ends with .md or .njk will be output to the website. Here are the parameters (i.e. *frontmatter*) required for a document to function properly on the website.
+
+```json
+---
+layout: 'basic.html'
+tags: [nav-items, index-pages]
+title: 'À propos'
+lang: 'fr'
+translationKey: 'about'
+permalink: '/fr/a-propos-de-nous/' //explicitly defines the URL of the page
+---
+```
+
+While each parameter can be described explicitly on a per-document basis, everything will also function without defining any of these parameters, since they all have defaults. For example, if layout is undefined, the document will have the site's default layout. If permalink is undefined, the URL of the page will be equivalent to `/lang/directory/title`. If title is undefined, the title will be the file name of the document (e.g. *à propos.md* will have the title *à propos* and url *a-propos*). If lang is undefined, and if it is not in the filename either (see next section), it will inherit the site's default language. Finally, tags designate where the document is displayed on the website: for example, in the navbar menu and/or in the footer at the page index list
+
+
 # Multilingual controls
 
 In `./src/_data/site.json`:
@@ -41,3 +59,10 @@ In `./src/_data/site.json`:
 A document's language is determined by its filename as long as it follows the convention *fileName.languageCode.md*. Files that don't follow this convention will default to `defaultLang`. For example, if `defaultLang` is `en`, then *index.md* will be considered to be in English, while a French document will need to be named as `index.fr.md`.
 
 Alternatively, you can define a document's language by entering the language code in the document's frontmatter (e.g. `lang: 'en'`). This frontmatter parameter will take precedence if it is defined.
+
+# Page translations
+
+Documents without a specified language are considered to be in the site's default language. To create a translation for a document, there are two options:
+
+- Add a frontmatter key called `translationKey` and give it a unique value. the same key-value pair must also be found in the translated document's frontmatter (e.g. an English and French version of an About page would both need `"translationKey": "about"` to display properly across the multilingual website).
+- Use nested folders (this is the easier way): create a subfolder for the document and its translated version(s). As long as each document is a different language, they will appear as translations on the website.

@@ -6,7 +6,7 @@ date: 2023-06-13
 ---
 
 Hello,
-We are Bécyks Unis de Montréal - Bikes Unite Montréal. We are a network of community bike shops. We use our acronym BUM BUM externally and in our documentation, internally we are free. We may yell BuM! bUm! Or buuuuuuum or any other spelling or 🍑🍑, as we wish, because we are aware that it is a play on words about butts. The following text is our collective agreement.
+We are *Bécyks Unis de Montréal - Bikes Unite Montréal*. We are a network of community bike shops. We use our acronym BUM BUM externally and in our documentation, internally we are free. We may yell BuM! bUm! Or buuuuuuum or any other spelling or 🍑🍑, as we wish, because we are aware that it is a play on words about butts. The following text is our collective agreement.
 
 # What is a community bike shop?
 
