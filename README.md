@@ -7,6 +7,7 @@ Built using Eleventy and Nunjucks, with a custom build process to generate the s
 - Find the webpage document you want to edit under /src/content/. Wherever possible, keep documents organized under relevant subdirectories (projects, pages, posts).
 - Click the pencil icon on the top-right to edit a file.
   - The edits you make should use [markdown syntax](https://www.markdownguide.org/cheat-sheet/).
+  - When adding an image, make sure you've uploaded the image to *src/imgs/* and refer to the image as follows: `![Alt text](/imgs/logo.png "Mouseover caption text")`
 - Once satisfied with your edit, hit *Commit changes...* to save your edits.
 
 ## to create a new page
