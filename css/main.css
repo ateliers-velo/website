@@ -581,8 +581,8 @@ footer h2 {
 }
 
 footer p {
-	font-size: calc(var(--font-multiplier) * 0.75rem);
-	line-height: calc(var(--font-multiplier) * .9rem);
+	font-size: calc(var(--font-multiplier) * 1rem);
+	line-height: calc(var(--font-multiplier) * 1.1rem);
 	filter: invert(.6);
 	padding:0px 0px 0px 0px;
 }
@@ -611,9 +611,9 @@ footer > .brands {
 
 .tile-gallery {
 	display: grid;
-  	grid-template-columns: repeat(2, 1fr);
 	grid-column: 1 / -1;
-	grid-gap: 5vw;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 3vw;
 }
 
 .tile-gallery > a {
