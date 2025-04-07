@@ -21,7 +21,7 @@
                 <!-- if viewed from anywhere else (i.e. news page), show all -->
                 {% else %}
                     <!-- mtl-avc-reseau prefix only for GITHUB PAGES -->
-                    <div class="content" onclick="window.location.href='/mtl-avc-velo{{ post.data.permalink }}';">
+                    <div class="content" onclick="window.location.href='/mtl-avc-reseau{{ post.data.permalink }}';">
                         <p class="date">{{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 300 %}
