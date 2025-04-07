@@ -20,7 +20,7 @@
                     </div>
                 <!-- if viewed from anywhere else (i.e. news page), show all -->
                 {% else %}
-                    <div class="content" onclick="window.location.href='{{ post.url }}';">
+                    <div class="content" onclick="window.location.href='{{ post.data.permalink }}';">
                         <p class="date">{{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 300 %}
