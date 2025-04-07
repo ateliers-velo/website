@@ -1,10 +1,11 @@
 <head>    
     <meta charset="UTF-8">
-    <title>{{ site.title }} | {{ title }}</title>
+    <title>{{ site.title[lang] }} | {{ title }}</title>
+
     {% if description %}
         <meta name="description" content="{{ description }}">
     {% else %}
-        <meta name="description" content="{{ site.description }}">
+        <meta name="description" content="{{ site.description[lang] }}">
     {% endif %}
     <link rel="shortcut icon" href="/imgs/peach-emoji.ico" type="image/x-icon">
     <link id="theme-style" rel="stylesheet" type="text/css" href="/css/dark-mode.css" />

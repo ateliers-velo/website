@@ -1,6 +1,12 @@
 {
-  "title": "Bécyks Unis Montréal // Bikes Unite Montreal",
-  "description": "Réseau des ateliers vélos communautaires de Montréal",
+  "title": {
+    "fr": "Bécyks Unis Montréal",
+    "en": "Bikes Unite Montreal"
+  },
+  "description": {
+    "fr": "Réseau des ateliers vélo communautaires de Montréal",
+    "en": "Montreal Community Bike Shop Network"
+  },
   "url": "x",
   "baseUrl": "/",
   "date": "Created",
