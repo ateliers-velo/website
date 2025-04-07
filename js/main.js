@@ -1,7 +1,10 @@
 console.log('JS loaded');
 
 document.addEventListener('DOMContentLoaded', function() {
+    
     console.log('DOM loaded');
+    // TEMPORARY FIX ONLY FOR GH PAGES
+    const prefix = "/mtl-avc-reseau"
 
     const light = document.getElementById('light-toggle');
     const navWrapper = document.querySelector('.nav-items');
@@ -11,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentTheme = themeStyle.getAttribute('href');
         
         if (currentTheme === '/css/dark-mode.css') {
-            themeStyle.setAttribute('href', '/css/light-mode.css');
+            themeStyle.setAttribute('href', prefix + '/css/light-mode.css');
         } else {
-            themeStyle.setAttribute('href', '/css/dark-mode.css');
+            themeStyle.setAttribute('href', prefix + '/css/dark-mode.css');
         }
         navWrapper.classList.toggle('activated');
     });
