@@ -447,9 +447,11 @@ header a {
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--main-font);
-	font-style: ;
+	font-style: normal;
+	text-transform: uppercase;
 	color: var(--button-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
+	
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
