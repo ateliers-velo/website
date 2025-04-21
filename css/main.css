@@ -154,7 +154,14 @@ img {
 					 font-weight: <weight>;
 					 font-style: normal;
 				 }
-				 
+@font-face {
+	font-family: 'Orbit';
+	src: url('https://github.com/JAMO-TYPEFACE/Orbit/raw/refs/heads/main/Fonts/webfonts/Orbit-Regular.woff2');
+	font-weight: 100;
+	font-style: normal;
+}
+
+
 /* body */
 
 .grid-container {
