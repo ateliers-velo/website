@@ -1,7 +1,7 @@
 /*special google fonts import*/
 /* HK grotesk on font squirrel is good too */
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Inclusive+Sans');
 :root {
 	--font-multiplier: 1;
 	--content-gap: 1rem;
