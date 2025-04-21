@@ -527,8 +527,10 @@ footer .lang-selector a {
 }
 
 .nav-items > a[href]:hover, footer a[href]:hover, .lang-selector a[href]:hover {
-    background-color: var(--hover-bg-color);
+   /* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
+	border: 1px solid var(--hover-color);
+	border-radius: calc(var(--font-multiplier) * 1.2rem);
 }
 
 .nav-item svg {
