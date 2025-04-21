@@ -1,0 +1,20 @@
+:root {
+	--main-bg-color: #000000;	
+	--nav-title-color: #ffffff;
+	--path-color: #000000;
+	--main-text-color: #ffffff;
+	--caption-color: #284c63;
+	--link-color: #20364d;
+	--content-link-color: #6677b4;
+	/*--link-color: #C2D5E0;*/
+	/*--button-color: #AB91B3;*/
+	--button-color: #ecdcbd;
+	--tag-color: #ed8266;
+	--hover-color: #fff;
+	--hover-bg-color: #ed8266;
+	--selection-color: #E0DFAD;
+	--map-selection-color: #ed8266;
+	--default-item-color: rgb(200,200,200);
+  	--active-color: #ffdda2;
+  	--inactive-color: #c40000;
+}
