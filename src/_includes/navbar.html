@@ -2,12 +2,7 @@
     <header><a href="/{{ lang }}/">🍑🍑</a></header>
 </div>
 <div class="nav-items">
-    
-    <div id="light-toggle">
-        <div class="icon" id="light">
-            {% include 'hanging_light.svg' %}
-        </div>
-    </div>
+
 
     {% for p in collections.all %}
         {% if p.data.tags and p.data.tags.includes('nav-items') %}
@@ -40,5 +35,11 @@
             {% endif %}
         {% endif %}
     {% endfor %}
+
+    <div id="light-toggle">
+        <div class="icon" id="light">
+            {% include 'hanging_light.svg' %}
+        </div>
+    </div>
 </div>
 
