@@ -140,6 +140,21 @@ img {
 	grid-column: 1 / -1;
 }
 
+
+.inclusive-sans-<uniquifier> {
+					 font-family: "Inclusive Sans", sans-serif;
+					 font-optical-sizing: auto;
+					 font-weight: <weight>;
+					 font-style: normal;
+				 }
+
+.orbit-regular-<uniquifier> {
+					 font-family: "Orbit", sans-serif;
+					 font-optical-sizing: auto;
+					 font-weight: <weight>;
+					 font-style: normal;
+				 }
+				 
 /* body */
 
 .grid-container {
@@ -425,12 +440,13 @@ header a {
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--main-font);
+	font-style: ;
 	color: var(--button-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	direction: ltr;
+	/* direction: ltr; */
 }
 
 .nav-items + .lang-selector {
