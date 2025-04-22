@@ -151,7 +151,7 @@ img {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(auto-fill, 1fr);
 	padding: 4vh 3vw 4vh 3vw;
 	grid-row-gap: 10vh;
@@ -407,7 +407,7 @@ header a {
 .nav-items {
 	grid-area: span 1 / span 8;
 	display: inline-grid;
-	grid-template-columns: repeat( 7, 1fr );
+	grid-template-columns: repeat( 8, 1fr );
 	/*grid-auto-rows: auto;*/
 	place-items: stretch stretch;
 	grid-column-gap: 0vw;
