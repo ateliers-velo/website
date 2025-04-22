@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* root styling */
+
 :root {
 	background-color: var(--main-bg-color);
 }
