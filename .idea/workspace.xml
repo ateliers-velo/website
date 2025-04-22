@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <list default="true" id="b06e14f5-7840-4fcd-9daa-da83328dc4fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/css/sizing.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/sizing.css" afterDir="false" />
+=======
+    <list default="true" id="6110764a-c857-4999-b05a-7bfb8b07cead" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/head.html" afterDir="false" />
+>>>>>>> Stashed changes
 =======
     <list default="true" id="6110764a-c857-4999-b05a-7bfb8b07cead" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/_includes/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/_includes/head.html" afterDir="false" />
@@ -21,13 +26,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
     "state": "OPEN",
     "assignee": "emvystudio"
   }
 }]]></component>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
@@ -35,6 +46,7 @@
     "accountId": "911da31d-0c06-4c48-89e9-c804c8168a8a"
   }
 }]]></component>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -47,6 +59,8 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
 =======
+=======
+>>>>>>> Stashed changes
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
 }]]></component>
@@ -87,5 +101,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </project>
