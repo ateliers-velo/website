@@ -1,9 +1,6 @@
-<div class="title">
-    <header><a href="/{{ lang }}/">🍑🍑</a></header>
-</div>
+
 <div class="nav-items">
-
-
+    
     {% for p in collections.all %}
         {% if p.data.tags and p.data.tags.includes('nav-items') %}
             {% if p.data.lang == lang %}
@@ -43,3 +40,6 @@
     </div>
 </div>
 
+<div class="title">
+    <header><a href="/{{ lang }}/">🍑🍑</a></header>
+</div>
