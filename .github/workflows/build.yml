@@ -3,6 +3,16 @@ name: Build 11ty
 on:
   push:
     branches: ['main']
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Which environment to build for'
+        required: false
+        default: 'production'
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'false'
 
 jobs:
   build:
