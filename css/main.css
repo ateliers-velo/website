@@ -378,7 +378,7 @@ video {
 /* header */
 
 .title {
-	grid-area: span 1 / span 2;
+	grid-area: span 1 / span 8;
 	text-align: center;
 }
 
