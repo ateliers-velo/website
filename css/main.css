@@ -417,7 +417,7 @@ header a {
 	padding: 1vh 1vw 1vh 0;
 	line-height: calc(var(--font-multiplier) * 6vh);
 	align-items: center;
-	direction: rtl;
+	direction: ltr;
 	transition: display 0.2s ease-in-out;
 }
 
@@ -432,7 +432,7 @@ header a {
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--main-font);
-	font-style: ;
+	font-style: normal;
 	color: var(--button-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
 	overflow: hidden;
@@ -491,6 +491,7 @@ header a {
 .nav-items > a {
 	font-size: calc(var(--font-multiplier) * 1.4rem);
 	color: var(--button-color);
+	text-transform: uppercase;
 }
 
 .nav-items > a, .nav-items + .lang-selector a[href] {
