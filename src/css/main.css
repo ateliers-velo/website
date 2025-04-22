@@ -85,9 +85,9 @@ li a {
 }
 
 button {
-    cursor: pointer;
-    padding: 2px 15px;
-    margin-left: 10px;
+	cursor: pointer;
+	padding: 2px 15px;
+	margin-left: 10px;
 }
 hr {
 	border: 0;
@@ -147,21 +147,6 @@ img {
 					 font-weight: <weight>;
 					 font-style: normal;
 				 }
-
-.orbit-regular-<uniquifier> {
-					 font-family: "Orbit", sans-serif;
-					 font-optical-sizing: auto;
-					 font-weight: <weight>;
-					 font-style: normal;
-				 }
-@font-face {
-	font-family: 'Orbit';
-	src: url('https://github.com/JAMO-TYPEFACE/Orbit/raw/refs/heads/main/Fonts/webfonts/Orbit-Regular.ttf');
-	font-weight: 100;
-	font-style: normal;
-}
-
-
 /* body */
 
 .grid-container {
@@ -186,8 +171,8 @@ img {
 }
 
 .left-pane li::before {
-    content: none;
-    margin-right: 0.5em;
+	content: none;
+	margin-right: 0.5em;
 }
 
 .left-pane li > a {
@@ -447,11 +432,9 @@ header a {
 	text-align: center;
 	text-decoration: none;
 	font-family: var(--main-font);
-	font-style: normal;
-	text-transform: uppercase;
+	font-style: ;
 	color: var(--button-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -536,8 +519,10 @@ footer .lang-selector a {
 }
 
 .nav-items > a[href]:hover, footer a[href]:hover, .lang-selector a[href]:hover {
-    background-color: var(--hover-bg-color);
+	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
+	border: 1px solid var(--hover-color);
+	border-radius: calc(var(--font-multiplier) * 1.2rem);
 }
 
 .nav-item svg {
@@ -587,8 +572,8 @@ footer .lang-selector {
 }
 
 footer li::before {
-    content: none;
-    margin-right: 0.5em;
+	content: none;
+	margin-right: 0.5em;
 }
 
 footer li a {
@@ -630,7 +615,7 @@ footer > .brands {
 .brands > div > img {
 	width: 80%;
 	margin: auto;
-    filter: grayscale(1) invert(.5);
+	filter: grayscale(1) invert(.5);
 }
 
 /* tile-gallery */
@@ -672,8 +657,8 @@ footer > .brands {
 	position: relative;
 	height: 100%;
 	padding: 2vh 5vw 0 5vw;
-  	display: flex;
-  	flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
@@ -808,7 +793,7 @@ footer > .brands {
 	.content > h2,
 	.content > h3 {
 		text-align: center;
-}
+	}
 }
 @media only screen and (max-device-width: 360px) and (max-device-height: 760px) {
 	body {
@@ -826,7 +811,7 @@ footer > .brands {
 	z-index: 1000;
 	white-space: nowrap;
 }
-  
+
 .gallery > div {
 	width: 60vw;
 	height: 100%;
