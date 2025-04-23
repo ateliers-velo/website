@@ -340,7 +340,7 @@ video {
 
 
 #landing-content {
-	grid-column: span 6;
+	grid-column: span 8;
 	grid-template-columns: repeat(auto-fill, minmax(25vw, max-content));
 }
 
