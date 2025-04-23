@@ -7,7 +7,7 @@
 	--content-gap: 1rem;
 	--item-gap: 0.2rem;
 	--default-item-color: rgb(200,200,200);
-	--navheight: 10vh;
+	--navheight: 5vh;
 	--main-font: "Inclusive Sans", sans-serif;
 	z-index: 1;
 	margin: auto 0;
