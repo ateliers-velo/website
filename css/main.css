@@ -557,7 +557,7 @@ footer {
 	background-color: var(--hover-color);
 	display: grid;
 	place-items: stretch stretch;
-	grid-template-columns: repeat(7, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(auto-fill, 1fr);
 	margin-top: 20vh;
 	padding: 2vh 2vw 2vh 2vw;
@@ -566,6 +566,7 @@ footer {
 footer ul {
 	margin: 0;
 	padding: 0 0 0 0;
+	grid-area: span 1 / span 4;
 }
 
 footer .lang-selector {
