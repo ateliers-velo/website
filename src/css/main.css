@@ -324,7 +324,7 @@ video {
 	grid-area: span 2 / span 8;
 	scroll-behavior: smooth;
 	display: grid;
-	grid-template-columns: repeat( 6, 1fr );
+	grid-template-columns: repeat( 8, 1fr );
 	grid-row-gap: 10vh;
 	column-gap: 3vw;
 	/*padding: 3vw;*/
