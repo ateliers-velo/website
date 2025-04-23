@@ -443,7 +443,7 @@ header a {
 
 .nav-items + .lang-selector {
 	grid-area: span 1 / span 1;
-	padding: 1vh 1vw 1vh 0;
+	padding: 1vh 1vw 1vh 1vw;
 	height: 8vh;
 }
 
@@ -522,8 +522,9 @@ footer .lang-selector a {
 .nav-items > a[href]:hover, footer a[href]:hover, .lang-selector a[href]:hover {
 	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
-	border: 1px solid var(--hover-color);
+	border: .5px solid transparent var(--hover-color);
 	border-radius: calc(var(--font-multiplier) * 1.2rem);
+	transition: all 0.3s ease-in-out;
 }
 
 .nav-item svg {
