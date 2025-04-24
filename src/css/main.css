@@ -605,7 +605,7 @@ footer p {
 }
 
 footer > .index {
-	grid-area: span 2 / span 1;
+	grid-area: span 1 / span 4;
 }
 
 footer > .brands {
