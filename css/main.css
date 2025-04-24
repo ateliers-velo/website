@@ -610,9 +610,8 @@ footer > .index {
 
 footer > .brands {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
 	padding: 1vh 2vw 1vh 2vw;
-	
 }
 
 .brands > div {
