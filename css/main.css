@@ -558,7 +558,7 @@ footer {
 	background-color: var(--hover-color);
 	display: grid;
 	place-items: stretch stretch;
-	grid-template-columns: repeat(8, 1fr);
+	grid-template-columns: repeat(auto-fill, 1fr);
 	grid-template-rows: repeat(auto-fill, 1fr);
 	margin-top: 20vh;
 	padding: 2vh 2vw 2vh 2vw;
