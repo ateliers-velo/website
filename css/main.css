@@ -566,7 +566,9 @@ footer {
 footer ul {
 	margin: 0;
 	padding: 0 0 0 0;
-	grid-area: span 1 / span 4;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	
 }
 
 footer .lang-selector {
