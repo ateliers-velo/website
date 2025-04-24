@@ -558,7 +558,7 @@ footer {
 	background-color: var(--hover-color);
 	display: grid;
 	place-items: stretch stretch;
-	grid-template-columns: repeat(auto-fill, 1fr);
+	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(auto-fill, 1fr);
 	margin-top: 20vh;
 	padding: 2vh 2vw 2vh 2vw;
@@ -568,7 +568,7 @@ footer ul {
 	margin: 0;
 	padding: 0 0 0 0;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	
 }
 
@@ -605,10 +605,11 @@ footer p {
 }
 
 footer > .index {
-	grid-area: span 1 / span 8;
+	grid-area: span 1 / span 4;
 }
 
 footer > .brands {
+	grid-area: span 2 / span 5;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
 	padding: 1vh 2vw 1vh 2vw;
