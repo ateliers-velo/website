@@ -2,6 +2,8 @@
 
 Built using Eleventy and Nunjucks, with a custom build process to generate the site in more than one language. Root redirect functionality adapted from [this code](https://gist.github.com/BrianMitchL/f93622a46f4476b7514995ff502d8d17).
 
+website URL: https://maphouse.github.io/mtl-avc-reseau
+
 ## to edit content
 
 - Find the webpage document you want to edit under /src/content/. Wherever possible, keep documents organized under relevant subdirectories (projects, pages, posts).
