@@ -568,7 +568,7 @@ footer ul {
 	margin: 0;
 	padding: 0 0 0 0;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	
 }
 
@@ -605,11 +605,11 @@ footer p {
 }
 
 footer > .index {
-	grid-area: span 1 / span 4;
+	grid-area: span 1 / span 8;
 }
 
 footer > .brands {
-	grid-area: span 2 / span 5;
+	grid-area: span 2 / span 3;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
 	padding: 1vh 2vw 1vh 2vw;
