@@ -75,7 +75,7 @@ li {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	line-height: 1.9rem;
+	line-height: 2.4rem;
 	font-weight: normal;
 	padding:0px 0px 0px 0px;
 }
