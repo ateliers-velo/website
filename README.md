@@ -25,7 +25,7 @@ This is the bare minimum for a page to be published. However, there are several 
 
 Here are the parameters (i.e. *frontmatter*) that the system uses for a page to function properly on the website.
 
-```json
+```
 ---
 layout: 'basic.html'
 tags: [nav-items, index-pages]
