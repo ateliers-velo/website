@@ -288,6 +288,11 @@ video {
 	font-size: calc(var(--font-multiplier) * 1.2em);
 }
 
+p {
+	border-left: 2px;
+	border-color: var(--hover-bg-color);
+}
+
 .content {
 	grid-column: 1 / -1;
 	scroll-behavior: smooth;
