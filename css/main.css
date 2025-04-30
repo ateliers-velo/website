@@ -418,7 +418,7 @@ header a {
 	line-height: calc(var(--font-multiplier) * 6vh);
 	align-items: center;
 	direction: ltr;
-	transition: display 0.2s ease-in-out;
+	/* transition: display 0.2s ease-in-out; */
 }
 
 .nav-items > div, .nav-items + .lang-selector {
