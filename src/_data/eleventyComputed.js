@@ -4,6 +4,9 @@ const slugify = require("slugify");
 const fs = require("fs");
 
 module.exports = function () {
+  // at the very top of src/_data/eleventyComputed.js
+  console.log("✅ eleventyComputed.js loaded");
+
   //TO DO : build 1 collection per folder, to maintain context of other lang version
   return {
     translationKey: (data) => {

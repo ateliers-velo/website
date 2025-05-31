@@ -11,6 +11,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 // If not already added from previous tip
 const slugify = require("slugify");
+const eleventyComputed = require("./src/_data/eleventyComputed.js")();
 
 
 const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
@@ -64,6 +65,8 @@ const fs = require("fs");
 
 module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
+  eleventyConfig.addGlobalData("eleventyComputed", eleventyComputed);
+
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   // This is the part that tells 11ty to swap to our custom config
@@ -143,7 +146,7 @@ module.exports = async function (eleventyConfig) {
       data: '_data',
       output: 'public',
     },
-    pathPrefix: "/mtl-avc-reseau/",
+    pathPrefix: "/",
     templateFormats: ['html', 'md', 'njk','css'],//copy any files with these extensions to _site
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
