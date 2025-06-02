@@ -12,6 +12,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 // If not already added from previous tip
 const slugify = require("slugify");
 const eleventyComputed = require("./src/_data/eleventyComputed.js")();
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 
 const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
@@ -66,7 +67,7 @@ const fs = require("fs");
 module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
   eleventyConfig.addGlobalData("eleventyComputed", eleventyComputed);
-
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   // This is the part that tells 11ty to swap to our custom config
