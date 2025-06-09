@@ -17,6 +17,7 @@ h1 {
 
 h2 {
 	font-family: var(--main-font);
+	color: var(--nav-title-color);
 	font-size: calc(var(--font-multiplier) * 1.5rem);
 	font-weight: bold;
 	font-style: italic;
