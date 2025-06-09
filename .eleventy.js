@@ -12,7 +12,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 // If not already added from previous tip
 const slugify = require("slugify");
 const eleventyComputed = require("./src/_data/eleventyComputed.js")();
-const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+//const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 
 const linkAfterHeader = markdownItAnchor.permalink.linkAfterHeader({
