@@ -213,6 +213,12 @@
         style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
         center: [-73.5683148,45.5048116], // Centered on Montreal
         zoom: 12,
+        minZoom: 11,
+        maxZoom: 16,
+        maxBounds: [
+            [-73.94583664228385, 45.38248151412239], // Southwest coordinates (longitude, latitude)
+            [-73.37553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
+    ], 
         maplibreLogo: false
     });
     let popupTimeout;
@@ -316,7 +322,7 @@
                 // Add click event to open the URL in a new tab
                 el.addEventListener('click', () => {
                     if (feature.properties.url) {
-                        window.location.href = feature.properties.url;
+                        window.location.href = PATH_PREFIX + feature.properties.url;
                     }
                 });
 
