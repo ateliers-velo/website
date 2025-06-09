@@ -192,17 +192,25 @@
             border: 1px solid #ffffff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
             cursor: pointer;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.12s ease-in-out;
             transform-origin: center center;
         }
 
         /* Style for the popup content */
         .maplibregl-popup-content {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 12px;
+            font-size: 1rem;
             padding: 8px 12px;
             color: #333;
+            outline-color: #333;
+            outline-width: 1px;
+            outline-style: solid;
+            background-color: rgba(255, 255, 255, 0.9);
         }
+        .maplibregl-popup-tip {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -261,11 +269,11 @@
         const popup = new maplibregl.Popup({
             closeButton: false,
             closeOnClick: false,
-            offset: 55
+            offset: 60
         });
 
-        const initialMarkerSize = 50; // Base size of the marker in pixels
-        const scaleFactor = 2;       // How much to scale on hover (e.g., 2 for double)
+        const initialMarkerSize = 60; // Base size of the marker in pixels
+        const scaleFactor = 1.8;       // How much to scale on hover (e.g., 2 for double)
 
         ateliersData.features.forEach((feature) => {
             if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.nom && feature.properties.logo_path) {
@@ -304,7 +312,7 @@
                         popup.setLngLat(feature.geometry.coordinates)
                             .setHTML(`<strong>${feature.properties.nom}</strong>`)
                             .addTo(map);
-                    }, 150); // 200ms = same as your CSS transition time
+                    }, 100); // 200ms = same as your CSS transition time
                 });
 
 
