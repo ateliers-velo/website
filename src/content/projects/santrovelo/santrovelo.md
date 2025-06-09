@@ -16,7 +16,8 @@ date: 2023-08-10 # YYYY-MM-DD, oldest appears first in tile-gallery
 Depuis 1996 au Santropol Roulant
 
 Les ateliers de vélo communautaires sont précaires en ressources humaines et matériels. Assurez-vous de vérifier les détails de leurs horaires, procédures, méthodes de paiement etc.
-Services
+
+## Services
 
 - 🔧 Soirées en libre service (DIY) avec accompagnement
 - ❄️ Ouvert à l'année longue
