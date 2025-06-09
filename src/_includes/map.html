@@ -11,27 +11,32 @@
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; }
 
-        /* CSS for the custom marker element */
+        /* Outer wrapper: positioned by MapLibre */
+        .atelier-marker-wrapper {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            z-index: 0;
+        }
+
+        /* Inner circle that grows */
         .atelier-marker {
-            display: block;
-            /* Make it a circle */
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
-            /* Ensure background image covers and is centered */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* Add a border for visual appeal, optional */
-            border: 1px solid #ffffff; /* White border around the circle */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Subtle shadow */
+            border: 1px solid #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
             cursor: pointer;
-            /* Initial size - adjust as needed, can be overridden per marker */
-            width: 40px; /* Default width */
-            height: 40px; /* Default height */
+            transition: transform 0.2s ease-in-out;
+            transform-origin: center center;
         }
 
         /* Style for the popup content */
         .maplibregl-popup-content {
-            font-family: 'Open Sans Semibold', 'Arial Unicode MS Bold';
+            font-family: 'Courier New', Courier, monospace;
             font-size: 12px;
             padding: 8px 12px;
             color: #333;
@@ -48,12 +53,10 @@
         zoom: 12,
         maplibreLogo: false
     });
+    let popupTimeout;
 
-    // Define the fixed path prefix as per your Eleventy config for production
-    const PATH_PREFIX = '/mtl-avc-reseau';
-
-    // --- MODIFIED: geojsonUrl now explicitly includes the prefix ---
-    const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json'; // Combined prefix with data path
+    const PATH_PREFIX = '/mtl-avc-reseau/';
+    const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json';
 
     map.on('load', async () => {
         let ateliersData;
@@ -87,71 +90,78 @@
             return;
         }
 
-        // Create a single popup instance outside the loop
         const popup = new maplibregl.Popup({
             closeButton: false,
             closeOnClick: false,
-            offset: 25 // Offset popup from the marker, adjust as needed
+            offset: 55
         });
 
-        // Add markers to the map for each atelier feature
+        const initialMarkerSize = 50; // Base size of the marker in pixels
+        const scaleFactor = 2;       // How much to scale on hover (e.g., 2 for double)
+
         ateliersData.features.forEach((feature) => {
-            if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.logo_path) {
-                // Create a DOM element for the marker
+            if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.nom && feature.properties.logo_path) {
+                
                 const el = document.createElement('div');
-                el.className = 'atelier-marker'; // Apply our custom CSS class
+                el.className = 'atelier-marker-wrapper'; // outer wrapper
 
-                // Set the background image to the logo path
-                el.style.backgroundImage = `url(${PATH_PREFIX + feature.properties.logo_path})`;
+                const inner = document.createElement('div');
+                inner.className = 'atelier-marker'; // inner element that gets scaled
+                inner.style.backgroundImage = `url(${PATH_PREFIX + feature.properties.logo_path})`;
 
+                el.appendChild(inner); // nest the image inside the wrapper
+                
+                el.style.width = `${initialMarkerSize}px`;
+                el.style.height = `${initialMarkerSize}px`;
 
-                // You can also set dynamic sizes if your GeoJSON has a size property
-                // For now, using fixed size from CSS or setting here:
-                const markerSize = 50; // Pixels
-                el.style.width = `${markerSize}px`;
-                el.style.height = `${markerSize}px`;
+                // Set initial transform to ensure it starts at scale 1, and ensure z-index
+                el.style.transform = 'scale(1)';
+                el.style.zIndex = '0'; // Default z-index
 
-                // Create the MapLibre GL JS marker
                 const marker = new maplibregl.Marker({
                     element: el,
-                    anchor: 'center' // Anchor the marker element's center to the point coordinates
+                    anchor: 'center' // This is crucial for MapLibre to position the DOM element's center correctly
                 })
                 .setLngLat(feature.geometry.coordinates)
                 .addTo(map);
 
-                // --- Event listeners for the popup on this specific marker element ---
+                // --- MODIFIED Event listeners for popup AND scale effect ---
                 el.addEventListener('mouseenter', () => {
                     map.getCanvas().style.cursor = 'pointer';
+                    inner.style.transform = `scale(${scaleFactor})`;
+                    el.style.zIndex = '10';
 
-                    const coordinates = feature.geometry.coordinates.slice();
-                    const nom = feature.properties.nom;
-
-                    // Ensure coordinates wrap correctly for global maps
-                    while (Math.abs(map.getCenter().lng - coordinates[0]) > 180) {
-                        coordinates[0] += map.getCenter().lng > coordinates[0] ? 360 : -360;
-                    }
-
-                    popup.setLngLat(coordinates)
-                        .setHTML(`<strong>${nom}</strong>`)
-                        .addTo(map);
+                    // Delay popup appearance
+                    popupTimeout = setTimeout(() => {
+                        popup.setLngLat(feature.geometry.coordinates)
+                            .setHTML(`<strong>${feature.properties.nom}</strong>`)
+                            .addTo(map);
+                    }, 150); // 200ms = same as your CSS transition time
                 });
+
 
                 el.addEventListener('mouseleave', () => {
                     map.getCanvas().style.cursor = '';
+                    inner.style.transform = 'scale(1)';
+                    el.style.zIndex = '0';
+                    
+                    clearTimeout(popupTimeout); // Cancel if still waiting
                     popup.remove();
                 });
+
+                // --- END MODIFIED ---
+
+                // Add click event to open the URL in a new tab
+                el.addEventListener('click', () => {
+                    if (feature.properties.url) {
+                        window.location.href = feature.properties.url;
+                    }
+                });
+
             } else {
-                console.warn('Skipping feature due to missing geometry or logo_path:', feature);
+                console.warn('Skipping feature due to missing geometry, nom, or logo_path:', feature);
             }
         });
-
-        // No need for addLayer calls for 'atelier-points', 'atelier-logos', 'atelier-background-circles'
-        // or 'atelier-labels' if you are using custom HTML markers for everything.
-        // If you still want text labels, you would need to either:
-        // 1. Incorporate text directly into the marker HTML (more complex, requires careful styling)
-        // 2. Or revert to using a separate symbol layer just for labels (and remove the 'text-field' from the marker layer).
-        // For simplicity, I've removed the text labels here.
-        // If you want text labels WITH these custom HTML markers, let me know, and we can adjust.
     });
 </script>
 </body>
