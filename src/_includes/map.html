@@ -49,7 +49,11 @@
         maplibreLogo: false
     });
 
-    const geojsonUrl = '/mtl-avc-reseau/_data/ateliers.json'; // Your local GeoJSON file path
+    // Define the fixed path prefix as per your Eleventy config for production
+    const PATH_PREFIX = '/mtl-avc-reseau';
+
+    // --- MODIFIED: geojsonUrl now explicitly includes the prefix ---
+    const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json'; // Combined prefix with data path
 
     map.on('load', async () => {
         let ateliersData;
@@ -98,7 +102,8 @@
                 el.className = 'atelier-marker'; // Apply our custom CSS class
 
                 // Set the background image to the logo path
-                el.style.backgroundImage = `url(${feature.properties.logo_path})`;
+                el.style.backgroundImage = `url(${PATH_PREFIX + feature.properties.logo_path})`;
+
 
                 // You can also set dynamic sizes if your GeoJSON has a size property
                 // For now, using fixed size from CSS or setting here:
