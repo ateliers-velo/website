@@ -78,6 +78,7 @@ li {
 	line-height: 2.4rem;
 	font-weight: normal;
 	padding:0px 0px 0px 0px;
+	text-wrap: nowrap;
 }
 
 li a {
@@ -102,6 +103,12 @@ img {
 }
 .content img {
 	/*cursor: zoom-in;*/
+}
+figcaption {
+	font-family: var(--main-font);
+	color: var(--main-text-color);
+	font-size: calc(var(--font-multiplier) * 0.9rem);
+	padding:0px 0px 0px 0px;
 }
 
 .heading-wrapper {
@@ -278,6 +285,13 @@ video {
 	padding: 2vh;
 }
 
+#map-container {
+	width: 100%;
+	height: 70vh;
+	grid-column: span 8;
+	margin: 0vh 0 10vh 0;
+}
+
 .note1 h2 {
 	font-size: calc(var(--font-multiplier) * 1.2em);
 	font-style: italic;
@@ -397,7 +411,7 @@ header img {
 header {
 	font-family: var(--main-font);
 	color: var(--nav-title-color);
-	font-size: calc(var(--font-multiplier) * 9rem);
+	calc(var(--font-multiplier) * 2.4rem)
 	font-weight: bold;
 	margin: 0px 0px 0px 0px;
 	text-decoration: none;
@@ -496,7 +510,7 @@ header a {
 
 
 .nav-items > a {
-	font-size: calc(var(--font-multiplier) * 1.4rem);
+	font-size: calc(var(--font-multiplier) * 1.1rem);
 	color: var(--button-color);
 	text-transform: uppercase;
 }
@@ -526,10 +540,10 @@ footer .lang-selector a {
 	line-height: 4vh;
 }
 
-.nav-items > a[href]:hover, footer a[href]:hover, .lang-selector a[href]:hover {
+.nav-items > a[href]:hover, .lang-selector a[href]:hover {
 	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
-	border: .5px solid var(--hover-color);
+	outline: .5px solid var(--hover-color);
 	border-radius: calc(var(--font-multiplier) * 1.2rem);
 	box-sizing: border-box;
 	transition: all 0.3s ease-in-out;
@@ -575,7 +589,7 @@ footer ul {
 	margin: 0;
 	padding: 0 0 0 0;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	
 }
 
@@ -596,6 +610,11 @@ footer li a {
 	text-decoration: none;
 }
 
+footer a[href]:hover {
+	/* background-color: var(--hover-bg-color); */
+	text-decoration: underline;
+}
+
 footer h2 {
 	font-family: var(--main-font);
 	font-size: calc(var(--font-multiplier) * 1rem);
@@ -605,18 +624,18 @@ footer h2 {
 }
 
 footer p {
-	font-size: calc(var(--font-multiplier) * 1rem);
+	font-size: calc(var(--font-multiplier) * .8rem);
 	line-height: calc(var(--font-multiplier) * 1.1rem);
 	filter: invert(.6);
 	padding:0px 0px 0px 0px;
 }
 
 footer > .index {
-	grid-area: span 1 / span 4;
+	grid-area: span 1 / span 8;
 }
 
 footer > .brands {
-	grid-area: span 2 / span 5;
+	grid-area: span 1 / span 6;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
 	padding: 1vh 2vw 1vh 2vw;
@@ -636,7 +655,7 @@ footer > .brands {
 .tile-gallery {
 	display: grid;
 	grid-column: 1 / -1;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 3vw;
 }
 
@@ -724,7 +743,7 @@ footer > .brands {
 
 @media all and (max-width: 1200px) {
 	.tile-gallery {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 	}
 	.tile-gallery > a {
 		height: 75vh;
