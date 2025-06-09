@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Display a map</title>
-    <meta property="og:description" content="Initialize a map in an HTML element with MapLibre GL JS." />
+    <title>Display GeoJSON Ateliers with Clipped Logos and On-Hover Popup</title>
+    <meta property="og:description" content="Load and display GeoJSON atelier data with custom logos clipped to a circle and on-hover popups." />
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.5.0/dist/maplibre-gl.css' />
@@ -10,17 +10,143 @@
     <style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; }
+
+        /* CSS for the custom marker element */
+        .atelier-marker {
+            display: block;
+            /* Make it a circle */
+            border-radius: 50%;
+            /* Ensure background image covers and is centered */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Add a border for visual appeal, optional */
+            border: 1px solid #ffffff; /* White border around the circle */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Subtle shadow */
+            cursor: pointer;
+            /* Initial size - adjust as needed, can be overridden per marker */
+            width: 40px; /* Default width */
+            height: 40px; /* Default height */
+        }
+
+        /* Style for the popup content */
+        .maplibregl-popup-content {
+            font-family: 'Open Sans Semibold', 'Arial Unicode MS Bold';
+            font-size: 12px;
+            padding: 8px 12px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
 <div id="map"></div>
 <script>
     const map = new maplibregl.Map({
-        container: 'map', // container id
-        style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json', // style URL
-        center: [-73.5683148,45.5048116], // starting position [lng, lat]
-        zoom: 12, // starting zoom
+        container: 'map',
+        style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+        center: [-73.5683148,45.5048116], // Centered on Montreal
+        zoom: 12,
         maplibreLogo: false
+    });
+
+    const geojsonUrl = '/_data/ateliers.json'; // Your local GeoJSON file path
+
+    map.on('load', async () => {
+        let ateliersData;
+        try {
+            const response = await fetch(geojsonUrl);
+            ateliersData = await response.json();
+            console.log('GeoJSON data loaded successfully:', ateliersData);
+        } catch (error) {
+            console.error('Error fetching or parsing GeoJSON data:', error);
+            map.once('idle', () => {
+                const errorMessageDiv = document.createElement('div');
+                errorMessageDiv.style.cssText = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: rgba(255, 0, 0, 0.7);
+                    color: white;
+                    padding: 15px;
+                    border-radius: 5px;
+                    z-index: 1000;
+                    text-align: center;
+                `;
+                errorMessageDiv.innerHTML = `
+                    <h3>Error loading map data!</h3>
+                    <p>Please check your network connection or the GeoJSON file path.</p>
+                    <p>Console for details: ${error.message}</p>
+                `;
+                map.getContainer().appendChild(errorMessageDiv);
+            });
+            return;
+        }
+
+        // Create a single popup instance outside the loop
+        const popup = new maplibregl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            offset: 25 // Offset popup from the marker, adjust as needed
+        });
+
+        // Add markers to the map for each atelier feature
+        ateliersData.features.forEach((feature) => {
+            if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.logo_path) {
+                // Create a DOM element for the marker
+                const el = document.createElement('div');
+                el.className = 'atelier-marker'; // Apply our custom CSS class
+
+                // Set the background image to the logo path
+                el.style.backgroundImage = `url(${feature.properties.logo_path})`;
+
+                // You can also set dynamic sizes if your GeoJSON has a size property
+                // For now, using fixed size from CSS or setting here:
+                const markerSize = 50; // Pixels
+                el.style.width = `${markerSize}px`;
+                el.style.height = `${markerSize}px`;
+
+                // Create the MapLibre GL JS marker
+                const marker = new maplibregl.Marker({
+                    element: el,
+                    anchor: 'center' // Anchor the marker element's center to the point coordinates
+                })
+                .setLngLat(feature.geometry.coordinates)
+                .addTo(map);
+
+                // --- Event listeners for the popup on this specific marker element ---
+                el.addEventListener('mouseenter', () => {
+                    map.getCanvas().style.cursor = 'pointer';
+
+                    const coordinates = feature.geometry.coordinates.slice();
+                    const nom = feature.properties.nom;
+
+                    // Ensure coordinates wrap correctly for global maps
+                    while (Math.abs(map.getCenter().lng - coordinates[0]) > 180) {
+                        coordinates[0] += map.getCenter().lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    popup.setLngLat(coordinates)
+                        .setHTML(`<strong>${nom}</strong>`)
+                        .addTo(map);
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    map.getCanvas().style.cursor = '';
+                    popup.remove();
+                });
+            } else {
+                console.warn('Skipping feature due to missing geometry or logo_path:', feature);
+            }
+        });
+
+        // No need for addLayer calls for 'atelier-points', 'atelier-logos', 'atelier-background-circles'
+        // or 'atelier-labels' if you are using custom HTML markers for everything.
+        // If you still want text labels, you would need to either:
+        // 1. Incorporate text directly into the marker HTML (more complex, requires careful styling)
+        // 2. Or revert to using a separate symbol layer just for labels (and remove the 'text-field' from the marker layer).
+        // For simplicity, I've removed the text labels here.
+        // If you want text labels WITH these custom HTML markers, let me know, and we can adjust.
     });
 </script>
 </body>

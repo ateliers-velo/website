@@ -67,7 +67,7 @@ const fs = require("fs");
 module.exports = async function (eleventyConfig) {
   const { EleventyHtmlBasePlugin } = await import("@11ty/eleventy");
   eleventyConfig.addGlobalData("eleventyComputed", eleventyComputed);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  //eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   // This is the part that tells 11ty to swap to our custom config
@@ -87,6 +87,7 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/imgs/");//add folders to public
   eleventyConfig.addPassthroughCopy("src/attachments/");
+  eleventyConfig.addPassthroughCopy("src/_data/ateliers.json");
   eleventyConfig.addPassthroughCopy("src/js/");
   eleventyConfig.addPassthroughCopy("CNAME");
   //eleventyConfig.addPassthroughCopy({ "content/index.en.md": "/index.md" });

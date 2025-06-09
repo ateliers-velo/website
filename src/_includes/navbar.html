@@ -1,6 +1,8 @@
 
 <div class="nav-items">
-    
+    <div class="title">
+        <header><a href="/{{ lang }}/">🍑🍑</a></header>
+    </div>
     {% for p in collections.all %}
         {% if p.data.tags and p.data.tags.includes('nav-items') %}
             {% if p.data.lang == lang %}
@@ -33,13 +35,4 @@
         {% endif %}
     {% endfor %}
     {% include 'lang-switcher.html' %}
-    <div id="light-toggle">
-        <div class="icon" id="light">
-            {% include 'hanging_light.svg' %}
-        </div>
-    </div>
-</div>
-
-<div class="title">
-    <header><a href="/{{ lang }}/">🍑🍑</a></header>
 </div>
