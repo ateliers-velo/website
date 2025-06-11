@@ -679,7 +679,7 @@ footer > .brands {
 	display: grid;
 	grid-column: 1 / -1;
 	/*grid-template-columns: repeat(3, 1fr);*/
-	grid-gap: 6vw;
+	grid-gap: 4vw;
 	grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(200px, 1fr);
 	margin: 2vw;
@@ -687,7 +687,7 @@ footer > .brands {
 
 .tile-gallery > a {
 	text-decoration: none;
-	height: 50vh;
+	height: 46vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -770,7 +770,7 @@ footer > .brands {
 
 @media all and (max-width: 1400px) {
 	.tile-gallery > a {
-		height: 45vh;
+		height: 40vh;
 	}
 }
 @media all and (max-width: 1200px) {
