@@ -587,12 +587,13 @@ footer {
 	place-items: stretch stretch;
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(auto-fill, 1fr);
-	margin-top: 20vh;
+	margin-top: 10vh;
 	padding: 2vh 2vw 2vh 2vw;
 }
 
 footer.grid-container {
 	grid-row-gap: 1vh;
+	padding-top: 6vh;
 }
 
 footer ul {
@@ -661,7 +662,6 @@ footer > .brands {
 	grid-area: span 1 / span 6;
 	display: grid;
 	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
-	padding: 1vh 2vw 1vh 2vw;
 }
 
 .brands > div {
@@ -679,14 +679,15 @@ footer > .brands {
 	display: grid;
 	grid-column: 1 / -1;
 	/*grid-template-columns: repeat(3, 1fr);*/
-	grid-gap: 3vw;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 6vw;
+	grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(200px, 1fr);
+	margin: 2vw;
 }
 
 .tile-gallery > a {
 	text-decoration: none;
-	height: 45vh;
+	height: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -767,13 +768,17 @@ footer > .brands {
 
 /** Mobile CSS **/
 
-
+@media all and (max-width: 1400px) {
+	.tile-gallery > a {
+		height: 45vh;
+	}
+}
 @media all and (max-width: 1200px) {
 	.tile-gallery {
-		/*grid-template-columns: repeat(2, 1fr);*/
+		grid-template-columns: repeat(2, 1fr);
 	}
 	.tile-gallery > a {
-		height: 75vh;
+		height: 55vh;
 	}
 }
 @media all and (max-width: 1000px) {
@@ -850,8 +855,11 @@ footer > .brands {
 		grid-column: 1 / -1;
 		padding: 2vh 0 2vh 0;
 	}
+	.tile-gallery {
+		grid-template-columns: repeat(1, 1fr);
+	}
 	.tile-gallery > a {
-		height: 55vh;
+		height: 70vh;
 	}
 	video {
 		width: 100%;
