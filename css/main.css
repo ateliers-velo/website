@@ -687,7 +687,6 @@ footer > .brands {
 
 .tile-gallery > a {
 	text-decoration: none;
-	height: 46vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -768,17 +767,9 @@ footer > .brands {
 
 /** Mobile CSS **/
 
-@media all and (max-width: 1400px) {
-	.tile-gallery > a {
-		height: 40vh;
-	}
-}
 @media all and (max-width: 1200px) {
 	.tile-gallery {
 		grid-template-columns: repeat(2, 1fr);
-	}
-	.tile-gallery > a {
-		height: 55vh;
 	}
 }
 @media all and (max-width: 1000px) {
@@ -857,9 +848,6 @@ footer > .brands {
 	}
 	.tile-gallery {
 		grid-template-columns: repeat(1, 1fr);
-	}
-	.tile-gallery > a {
-		height: 70vh;
 	}
 	video {
 		width: 100%;
