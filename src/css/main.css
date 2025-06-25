@@ -94,6 +94,8 @@ td {
 	border: 1px solid var(--main-text-color); /* Blue border for all cell sides */
 	padding: 8px;
 	text-align: left;
+	color: var(--main-text-color);
+	font-family: var(--main-font);
 }
 
 button {
