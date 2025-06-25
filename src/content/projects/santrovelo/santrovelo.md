@@ -29,11 +29,12 @@ Depuis 1996 au Santropol Roulant
 
 ## Horaire🔧🧑‍🔧
 
-[SUR RÉSERVATION](https://santrovelo.square.site/)
-*Il faut aller sur leur site pour vous réserver une plage horaire.
+[SUR RÉSERVATION](https://santrovelo.square.site/): *Il faut aller sur leur site pour vous réserver une plage horaire.*
 
-- Mardi : 17h - 19h30
-- Mercredi : 17h - 19h30
+|        |          |
+| :-------- | :------------ |
+| Mardi     | 17h - 19h30   |
+| Mercredi  | 17h - 19h30   |
 <!-- Why is this not a visual Monday to Friday scheduele, I find a schedule easier to read. GABA-->
 
 ## Cout en libre service🔧
@@ -54,11 +55,15 @@ Par carte, en ligne, et comptant
 - 🔎 Passez par l’allée sur la rue Roy à l’est de l’immeuble, l’accès est au fond de l’immeuble. Interdiction de passer par l’entrée principale (salubrité des lieux). 
 
 ## Nous rejoindre
+
 - 📨  santrovelo@santropolroulant.org
 - 📞  514-284-9335
 
 ## Nos Médias
-- [SITE](https://santropolroulant.org/fr/quest-ce-que-le-roulant/des-collectifs/santrovelo-2/) - [FB](https://www.facebook.com/SantroVelo/) - [IG](https://www.instagram.com/santrovelo/)
+
+- [SITE](https://santropolroulant.org/fr/quest-ce-que-le-roulant/des-collectifs/santrovelo-2/)
+- [FB](https://www.facebook.com/SantroVelo/)
+- [IG](https://www.instagram.com/santrovelo/)
 
 <!-- The emoji vs point form was worst here with the facebook and instagram icons missing. It looks terrible. Its unclear what is clickable.. GABA -->
 
