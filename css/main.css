@@ -76,7 +76,7 @@ li {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	line-height: 3rem;
+	line-height: 1.5em;
 	font-weight: normal;
 	padding:0px 0px 15px 20px;
 	text-wrap: wrap;
@@ -84,6 +84,16 @@ li {
 
 li a {
 	font-size: calc(var(--font-multiplier) * 1.2rem);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid var(--main-text-color); /* Blue border for all cell sides */
+	padding: 8px;
+	text-align: left;
 }
 
 button {
