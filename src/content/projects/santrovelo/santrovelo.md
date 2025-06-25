@@ -17,7 +17,7 @@ Every one of these sections could be cube or in a large Table, the same squares 
 
 Depuis 1996 au Santropol Roulant
 
-*Les ateliers de vélo communautaires sont précaires en ressources humaines et matériels. Assurez-vous de vérifier les détails de leurs horaires, procédures, méthodes de paiement etc.
+*Les ateliers de vélo communautaires sont précaires en ressources humaines et matériels. Assurez-vous de vérifier les détails de leurs horaires, procédures, méthodes de paiement etc.*
 
 ## Services
 
@@ -29,7 +29,7 @@ Depuis 1996 au Santropol Roulant
 
 ## Horaire🔧🧑‍🔧
 
-[SUR RÉSERVATION] (https://santrovelo.square.site/)
+[SUR RÉSERVATION](https://santrovelo.square.site/)
 *Il faut aller sur leur site pour vous réserver une plage horaire.
 
 - Mardi : 17h - 19h30
