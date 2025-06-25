@@ -382,7 +382,7 @@ p {
 }
 
 .content > ul {
-	list-style-type: "+";
+	list-style-type: "‣ ";
 	list-style-position: inside;
 }
 
