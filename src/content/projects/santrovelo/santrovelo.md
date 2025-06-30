@@ -10,12 +10,14 @@ cost: "7 per hour"
 payment-methods: "Card / Cash"
 date: 2023-08-10 # YYYY-MM-DD, oldest appears first in tile-gallery
 ---
+<!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
+Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->
 
 # Santrovélo
 
 Depuis 1996 au Santropol Roulant
 
-Les ateliers de vélo communautaires sont précaires en ressources humaines et matériels. Assurez-vous de vérifier les détails de leurs horaires, procédures, méthodes de paiement etc.
+*Les ateliers de vélo communautaires sont précaires en ressources humaines et matériels. Assurez-vous de vérifier les détails de leurs horaires, procédures, méthodes de paiement etc.*
 
 ## Services
 
@@ -23,13 +25,17 @@ Les ateliers de vélo communautaires sont précaires en ressources humaines et m
 - ❄️ Ouvert à l'année longue
 - ⚧️ Soirée mixité-choisie - dernier samedi du mois: 13h-16h
 - 🧑‍🔧 Service disponible (pas libre/ pas DIY)
+<!-- We can use the emoijis OR we use point form, but both look wierd. I was using the icons to represent service vs DIY. We might have to find a different way to do that. GABA-->
 
 ## Horaire🔧🧑‍🔧
 
-SUR RÉSERVATION [ICI](https://santrovelo.square.site/)
+[SUR RÉSERVATION](https://santrovelo.square.site/): *Il faut aller sur leur site pour vous réserver une plage horaire.*
 
-- Mardi : 17h - 19h30
-- Mercredi : 17h - 19h30
+|        |          |
+| :-------- | :------------ |
+| Mardi     | 17h - 19h30   |
+| Mercredi  | 17h - 19h30   |
+<!-- Why is this not a visual Monday to Friday scheduele, I find a schedule easier to read. GABA-->
 
 ## Cout en libre service🔧
 
@@ -50,11 +56,16 @@ Par carte, en ligne, et comptant
 
 ## Nous rejoindre
 
-- 🌐  [Site web](https://santropolroulant.org/fr/quest-ce-que-le-roulant/des-collectifs/santrovelo-2/)
-- [FB](https://www.facebook.com/SantroVelo/)
-- [IG](https://www.instagram.com/santrovelo/)
 - 📨  santrovelo@santropolroulant.org
 - 📞  514-284-9335
+
+## Nos Médias
+
+- [SITE](https://santropolroulant.org/fr/quest-ce-que-le-roulant/des-collectifs/santrovelo-2/)
+- [FB](https://www.facebook.com/SantroVelo/)
+- [IG](https://www.instagram.com/santrovelo/)
+
+<!-- The emoji vs point form was worst here with the facebook and instagram icons missing. It looks terrible. Its unclear what is clickable.. GABA -->
 
 ## Devenez bénévole
 

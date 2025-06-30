@@ -76,14 +76,28 @@ li {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	line-height: 2.4rem;
 	font-weight: normal;
-	padding:0px 0px 0px 0px;
-	text-wrap: nowrap;
+	padding:0px 0px 15px 20px;
+	text-wrap: wrap;
+	line-height: calc(var(--font-multiplier) * 1.5rem);
 }
 
 li a {
 	font-size: calc(var(--font-multiplier) * 1.2rem);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid var(--main-text-color); /* Blue border for all cell sides */
+	padding: 8px;
+	text-align: left;
+	color: var(--main-text-color);
+	font-family: var(--main-font);
+	font-size: calc(var(--font-multiplier) * 1.2rem);
+	line-height: calc(var(--font-multiplier) * 1.5rem);
 }
 
 button {
@@ -382,7 +396,7 @@ p {
 }
 
 .content > ul {
-	list-style-type: "+";
+	list-style-type: "‣ ";
 	list-style-position: inside;
 }
 
@@ -687,7 +701,6 @@ footer > .brands {
 
 .tile-gallery > a {
 	text-decoration: none;
-	height: 46vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -768,17 +781,9 @@ footer > .brands {
 
 /** Mobile CSS **/
 
-@media all and (max-width: 1400px) {
-	.tile-gallery > a {
-		height: 40vh;
-	}
-}
 @media all and (max-width: 1200px) {
 	.tile-gallery {
 		grid-template-columns: repeat(2, 1fr);
-	}
-	.tile-gallery > a {
-		height: 55vh;
 	}
 }
 @media all and (max-width: 1000px) {
@@ -857,9 +862,6 @@ footer > .brands {
 	}
 	.tile-gallery {
 		grid-template-columns: repeat(1, 1fr);
-	}
-	.tile-gallery > a {
-		height: 70vh;
 	}
 	video {
 		width: 100%;
