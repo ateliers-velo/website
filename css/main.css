@@ -330,7 +330,7 @@ p {
 	grid-row-gap: var(--content-gap);
 	column-gap: 3vw;
 	/**/
-	border-width: 2px 2px 2px 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	border-style: dashed;
 	border-color: var(--hover-bg-color);
@@ -528,6 +528,8 @@ header a {
 	font-size: calc(var(--font-multiplier) * 1.1rem);
 	color: var(--button-color);
 	text-transform: uppercase;
+	border-radius: 5px;
+	border: 1px dashed var(--no-color);
 }
 
 .nav-items > a, .nav-items > .lang-selector a[href] {
@@ -563,10 +565,11 @@ footer .lang-selector a {
 .nav-items > a[href]:hover, .nav-items > .lang-selector a[href]:hover {
 	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
-	outline: .5px dash var(--hover-color);
+	/*outline: .5px dash var(--hover-color);*/
 	/*border-radius: calc(var(--font-multiplier) * 1.2rem);*/
+	border: dashed 1px var(--hover-bg-color);
 	box-sizing: border-box;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-out;
 }
 
 .nav-item svg {

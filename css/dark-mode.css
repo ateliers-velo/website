@@ -17,4 +17,5 @@
 	--default-item-color: rgb(200,200,200);
   	--active-color: #ffdda2;
   	--inactive-color: #c40000;
+	--no-color: rgba(255, 255, 255, 0);
 }
