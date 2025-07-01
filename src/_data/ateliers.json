@@ -10,7 +10,7 @@
     { "type": "Feature", "properties": { "nom": "Cycle 7", "logo_path": "/imgs/atelier-logos/BB_C7.png" }, "geometry": { "type": "Point", "coordinates": [ -73.55248265, 45.48111285 ] } },
     { "type": "Feature", "properties": { "nom": "Right to Move / La Voie Libre", "logo_path": "/imgs/atelier-logos/BB_RTM_LVL.png" }, "geometry": { "type": "Point", "coordinates": [ -73.57941043, 45.49761647 ] } },
     { "type": "Feature", "properties": { "nom": "Atelier Culture Vélo", "logo_path": "/imgs/atelier-logos/BB_ACV.png" }, "geometry": { "type": "Point", "coordinates": [ -73.63084125, 45.53506429 ] } },
-    { "type": "Feature", "properties": { "nom": "BQAM-E", "logo_path": "/imgs/atelier-logos/BB_BQAME.png" }, "geometry": { "type": "Point", "coordinates": [ -73.57001538, 45.50981 ] } },
+    { "type": "Feature", "properties": { "nom": "BQAM-E", "logo_path": "/imgs/atelier-logos/BB_BQAME.png", "url": "/fr/projects/BQAME" },"geometry": { "type": "Point", "coordinates": [ -73.57001538, 45.50981 ] } },
     { "type": "Feature", "properties": { "nom": "Santrovélo", "logo_path": "/imgs/atelier-logos/BB_Santrovelo.png", "url": "/fr/projects/santrovelo" }, "geometry": { "type": "Point", "coordinates": [ -73.57521853, 45.51668767 ] } },
     { "type": "Feature", "properties": { "nom": "La Remise", "logo_path": "/imgs/atelier-logos/BB_REMISE.png" }, "geometry": { "type": "Point", "coordinates": [ -73.60156388, 45.53746646 ] } },
     { "type": "Feature", "properties": { "nom": "La Grande Roue", "logo_path": "/imgs/atelier-logos/BB_GR.png" }, "geometry": { "type": "Point", "coordinates": [ -73.60078297, 45.56242496 ] } },
