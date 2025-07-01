@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c40402-16ab-4812-8442-812b52c6128a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_layouts/atelier.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/dark-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/dark-mode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/projects/atelier2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/light-mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/light-mode.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1745517361645</updated>
       <workItem from="1745517363231" duration="8428000" />
-      <workItem from="1751243078233" duration="1695000" />
+      <workItem from="1751243078233" duration="9331000" />
     </task>
     <servers />
   </component>
