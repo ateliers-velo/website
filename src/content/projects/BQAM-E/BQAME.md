@@ -1,14 +1,14 @@
 ---
 title: "BQAM-E"
-img: 'https://santropolroulant.org/wp-content/uploads/2015/07/santrovelo-200x200.jpg' # '/imgs/browse-heritage.png'
+img: 'https://bqam-e.org/wp-content/uploads/2023/01/output-17.jpg' # '/imgs/browse-heritage.png'
 logo: "/imgs/atelier-logos/BB_BQAME.png"
-description: "Projet pour BQAM-E"
-location: [ -73.57521853, 45.51668767 ]
-schedule: "Mondays, Sundays, Thursdays"
+description: "groupe etudiante de UQAM"
+location: [-73.57001538, 45.50981]
+schedule: "Mondays, Tuesdays, Wednesdays, Thursdays, Sundays"
 public: "all"
-cost: "7 per hour"
+cost: "free"
 payment-methods: "Card / Cash"
-date: 2023-08-10 # YYYY-MM-DD, oldest appears first in tile-gallery
+date: 2023-08-11 # YYYY-MM-DD, oldest appears first in tile-gallery
 ---
 <!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
 Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->
