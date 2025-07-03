@@ -555,6 +555,10 @@ header a {
 	line-height: 4vh;
 }
 
+ .nav-items > .lang-selector a[href]:hover {
+	 text-decoration: underline;
+ }
+
 .lang-selector {
 	height: 4vh;
 }
@@ -567,14 +571,15 @@ footer .lang-selector a {
 	line-height: 4vh;
 }
 
-.nav-items > a[href]:hover, .nav-items > .lang-selector a[href]:hover {
+.nav-items > a[href]:hover {
 	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
 	/*outline: .5px dash var(--hover-color);*/
 	/*border-radius: calc(var(--font-multiplier) * 1.2rem);*/
 	border: dashed 1px var(--hover-bg-color);
 	box-sizing: border-box;
-	transition: all 0.3s ease-out;
+	border-radius: calc(var(--font-multiplier) * .4rem);
+	transition: all 0.1s ease-out;
 }
 
 .nav-item svg {
