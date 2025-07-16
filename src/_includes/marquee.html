@@ -1,6 +1,59 @@
-  <head>
+  <!-- It doesn't work and it makes me sad :(
+Shit I have tried: 
+
+import "./main.css"; 
+
+ <head>
       <link rel="stylesheet" href="main.css">
   </head>
+
+Before copying the CSS in the file, see below, but it still doesn't work at all
+I am clearly missing something and I can't see it or figure it out - Gaba --> 
+
+<style>
+  .fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
+}
+
+.wrapper {
+  padding: 4rem 1px;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+}
+
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 40s) linear infinite
+    var(--direction, forwards);
+}
+
+.marquee-text-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
+
+
+
     <div className="wrapper">
       <div className="marquee-text fadeout-horizontal">
                <div 
