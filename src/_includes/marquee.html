@@ -1,4 +1,48 @@
-import "./css/main.css";
+<style>
+    .fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
+}
+
+.center-content {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  padding: 4rem 1px;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+}
+
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 40s) linear infinite
+    var(--direction, forwards);
+}
+
+
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
     <div className="center-content">
       <div className="wrapper">
         <div className="marquee-text fadeout-horizontal">
