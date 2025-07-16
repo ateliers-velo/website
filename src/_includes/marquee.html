@@ -60,7 +60,14 @@ Best - Gaba -->
  
 <div className="wrapper">
   <div className="marquee-text fadeout-horizontal">
-      <div className="marquee-text-track">
+      <div 
+        style={
+            {
+              "--direction": "reverse",
+              "--speed": "20s",
+            } as React.CSSProperties
+          }
+        className="marquee-text-track">
           <p>🍑🍑</p>
           <p>BUM-BUM</p>
           <p>🍑🍑</p>
