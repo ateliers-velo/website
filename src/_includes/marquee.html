@@ -1,4 +1,23 @@
- <link rel='stylesheet' href='./main.css'/>
+ <style>
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 40s) linear infinite
+    var(--direction, forwards);
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
     <div className="center-content">
       <div className="wrapper">
         <div className="marquee-text fadeout-horizontal">
