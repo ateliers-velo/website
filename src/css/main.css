@@ -619,12 +619,6 @@ footer ul svg {
   );
 }
 
-.center-content {
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-}
-
 .wrapper {
   padding: 4rem 1px;
   width: 100%;
@@ -645,7 +639,9 @@ footer ul svg {
     var(--direction, forwards);
 }
 
-
+.marquee-text-track:hover {
+  animation-play-state: paused;
+}
 
 @keyframes marquee-move-text {
   to {
