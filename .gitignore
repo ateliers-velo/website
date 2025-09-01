@@ -8,3 +8,7 @@
 # Visual Studio Code
 /.vscode
 .history
+
+# MacOS
+.DS_Store
+
