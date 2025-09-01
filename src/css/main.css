@@ -171,6 +171,10 @@ figcaption {
 				 }
 /* body */
 
+.logo-banner	{
+	
+}
+
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
@@ -330,7 +334,7 @@ p {
 	grid-row-gap: var(--content-gap);
 	column-gap: 3vw;
 	/**/
-	border-width: 2px 2px 2px 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	border-style: dashed;
 	border-color: var(--hover-bg-color);
@@ -414,7 +418,7 @@ p {
 /* header */
 
 .title {
-	grid-area: span 1 / span 8;
+	grid-area: span 8 / span 1;
 	text-align: center;
 }
 
@@ -428,6 +432,7 @@ header {
 	color: var(--nav-title-color);
 	calc(var(--font-multiplier) * 2.4rem)
 	font-weight: bold;
+	font-size: calc(var(--font-multiplier) * 1.5em);
 	margin: 0px 0px 0px 0px;
 	text-decoration: none;
 }
@@ -528,6 +533,8 @@ header a {
 	font-size: calc(var(--font-multiplier) * 1.1rem);
 	color: var(--button-color);
 	text-transform: uppercase;
+	border-radius: 5px;
+	border: 1px dashed var(--no-color);
 }
 
 .nav-items > a, .nav-items > .lang-selector a[href] {
@@ -548,6 +555,10 @@ header a {
 	line-height: 4vh;
 }
 
+ .nav-items > .lang-selector a[href]:hover {
+	 text-decoration: underline;
+ }
+
 .lang-selector {
 	height: 4vh;
 }
@@ -560,13 +571,15 @@ footer .lang-selector a {
 	line-height: 4vh;
 }
 
-.nav-items > a[href]:hover, .nav-items > .lang-selector a[href]:hover {
+.nav-items > a[href]:hover {
 	/* background-color: var(--hover-bg-color); */
 	color:  var(--hover-color);
-	outline: .5px solid var(--hover-color);
-	border-radius: calc(var(--font-multiplier) * 1.2rem);
+	/*outline: .5px dash var(--hover-color);*/
+	/*border-radius: calc(var(--font-multiplier) * 1.2rem);*/
+	border: dashed 1px var(--hover-bg-color);
 	box-sizing: border-box;
-	transition: all 0.3s ease-in-out;
+	border-radius: calc(var(--font-multiplier) * .4rem);
+	transition: all 0.1s ease-out;
 }
 
 .nav-item svg {
@@ -591,6 +604,51 @@ footer ul svg {
 	box-sizing: border-box;
 	place-items: center;
 }
+
+
+
+/* marquee */
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
+}
+
+.wrapper {
+  padding: 4rem 1px;
+  width: 100%;
+  color: white;
+  font-size: 2rem;
+}
+
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 40s) linear infinite
+    var(--direction, forwards);
+}
+
+.marquee-text-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
 /* footer */
 

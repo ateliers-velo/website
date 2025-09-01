@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="ltr">
+{% include 'head.html' %}
+<body>
+<div class='grid-container'>
+    {% set landingpage = true %}
+    {% include 'navbar.html' %}
+    <!-- Added square div here -->
+    </div>
+    <div class="content">
+        {{ content | main | safe }}
+    </div>
+</div>
+{% include 'footer.html' %}
+</body>
+
+</html>

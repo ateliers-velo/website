@@ -2,9 +2,15 @@
 <html lang="{{ lang }}" dir="ltr">
 	{% include 'head.html' %}
 	<body>
+
 		<div class='grid-container'>
+<!--			<div class="logo-banner">-->
+<!--				{% set landingpage = true %}-->
+<!--				{% include 'logo-banner.html' %}-->
+<!--			</div>-->
 			{% set landingpage = true %}
 			{% include 'navbar.html' %}
+			{% include 'marquee.html' %}
 			<!-- Added square div here -->
 			<div id="map-container">
 				{% include 'map.html' %}
