@@ -330,7 +330,7 @@ p {
 	grid-column: 1 / -1;
 	scroll-behavior: smooth;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(25vw, max-content));
+	grid-template-columns: repeat(2, minmax(25vw, min-content));
 	grid-row-gap: var(--content-gap);
 	column-gap: 3vw;
 	/**/
@@ -681,7 +681,6 @@ footer ul li {
 	margin: 0;
 	padding: 0 0 0 0;
 	display: block;
-	width: 15vw;
 	height: 2.2rem;
 	overflow-wrap: break-word;
 	text-align: left;
@@ -704,6 +703,14 @@ footer li a {
 	font-size: calc(var(--font-multiplier) * 1.3rem);
 	color: var(--link-color);
 	text-decoration: none;
+}
+
+footer li a.index-items {
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
+	width: 20vw;
 }
 
 footer a[href]:hover {
