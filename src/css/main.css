@@ -643,6 +643,11 @@ footer ul svg {
     var(--direction, forwards);
 }
 
+.marquee-text-track > p {
+  font-size: calc(var(--font-multiplier) * 2rem);
+  line-height: calc(var(--font-multiplier) * 2rem);
+}
+
 .marquee-text-track:hover {
   animation-play-state: paused;
 }
@@ -818,10 +823,17 @@ footer > .brands {
 	grid-column: span 2;
 }
 
+.content p {
+	grid-column: span 2;
+}
+
 /* posts */
 
-.date {
-	text-align: left;
+.content .date {
+	font-family: 'Courier New', Courier, monospace;
+	justify-self: end;
+  	text-align: right;
+	font-size: .9rem
 }
 
 .post-content {

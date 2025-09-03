@@ -9,9 +9,9 @@
 				<!--{% include 'list-index-pages.html' %}-->
 			</div>
 			<div class="content">
-				<p class="date">{{ date }}</p>
 				<h1>{{ title }}</h1>
 				{{ content | main | safe }}
+				<p class="date">{{ date | formatDate }}</p>
 			</div>
 			<!--
 			<div class="note2">

@@ -1,6 +1,4 @@
 ---
 layout: 'landing.html'
-title: "Home"
+title: "Accueil"
 ---
-
-
