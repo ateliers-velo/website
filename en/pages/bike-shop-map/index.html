@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en" dir="ltr">
 	<head>    
     <meta charset="UTF-8">
-    <title>Bécyks Unis Montréal | À propos</title>
+    <title>Bikes Unite Montreal | Bike Shop Map</title>
 
     
-        <meta name="description" content="Réseau des ateliers vélo communautaires de Montréal">
+        <meta name="description" content="Montreal Community Bike Shop Network">
     
     <link rel="shortcut icon" href="/mtl-avc-reseau/imgs/peach-emoji.ico" type="image/x-icon">
     <link id="theme-style" rel="stylesheet" type="text/css" href="/mtl-avc-reseau/css/dark-mode.css">
@@ -26,7 +26,7 @@
 			
 <div class="nav-items">
     <div class="title">
-        <header><a href="/mtl-avc-reseau/fr/">🍑🍑</a></header>
+        <header><a href="/mtl-avc-reseau/en/">🍑🍑</a></header>
     </div>
     
         
@@ -36,21 +36,17 @@
         
             
                 
-                <a class="nav-item" href="/mtl-avc-reseau/en/mission/" style="font-style: italic;">
+                <a class="nav-item" href="/mtl-avc-reseau/en/mission/">
                     Mission
                 </a>
-                    
-            
-        
-    
-        
+                
             
         
     
         
             
                 
-                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/contact/">
+                <a class="nav-item" href="/mtl-avc-reseau/en/pages/contact/">
                     Contact
                 </a>
                 
@@ -58,34 +54,6 @@
         
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-        
-    
-        
-            
-                
-                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/ateliers/">
-                    Ateliers
-                </a>
-                
             
         
     
@@ -105,19 +73,13 @@
     
         
     
-        
-    
-        
-    
-        
-            
         
     
         
             
                 
-                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/a-propos/">
-                    À propos
+                <a class="nav-item" href="/mtl-avc-reseau/en/pages/shops/">
+                    Shops
                 </a>
                 
             
@@ -128,12 +90,50 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             
                 
-                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/evenements-and-actualites/">
-                    Événements & Actualités
+                <a class="nav-item" href="/mtl-avc-reseau/en/pages/about/">
+                    About
                 </a>
                 
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                
+                <a class="nav-item" href="/mtl-avc-reseau/en/pages/news-and-events/">
+                    News & Events
+                </a>
+                
+            
+        
+    
+        
             
         
     
@@ -144,13 +144,6 @@
     <div class="lang-selector">
     
         
-            <a>fr</a>
-        
-        
-            <a>|</a>
-        
-    
-        
             
                 
                 
@@ -167,47 +160,7 @@
                     
                 
                     
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        <a href="/mtl-avc-reseau/en/pages/about/">en</a>
+                        <a href="/mtl-avc-reseau/fr/pages/carte-des-ateliers/">fr</a>
                         
                     
                 
@@ -221,8 +174,55 @@
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                 
             
+        
+        
+            <a>|</a>
+        
+    
+        
+            <a>en</a>
         
         
     
@@ -230,9 +230,149 @@
 </div>
 
 			<div class="content">
-				<p>Nous voulons etre des BUMs
-comme vous</p>
-
+				<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display GeoJSON Ateliers with Clipped Logos and On-Hover Popup</title>
+    <meta property="og:description" content="Load and display GeoJSON atelier data with custom logos clipped to a circle and on-hover popups.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.5.0/dist/maplibre-gl.css">
+    <script src="https://unpkg.com/maplibre-gl@5.5.0/dist/maplibre-gl.js"></script>
+    <style>
+        #map { height: 100%; }
+<p>/* Outer wrapper: positioned by MapLibre */
+.atelier-marker-wrapper {
+width: 40px;
+height: 40px;
+position: absolute;
+z-index: 0;
+}</p>
+<p>/* Inner circle that grows */
+.atelier-marker {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+border: 1px solid #ffffff;
+box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+cursor: pointer;
+transition: transform 0.12s ease-in-out;
+transform-origin: center center;
+}</p>
+<p>/* Style for the popup content */
+.maplibregl-popup-content {
+font-family: 'Courier New', Courier, monospace;
+font-size: 1rem;
+padding: 8px 12px;
+color: #333;
+outline-color: #333;
+outline-width: 1px;
+outline-style: solid;
+background-color: rgba(255, 255, 255, 0.9);
+}
+.maplibregl-popup-tip {
+display: none;
+}</p>
+<p></style><p></p>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    const map = new maplibregl.Map({
+        container: 'map',
+        style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+        center: [-73.5783148,45.5048116], // Centered on Montreal
+        zoom: 12,
+        minZoom: 11,
+        maxZoom: 16,
+        maxBounds: [
+            [-73.97503664228385, 45.38248151412239], // Southwest coordinates (longitude, latitude)
+            [-73.34553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
+    ], 
+        maplibreLogo: false
+    });
+    let popupTimeout;
+<p>const PATH_PREFIX = '/mtl-avc-reseau/';
+const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json';</p>
+<p>map.on('load', async () =&gt; {
+let ateliersData;
+try {
+const response = await fetch(geojsonUrl);
+ateliersData = await response.json();
+console.log('GeoJSON data loaded successfully:', ateliersData);
+} catch (error) {
+console.error('Error fetching or parsing GeoJSON data:', error);
+map.once('idle', () =&gt; {
+const errorMessageDiv = document.createElement('div');
+errorMessageDiv.style.cssText = <code>                    position: absolute;                     top: 50%;                     left: 50%;                     transform: translate(-50%, -50%);                     background-color: rgba(255, 0, 0, 0.7);                     color: white;                     padding: 15px;                     border-radius: 5px;                     z-index: 1000;                     text-align: center;                </code>;
+errorMessageDiv.innerHTML = <code>                    &lt;h3&gt;Error loading map data!&lt;/h3&gt;                     &lt;p&gt;Please check your network connection or the GeoJSON file path.&lt;/p&gt;                     &lt;p&gt;Console for details: ${error.message}&lt;/p&gt;                </code>;
+map.getContainer().appendChild(errorMessageDiv);
+});
+return;
+}</p>
+<p>const popup = new maplibregl.Popup({
+closeButton: false,
+closeOnClick: false,
+offset: 60
+});</p>
+<p>const initialMarkerSize = 60; // Base size of the marker in pixels
+const scaleFactor = 1.8;       // How much to scale on hover (e.g., 2 for double)</p>
+<p>ateliersData.features.forEach((feature) =&gt; {
+if (feature.geometry &amp;&amp; feature.geometry.type === 'Point' &amp;&amp; feature.properties &amp;&amp; feature.properties.nom &amp;&amp; feature.properties.logo_path) {</p>
+<p>const el = document.createElement('div');
+el.className = 'atelier-marker-wrapper'; // outer wrapper</p>
+<p>const inner = document.createElement('div');
+inner.className = 'atelier-marker'; // inner element that gets scaled
+inner.style.backgroundImage = <code>url(${PATH_PREFIX + feature.properties.logo_path})</code>;</p>
+<p>el.appendChild(inner); // nest the image inside the wrapper</p>
+<p>el.style.width = <code>${initialMarkerSize}px</code>;
+el.style.height = <code>${initialMarkerSize}px</code>;</p>
+<p>// Set initial transform to ensure it starts at scale 1, and ensure z-index
+el.style.transform = 'scale(1)';
+el.style.zIndex = '0'; // Default z-index</p>
+<p>const marker = new maplibregl.Marker({
+element: el,
+anchor: 'center' // This is crucial for MapLibre to position the DOM element's center correctly
+})
+.setLngLat(feature.geometry.coordinates)
+.addTo(map);</p>
+<p>// --- MODIFIED Event listeners for popup AND scale effect ---
+el.addEventListener('mouseenter', () =&gt; {
+map.getCanvas().style.cursor = 'pointer';
+inner.style.transform = <code>scale(${scaleFactor})</code>;
+el.style.zIndex = '10';</p>
+<p>// Delay popup appearance
+popupTimeout = setTimeout(() =&gt; {
+popup.setLngLat(feature.geometry.coordinates)
+.setHTML(<code>&lt;strong&gt;${feature.properties.nom}&lt;/strong&gt;</code>)
+.addTo(map);
+}, 100); // 200ms = same as your CSS transition time
+});</p>
+<p>el.addEventListener('mouseleave', () =&gt; {
+map.getCanvas().style.cursor = '';
+inner.style.transform = 'scale(1)';
+el.style.zIndex = '0';</p>
+<p>clearTimeout(popupTimeout); // Cancel if still waiting
+popup.remove();
+});</p>
+<p>// --- END MODIFIED ---</p>
+<p>// Add click event to open the URL in a new tab
+el.addEventListener('click', () =&gt; {
+if (feature.properties.url) {
+window.location.href = PATH_PREFIX + feature.properties.url;
+}
+});</p>
+<p>} else {
+console.warn('Skipping feature due to missing geometry, nom, or logo_path:', feature);
+}
+});
+});
+</script><p></p>
+</body>
+</html>
 			</div>
 			<!--
 			<div class="note2">
@@ -249,13 +389,6 @@ comme vous</p>
                 <div class="lang-selector">
     
         
-            <a>fr</a>
-        
-        
-            <a>|</a>
-        
-    
-        
             
                 
                 
@@ -272,47 +405,7 @@ comme vous</p>
                     
                 
                     
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        <a href="/mtl-avc-reseau/en/pages/about/">en</a>
+                        <a href="/mtl-avc-reseau/fr/pages/carte-des-ateliers/">fr</a>
                         
                     
                 
@@ -326,8 +419,55 @@ comme vous</p>
                 
                     
                 
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                 
             
+        
+        
+            <a>|</a>
+        
+    
+        
+            <a>en</a>
         
         
     
@@ -340,13 +480,21 @@ comme vous</p>
     
         
         <li>
-            <a href="https://fediwall.social/?servers=fosstodon.org,mstdn.games,me.dm,litmind.club,mastodon.london,infosec.exchange,brands.town,handmade.social,toot.community,cupoftea.social,musician.social,universeodon.com,mastodon.social,historians.social,graphics.social,oldbytes.space,mastodonapp.uk,hachyderm.io,mas.to,layer8.space,pythonist.as,bitbang.social,mstdn.social,mastodon.sdf.org,discuss.systems,genart.social,gamepad.club,chaos.social,octodon.social,techhub.social,ohai.social,strangeobject.space,vis.social,social.lol,floss.social,mastodon.art,mozilla.social,social.bbc,linuxrocks.online,ubuntu.social,mapstodon.space,masto.bike,mobiliteactive.org,climatejustice.social,yeg.bike,kolektiva.social,mstdn.ca,framapiaf.org&amp;tags=BikeTooter,fahrrad,fedibikes,v%C3%A9lo,criticalmass&amp;accounts=fedibikes@a.gup.pe,mastobikes@a.gup.pe&amp;theme=auto&amp;interval=20" target="_blank" style="font-style: italic;" class="index-items">
+            <a href="https://fediwall.social/?servers=fosstodon.org,mstdn.games,me.dm,litmind.club,mastodon.london,infosec.exchange,brands.town,handmade.social,toot.community,cupoftea.social,musician.social,universeodon.com,mastodon.social,historians.social,graphics.social,oldbytes.space,mastodonapp.uk,hachyderm.io,mas.to,layer8.space,pythonist.as,bitbang.social,mstdn.social,mastodon.sdf.org,discuss.systems,genart.social,gamepad.club,chaos.social,octodon.social,techhub.social,ohai.social,strangeobject.space,vis.social,social.lol,floss.social,mastodon.art,mozilla.social,social.bbc,linuxrocks.online,ubuntu.social,mapstodon.space,masto.bike,mobiliteactive.org,climatejustice.social,yeg.bike,kolektiva.social,mstdn.ca,framapiaf.org&amp;tags=BikeTooter,fahrrad,fedibikes,v%C3%A9lo,criticalmass&amp;accounts=fedibikes@a.gup.pe,mastobikes@a.gup.pe&amp;theme=auto&amp;interval=20" target="_blank" class="index-items">
                 Fediwall
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </a>
         </li>
+        
+    
+
+
+
+    
+        
+        <li><a href="/mtl-avc-reseau/fr/archives/" style="font-style: italic;" class="index-items">Archives</a></li>
             
     
 
@@ -354,7 +502,7 @@ comme vous</p>
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/archives/" class="index-items">Archives</a></li>
+        <li><a href="/mtl-avc-reseau/en/mission/" class="index-items">Mission</a></li>
         
     
 
@@ -362,19 +510,7 @@ comme vous</p>
 
     
         
-        <li><a href="/mtl-avc-reseau/en/mission/" style="font-style: italic;" class="index-items">Mission</a></li>
-            
-    
-
-
-
-    
-
-
-
-    
-        
-        <li><a href="/mtl-avc-reseau/fr/pages/contact/" class="index-items">Contact</a></li>
+        <li><a href="/mtl-avc-reseau/en/pages/contact/" class="index-items">Contact</a></li>
         
     
 
@@ -386,42 +522,46 @@ comme vous</p>
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/carte-des-ateliers/" class="index-items">Carte des ateliers</a></li>
+        <li><a href="/mtl-avc-reseau/en/pages/bike-shop-map/" class="index-items">Bike Shop Map</a></li>
         
     
 
 
 
-
-
-
-
-
-
-
-
-    
-
-
-
-    
-        
-        <li><a href="/mtl-avc-reseau/fr/pages/services-publiques-de-reparation/" class="index-items">Services publiques de réparation</a></li>
-        
     
 
 
 
 
 
-    
+
+
+
 
 
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/ateliers/" class="index-items">Ateliers</a></li>
+        <li><a href="/mtl-avc-reseau/en/pages/public-bike-repair-infra/" class="index-items">Public bike repair infra</a></li>
         
+    
+
+
+
+    
+
+
+
+
+
+    
+        
+        <li><a href="/mtl-avc-reseau/en/pages/shops/" class="index-items">Shops</a></li>
+        
+    
+
+
+
     
 
 
@@ -447,25 +587,21 @@ comme vous</p>
     
         
         <li>
-            <a href="https://bumbike.wordpress.com/" target="_blank" style="font-style: italic;" class="index-items">
+            <a href="https://bumbike.wordpress.com/" target="_blank" class="index-items">
                 Liam's list
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </a>
         </li>
-            
-    
-
-
-
+        
     
 
 
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/a-propos/" class="index-items">À propos</a></li>
+        <li><a href="/mtl-avc-reseau/en/pages/about/" class="index-items">About</a></li>
         
     
 
@@ -477,8 +613,12 @@ comme vous</p>
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/evenements-and-actualites/" class="index-items">Événements & Actualités</a></li>
+        <li><a href="/mtl-avc-reseau/en/pages/news-and-events/" class="index-items">News & Events</a></li>
         
+    
+
+
+
     
 
 
@@ -486,14 +626,14 @@ comme vous</p>
     
         
         <li>
-            <a href="https://wiki.bqam-e.org" target="_blank" class="index-items">
+            <a href="https://wiki.bqam-e.org" target="_blank" style="font-style: italic;" class="index-items">
                 Wiki de BQAM-E
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </a>
         </li>
-        
+            
     
 
 
@@ -501,14 +641,14 @@ comme vous</p>
     
         
         <li>
-            <a href="https://wikidespossibles.org" target="_blank" class="index-items">
+            <a href="https://wikidespossibles.org" target="_blank" style="font-style: italic;" class="index-items">
                 Wiki des possibles
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
                 </svg>
             </a>
         </li>
-        
+            
     
 
 

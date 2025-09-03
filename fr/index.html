@@ -23,18 +23,12 @@
 	<body>
 
 		<div class="grid-container">
-<!--			<div class="logo-banner">-->
-<!--				-->
-<!--				-->
-<!--			</div>-->
 			
 			
 <div class="nav-items">
     <div class="title">
         <header><a href="/mtl-avc-reseau/fr/">🍑🍑</a></header>
     </div>
-    
-        
     
         
     
@@ -52,12 +46,26 @@
     
         
             
+        
+    
+        
+            
                 
-                <a class="nav-item" href="/mtl-avc-reseau/en/contact/" style="font-style: italic;">
+                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/contact/">
                     Contact
                 </a>
-                    
+                
             
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
         
@@ -97,6 +105,12 @@
         
     
         
+    
+        
+    
+        
+    
+        
             
         
     
@@ -117,29 +131,11 @@
         
             
                 
-                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/actualites/">
-                    Actualités
+                <a class="nav-item" href="/mtl-avc-reseau/fr/pages/evenements-and-actualites/">
+                    Événements & Actualités
                 </a>
                 
             
-        
-    
-        
-            
-        
-    
-        
-            
-                
-                <a class="nav-item" href="/mtl-avc-reseau/fr/calendrier/">
-                    Calendrier
-                </a>
-                
-            
-        
-    
-        
-    
         
     
         
@@ -184,87 +180,63 @@ Please let me know:
 
 Best - Gaba --> 
 
-<style>
-  .fadeout-horizontal {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 5rem,
-    black calc(100% - 5rem),
-    transparent
-  );
-}
-
-.wrapper {
-  padding: 4rem 1px;
-  width: 100%;
-  color: white;
-  font-size: 2rem;
-}
-
-.marquee-text {
-  overflow: clip;
-}
-
-.marquee-text-track {
-  display: flex;
-  padding-left: 4.8rem;
-  gap: 4.8rem;
-  width: max-content;
-  animation: marquee-move-text var(--speed, 40s) linear infinite
-    var(--direction, forwards);
-}
-
-.marquee-text-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee-move-text {
-  to {
-    transform: translateX(-50%);
-  }
-}
-</style>
  
-<div className="wrapper">
-  <div className="marquee-text fadeout-horizontal">
-      <div style="{" {="" "--direction":="" "reverse",="" "--speed":="" "20s",="" }="" as="" React.CSSProperties="" className="marquee-text-track">
-          <p>🍑🍑</p>
-          <p>BUM-BUM</p>
-          <p>🍑🍑</p>
-          <p>Bécks Unis Montréal - Bikes Unite Montreal</p>
-          <p aria-hidden="true">🍑🍑</p>
-          <p aria-hidden="true">BUM-BUM</p>
-          <p aria-hidden="true">🍑🍑</p>
-          <p aria-hidden="true">Bécks Unis Montréal - Bikes Unite Montreal </p>          
-        </div>
-      </div>
-      <div className="marquee-text fadeout-horizontal">
-        <div style="{" {="" "--direction":="" "forwards",="" "--speed":="" "20s",="" }="" as="" React.CSSProperties="" className="marquee-text-track">
-          <p>PROCHAIN RÉUNION - NEXT MEETING: 2025/07/14/18h/Immeuble Greenpeace Building</p>
-          <p>🚲</p>
-          <p>BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
-          <p>🚲</p>                
-          <p aria-hidden="true">PROCHAIN RÉUNION - NEXT MEETING: 2025/07/14/18h/Immeuble Greenpeace Building</p>
-          <p aria-hidden="true">🚲</p>
-          <p aria-hidden="true">BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
-          <p aria-hidden="true">🚲</p>                      
-        </div>
-       </div> 
-     <div className="marquee-text fadeout-horizontal">   
-      <div style="{" {="" "--direction":="" "reverse",="" "--speed":="" "20s",="" }="" as="" React.CSSProperties="" className="marquee-text-track">
-          <p>🔧</p>
-          <p>Réseau des ateliers vélo communautaires de Montréal</p>
-          <p>🔧</p>
-          <p>Montreal Community Bike Shop Network</p>
-          <p aria-hidden="true">🔧</p>
-          <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
-          <p aria-hidden="true">🔧</p>
-          <p aria-hidden="true">Montreal Community Bike Shop Network</p>          
-      </div>
+<!--
+Hi Gaba,
+
+Here's what was wrong and how I fixed it:
+
+1. The file was using React/JSX syntax (className, JS style objects, etc.), but this is a plain HTML file for Eleventy/static site, not a React app. Browsers don't understand JSX.
+2. I replaced all `className` with `class` (standard HTML).
+3. I replaced the JS style objects with valid inline CSS using the `style` attribute, e.g.:
+     style="--direction: reverse; --speed: 20s;"
+4. Now the CSS custom properties (variables) are set correctly for each marquee track.
+5. This should now work as intended, as long as the file is included in a page and the CSS is present (which it is, since it's in a <style> block at the top).
+
+How I figured it out: Browsers only understand HTML, not JSX. If you see curly braces, className, or JS objects in a .html file, that's a sign it was copied from a React/JSX context. Just use standard HTML attributes.
+
+Let me know if you need more help!
+-->
+<div class="marquee-detached">
+  <div class="marquee-wrapper">
+    <div class="marquee-text fadeout-horizontal">
+      <div class="marquee-text-track" style="--direction: reverse; --speed: 20s;">
+        <p>🍑🍑</p>
+        <p>BUM-BUM</p>
+        <p>🍑🍑</p>
+        <p>Bécyks Unis Montréal - Bikes Unite Montreal</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">BUM-BUM</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">Bécyks Unis Montréal - Bikes Unite Montreal </p>
       </div>
     </div>
-
+    <div class="marquee-text fadeout-horizontal">
+      <div class="marquee-text-track" style="--direction: forwards; --speed: 20s;">
+        <p>PROCHAINE RÉUNION - NEXT MEETING: 2025/09/12/18h/Immeuble Greenpeace Building</p>
+        <p>🚲</p>
+        <p>BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
+        <p>🚲</p>
+        <p aria-hidden="true">PROCHAINE RÉUNION - NEXT MEETING: 2025/09/12/18h/Immeuble Greenpeace Building</p>
+        <p aria-hidden="true">🚲</p>
+        <p aria-hidden="true">BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
+        <p aria-hidden="true">🚲</p>
+      </div>
+    </div>
+    <div class="marquee-text fadeout-horizontal">
+      <div class="marquee-text-track" style="--direction: reverse; --speed: 20s;">
+        <p>🔧</p>
+        <p>Réseau des ateliers vélo communautaires de Montréal</p>
+        <p>🔧</p>
+        <p>Montreal Community Bike Shop Network</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Montreal Community Bike Shop Network</p>
+      </div>
+    </div>
+  </div>
+</div>
 			<!-- Added square div here -->
 			<div id="map-container">
 				<!DOCTYPE html>
@@ -450,8 +422,7 @@ Best - Gaba -->
 </html>
 			</div>
 			<div id="landing-content" class="vertical-centre">
-				<p>Bienvenue au site web BUMBUM !</p>
-
+				
 			</div>
 			
     
@@ -462,14 +433,12 @@ Best - Gaba -->
                 
                     
                     <!-- mtl-avc-reseau prefix only for GITHUB PAGES -->
-                    <div class="content" onclick="window.location.href='/mtl-avc-reseau/fr/pages/actualites';" style="cursor: pointer;">
-                        <p class="date">2025-07-16</p>
-                        <h1>post3</h1>
+                    <div class="content" onclick="window.location.href='/mtl-avc-reseau/fr/pages/evenements-and-actualites';" style="cursor: pointer;">
+                        <p class="date">2025-09-03</p>
+                        <h1>PROCHAINE RÉUNION - NEXT MEETING</h1>
                         
-                            <div class="heading-wrapper h1">
-<h1 id="alllooo">Alllooo!!!</h1>
-<a class="anchor" href="#alllooo" aria-labelledby="alllooo"><span hidden="">#</span></a></div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. [...]</p>
+                            <p>2025-09-12 à 18h aux bureaux de Greenpeace (454 Laurier Ave E)</p>
+
                         
                     </div>
                 <!-- if viewed from anywhere else (i.e. news page), show all -->
@@ -483,143 +452,10 @@ Best - Gaba -->
     
         
     
-
-
-			<div id="gallery-content">
-				<script async="" type="text/javascript" src="/mtl-avc-reseau/js/tile-gallery.js" defer=""></script>
-
-<div class="tile-gallery">
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    
         
-        <a href="/mtl-avc-reseau/fr/projects/santrovelo/">
-        
-            
-            <div class="zoom-in" style="background-image: url('https://santropolroulant.org/wp-content/uploads/2015/07/santrovelo-200x200.jpg');">
-            
-                <div>
-                    <h1>Santrovélo</h1>
-                    
-                    <p>Santrovélo</p>
-                    
-                </div>
-            </div>
-        </a>
     
 
 
-
-    
-
-
-
-    
-        
-        <a href="/mtl-avc-reseau/fr/projects/bqam-e/">
-        
-            
-            <div class="zoom-in" style="background-image: url('https://bqam-e.org/wp-content/uploads/2023/01/output-17.jpg');">
-            
-                <div>
-                    <h1>BQAM-E</h1>
-                    
-                    <p>groupe etudiante de UQAM</p>
-                    
-                </div>
-            </div>
-        </a>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-        
-        <a href="/mtl-avc-reseau/fr/tetes-de-rayon/">
-        
-            
-            <div class="zoom-in" style="background-image: url('https://solon-collectif.org/media/pages/projets/tetes-de-rayon/02229e4144-1739219224/atelier-tetes-de-rayon_solon_2024_3-1920x-q80.webp');">
-            
-                <div>
-                    <h1>Têtes de rayon</h1>
-                    
-                    <p></p>
-                    
-                </div>
-            </div>
-        </a>
-    
-
-
-
-    
-        
-        <a href="/mtl-avc-reseau/fr/atelier4/">
-        
-            
-            <div class="zoom-in" style="background-image: url('/imgs/black.png');">
-            
-                <div>
-                    <h1>atelier4</h1>
-                    
-                    <p></p>
-                    
-                </div>
-            </div>
-        </a>
-    
-
-
-</div>
-			</div>
 		</div>
 		<footer class="grid-container add-padding">
     <div class="index">
@@ -650,7 +486,7 @@ Best - Gaba -->
     
         
         <li>
-            <a href="https://fediwall.social/?servers=fosstodon.org,mstdn.games,me.dm,litmind.club,mastodon.london,infosec.exchange,brands.town,handmade.social,toot.community,cupoftea.social,musician.social,universeodon.com,mastodon.social,historians.social,graphics.social,oldbytes.space,mastodonapp.uk,hachyderm.io,mas.to,layer8.space,pythonist.as,bitbang.social,mstdn.social,mastodon.sdf.org,discuss.systems,genart.social,gamepad.club,chaos.social,octodon.social,techhub.social,ohai.social,strangeobject.space,vis.social,social.lol,floss.social,mastodon.art,mozilla.social,social.bbc,linuxrocks.online,ubuntu.social,mapstodon.space,masto.bike,mobiliteactive.org,climatejustice.social,yeg.bike,kolektiva.social,mstdn.ca,framapiaf.org&amp;tags=BikeTooter,fahrrad,fedibikes,v%C3%A9lo,criticalmass&amp;accounts=fedibikes@a.gup.pe,mastobikes@a.gup.pe&amp;theme=auto&amp;interval=20" target="_blank" style="font-style: italic;">
+            <a href="https://fediwall.social/?servers=fosstodon.org,mstdn.games,me.dm,litmind.club,mastodon.london,infosec.exchange,brands.town,handmade.social,toot.community,cupoftea.social,musician.social,universeodon.com,mastodon.social,historians.social,graphics.social,oldbytes.space,mastodonapp.uk,hachyderm.io,mas.to,layer8.space,pythonist.as,bitbang.social,mstdn.social,mastodon.sdf.org,discuss.systems,genart.social,gamepad.club,chaos.social,octodon.social,techhub.social,ohai.social,strangeobject.space,vis.social,social.lol,floss.social,mastodon.art,mozilla.social,social.bbc,linuxrocks.online,ubuntu.social,mapstodon.space,masto.bike,mobiliteactive.org,climatejustice.social,yeg.bike,kolektiva.social,mstdn.ca,framapiaf.org&amp;tags=BikeTooter,fahrrad,fedibikes,v%C3%A9lo,criticalmass&amp;accounts=fedibikes@a.gup.pe,mastobikes@a.gup.pe&amp;theme=auto&amp;interval=20" target="_blank" style="font-style: italic;" class="index-items">
                 Fediwall
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
@@ -664,41 +500,29 @@ Best - Gaba -->
 
     
         
-        <li><a href="/mtl-avc-reseau/en/open-data/" style="font-style: italic;">Open Data</a></li>
+        <li><a href="/mtl-avc-reseau/fr/archives/" class="index-items">Archives</a></li>
+        
+    
+
+
+
+    
+        
+        <li><a href="/mtl-avc-reseau/en/mission/" style="font-style: italic;" class="index-items">Mission</a></li>
             
     
 
 
 
     
-        
-        <li><a href="/mtl-avc-reseau/fr/archives/">Archives</a></li>
-        
-    
 
 
 
     
         
-        <li><a href="/mtl-avc-reseau/en/mission/" style="font-style: italic;">Mission</a></li>
-            
-    
-
-
-
-    
+        <li><a href="/mtl-avc-reseau/fr/pages/contact/" class="index-items">Contact</a></li>
         
-        <li><a href="/mtl-avc-reseau/en/contact/" style="font-style: italic;">Contact</a></li>
-            
     
-
-
-
-
-
-
-
-
 
 
 
@@ -708,9 +532,49 @@ Best - Gaba -->
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/ateliers/">Ateliers</a></li>
+        <li><a href="/mtl-avc-reseau/fr/pages/carte-des-ateliers/" class="index-items">Carte des ateliers</a></li>
         
     
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+        
+        <li><a href="/mtl-avc-reseau/fr/pages/services-publiques-de-reparation/" class="index-items">Services publiques de réparation</a></li>
+        
+    
+
+
+
+
+
+    
+
+
+
+    
+        
+        <li><a href="/mtl-avc-reseau/fr/pages/ateliers/" class="index-items">Ateliers</a></li>
+        
+    
+
+
+
+
+
+
 
 
 
@@ -729,7 +593,7 @@ Best - Gaba -->
     
         
         <li>
-            <a href="https://bumbike.wordpress.com/" target="_blank" style="font-style: italic;">
+            <a href="https://bumbike.wordpress.com/" target="_blank" style="font-style: italic;" class="index-items">
                 Liam's list
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
@@ -747,7 +611,7 @@ Best - Gaba -->
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/a-propos/">À propos</a></li>
+        <li><a href="/mtl-avc-reseau/fr/pages/a-propos/" class="index-items">À propos</a></li>
         
     
 
@@ -759,19 +623,7 @@ Best - Gaba -->
 
     
         
-        <li><a href="/mtl-avc-reseau/fr/pages/actualites/">Actualités</a></li>
-        
-    
-
-
-
-    
-
-
-
-    
-        
-        <li><a href="/mtl-avc-reseau/fr/calendrier/">Calendrier</a></li>
+        <li><a href="/mtl-avc-reseau/fr/pages/evenements-and-actualites/" class="index-items">Événements & Actualités</a></li>
         
     
 
@@ -780,7 +632,7 @@ Best - Gaba -->
     
         
         <li>
-            <a href="https://wiki.bqam-e.org" target="_blank">
+            <a href="https://wiki.bqam-e.org" target="_blank" class="index-items">
                 Wiki de BQAM-E
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
@@ -795,7 +647,7 @@ Best - Gaba -->
     
         
         <li>
-            <a href="https://wikidespossibles.org" target="_blank">
+            <a href="https://wikidespossibles.org" target="_blank" class="index-items">
                 Wiki des possibles
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 2C2.44772 2 2 2.44772 2 3V12C2 12.5523 2.44772 13 3 13H12C12.5523 13 13 12.5523 13 12V8.5C13 8.22386 12.7761 8 12.5 8C12.2239 8 12 8.22386 12 8.5V12H3V3L6.5 3C6.77614 3 7 2.77614 7 2.5C7 2.22386 6.77614 2 6.5 2H3ZM12.8536 2.14645C12.9015 2.19439 12.9377 2.24964 12.9621 2.30861C12.9861 2.36669 12.9996 2.4303 13 2.497L13 2.5V2.50049V5.5C13 5.77614 12.7761 6 12.5 6C12.2239 6 12 5.77614 12 5.5V3.70711L6.85355 8.85355C6.65829 9.04882 6.34171 9.04882 6.14645 8.85355C5.95118 8.65829 5.95118 8.34171 6.14645 8.14645L11.2929 3H9.5C9.22386 3 9 2.77614 9 2.5C9 2.22386 9.22386 2 9.5 2H12.4999H12.5C12.5678 2 12.6324 2.01349 12.6914 2.03794C12.7504 2.06234 12.8056 2.09851 12.8536 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path>
@@ -804,10 +656,6 @@ Best - Gaba -->
         </li>
         
     
-
-
-
-
 
 
 </ul>

@@ -330,7 +330,7 @@ p {
 	grid-column: 1 / -1;
 	scroll-behavior: smooth;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(25vw, max-content));
+	grid-template-columns: repeat(2, minmax(25vw, min-content));
 	grid-row-gap: var(--content-gap);
 	column-gap: 3vw;
 	/**/
@@ -608,7 +608,7 @@ footer ul svg {
 
 
 /* marquee */
-
+/*
 .fadeout-horizontal {
   mask-image: linear-gradient(
     to right,
@@ -619,11 +619,16 @@ footer ul svg {
   );
 }
 
-.wrapper {
-  padding: 4rem 1px;
+.marquee-wrapper {
+	padding: 0 1px;
+	width: 100%;
+	color: white;
+	font-size: 2rem;
+}
+*/
+.marquee-detached {
+  grid-column: 1 / -1;
   width: 100%;
-  color: white;
-  font-size: 2rem;
 }
 
 .marquee-text {
@@ -632,7 +637,6 @@ footer ul svg {
 
 .marquee-text-track {
   display: flex;
-  padding-left: 4.8rem;
   gap: 4.8rem;
   width: max-content;
   animation: marquee-move-text var(--speed, 40s) linear infinite
@@ -681,7 +685,6 @@ footer ul li {
 	margin: 0;
 	padding: 0 0 0 0;
 	display: block;
-	width: 15vw;
 	height: 2.2rem;
 	overflow-wrap: break-word;
 	text-align: left;
@@ -704,6 +707,14 @@ footer li a {
 	font-size: calc(var(--font-multiplier) * 1.3rem);
 	color: var(--link-color);
 	text-decoration: none;
+}
+
+footer li a.index-items {
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
+	width: 20vw;
 }
 
 footer a[href]:hover {
