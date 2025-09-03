@@ -1,7 +1,15 @@
+@font-face {
+	font-family: 'main font';
+	src: url('./fonts/CreatoDisplay-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 @charset "utf-8";
 
 :root {
 	background-color: var(--main-bg-color);
+	--main-font: monospace, sans-serif;
 }
 
 
@@ -49,7 +57,7 @@ p, ul {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	line-height: calc(var(--font-multiplier) * 1.5rem);
+	line-height: calc(var(--font-multiplier) * 1.7rem);
 	font-weight: normal;
 	padding:0px 0px 0px 0px;
 	margin: 0 0 0 0;
@@ -830,7 +838,7 @@ footer > .brands {
 /* posts */
 
 .content .date {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Courier New', Courier, monospace, sans-serif;
 	justify-self: end;
   	text-align: right;
 	font-size: .9rem

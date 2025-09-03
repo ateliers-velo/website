@@ -89,6 +89,7 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/attachments/");
   eleventyConfig.addPassthroughCopy("src/_data/ateliers.json");
   eleventyConfig.addPassthroughCopy("src/js/");
+  eleventyConfig.addPassthroughCopy("src/css/fonts/");
   eleventyConfig.addPassthroughCopy("CNAME");
   //eleventyConfig.addPassthroughCopy({ "content/index.en.md": "/index.md" });
   
