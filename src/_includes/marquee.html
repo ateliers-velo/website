@@ -17,104 +17,69 @@ Please let me know:
 
 Best - Gaba --> 
 
-<style>
-  .fadeout-horizontal {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 5rem,
-    black calc(100% - 5rem),
-    transparent
-  );
-}
-
-.wrapper {
-  padding: 4rem 1px;
-  width: 100%;
-  color: white;
-  font-size: 2rem;
-}
-
-.marquee-text {
-  overflow: clip;
-}
-
-.marquee-text-track {
-  display: flex;
-  padding-left: 4.8rem;
-  gap: 4.8rem;
-  width: max-content;
-  animation: marquee-move-text var(--speed, 40s) linear infinite
-    var(--direction, forwards);
-}
-
-.marquee-text-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marquee-move-text {
-  to {
-    transform: translateX(-50%);
-  }
-}
-</style>
  
-<div className="wrapper">
-  <div className="marquee-text fadeout-horizontal">
+<!--
+Hi Gaba,
+
+Here's what was wrong and how I fixed it:
+
+1. The file was using React/JSX syntax (className, JS style objects, etc.), but this is a plain HTML file for Eleventy/static site, not a React app. Browsers don't understand JSX.
+2. I replaced all `className` with `class` (standard HTML).
+3. I replaced the JS style objects with valid inline CSS using the `style` attribute, e.g.:
+     style="--direction: reverse; --speed: 20s;"
+4. Now the CSS custom properties (variables) are set correctly for each marquee track.
+5. This should now work as intended, as long as the file is included in a page and the CSS is present (which it is, since it's in a <style> block at the top).
+
+How I figured it out: Browsers only understand HTML, not JSX. If you see curly braces, className, or JS objects in a .html file, that's a sign it was copied from a React/JSX context. Just use standard HTML attributes.
+
+Let me know if you need more help!
+-->
+<div class="marquee-detached">
+  <div class="marquee-wrapper">
+    <div class="marquee-text fadeout-horizontal">
       <div 
-        style={
-            {
-              "--direction": "reverse",
-              "--speed": "20s",
-            } as React.CSSProperties
-          }
-        className="marquee-text-track">
-          <p>🍑🍑</p>
-          <p>BUM-BUM</p>
-          <p>🍑🍑</p>
-          <p>Bécks Unis Montréal - Bikes Unite Montreal</p>
-          <p aria-hidden="true">🍑🍑</p>
-          <p aria-hidden="true">BUM-BUM</p>
-          <p aria-hidden="true" >🍑🍑</p>
-          <p aria-hidden="true">Bécks Unis Montréal - Bikes Unite Montreal </p>          
-        </div>
-      </div>
-      <div className="marquee-text fadeout-horizontal">
-        <div
-           style={
-            {
-              "--direction": "forwards",
-              "--speed": "20s",
-            } as React.CSSProperties
-          }
-          className="marquee-text-track">
-          <p>PROCHAIN RÉUNION - NEXT MEETING: 2025/07/14/18h/Immeuble Greenpeace Building</p>
-          <p>🚲</p>
-          <p>BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
-          <p>🚲</p>                
-          <p aria-hidden="true">PROCHAIN RÉUNION - NEXT MEETING: 2025/07/14/18h/Immeuble Greenpeace Building</p>
-          <p aria-hidden="true">🚲</p>
-          <p aria-hidden="true">BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
-          <p aria-hidden="true">🚲</p>                      
-        </div>
-       </div> 
-     <div className="marquee-text fadeout-horizontal">   
-      <div 
-        style={
-            {
-              "--direction": "reverse",
-              "--speed": "20s",
-            } as React.CSSProperties
-          }
-        className="marquee-text-track">
-          <p>🔧</p>
-          <p>Réseau des ateliers vélo communautaires de Montréal</p>
-          <p>🔧</p>
-          <p>Montreal Community Bike Shop Network</p>
-          <p aria-hidden="true">🔧</p>
-          <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
-          <p aria-hidden="true" >🔧</p>
-          <p aria-hidden="true">Montreal Community Bike Shop Network</p>          
-      </div>
+        class="marquee-text-track"
+        style="--direction: reverse; --speed: 20s;"
+      >
+        <p>🍑🍑</p>
+        <p>BUM-BUM</p>
+        <p>🍑🍑</p>
+        <p>Bécyks Unis Montréal - Bikes Unite Montreal</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">BUM-BUM</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">Bécyks Unis Montréal - Bikes Unite Montreal </p>
       </div>
     </div>
+    <div class="marquee-text fadeout-horizontal">
+      <div
+        class="marquee-text-track"
+        style="--direction: forwards; --speed: 20s;"
+      >
+        <p>PROCHAINE RÉUNION - NEXT MEETING: 2025/09/12/18h/Immeuble Greenpeace Building</p>
+        <p>🚲</p>
+        <p>BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
+        <p>🚲</p>
+        <p aria-hidden="true">PROCHAINE RÉUNION - NEXT MEETING: 2025/09/12/18h/Immeuble Greenpeace Building</p>
+        <p aria-hidden="true">🚲</p>
+        <p aria-hidden="true">BALADE DE BUM - BUM'A'RIDE: 2025/07/01/17h/Tourne à Gauche</p>
+        <p aria-hidden="true">🚲</p>
+      </div>
+    </div>
+    <div class="marquee-text fadeout-horizontal">
+      <div
+        class="marquee-text-track"
+        style="--direction: reverse; --speed: 20s;"
+      >
+        <p>🔧</p>
+        <p>Réseau des ateliers vélo communautaires de Montréal</p>
+        <p>🔧</p>
+        <p>Montreal Community Bike Shop Network</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Montreal Community Bike Shop Network</p>
+      </div>
+    </div>
+  </div>
+</div>

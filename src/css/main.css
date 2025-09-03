@@ -608,7 +608,7 @@ footer ul svg {
 
 
 /* marquee */
-
+/*
 .fadeout-horizontal {
   mask-image: linear-gradient(
     to right,
@@ -619,11 +619,16 @@ footer ul svg {
   );
 }
 
-.wrapper {
-  padding: 4rem 1px;
+.marquee-wrapper {
+	padding: 0 1px;
+	width: 100%;
+	color: white;
+	font-size: 2rem;
+}
+*/
+.marquee-detached {
+  grid-column: 1 / -1;
   width: 100%;
-  color: white;
-  font-size: 2rem;
 }
 
 .marquee-text {
@@ -632,7 +637,6 @@ footer ul svg {
 
 .marquee-text-track {
   display: flex;
-  padding-left: 4.8rem;
   gap: 4.8rem;
   width: max-content;
   animation: marquee-move-text var(--speed, 40s) linear infinite

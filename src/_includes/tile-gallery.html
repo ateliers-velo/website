@@ -2,7 +2,7 @@
 
 <div class="tile-gallery">
 {% for p in collections.all %}
-{% if p.data.tags and p.data.tags.includes('projects') %}
+{% if p.data.tags and p.data.tags.includes('ateliers') %}
     {% if p.data.lang == lang or (p.data.lang != lang and p.data.translationKey == false) %}
         {% if p.data.redirect %}
         <a href="{{ p.data.redirect }}" target="_blank">

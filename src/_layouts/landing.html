@@ -4,10 +4,6 @@
 	<body>
 
 		<div class='grid-container'>
-<!--			<div class="logo-banner">-->
-<!--				{% set landingpage = true %}-->
-<!--				{% include 'logo-banner.html' %}-->
-<!--			</div>-->
 			{% set landingpage = true %}
 			{% include 'navbar.html' %}
 			{% include 'marquee.html' %}
@@ -19,9 +15,6 @@
 				{{ content | safe }}
 			</div>
 			{% include 'posts.html' %}
-			<div id="gallery-content">
-				{% include 'tile-gallery.html' %}
-			</div>
 		</div>
 		{% include 'footer.html' %}
 	</body>

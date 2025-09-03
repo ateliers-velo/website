@@ -1,15 +1,15 @@
-{% if not collections.post %}
+{% if not collections.posts %}
     <p>No posts to display.</p>
 {% else %}
     {% set firstPostPrinted = false %}
-    {% for post in collections.post | reverse %}
+    {% for post in collections.posts | reverse %}
         {% if not firstPostPrinted %}
             {% if post.data.lang == lang or (post.data.lang != lang and post.data.translationKey == false) %}
                 <!-- if the blogroll is being viewed from landing page, only show latest post -->
                 {% if layout == "landing.html" %}
                     {% set firstPostPrinted = true %}
                     <!-- mtl-avc-reseau prefix only for GITHUB PAGES -->
-                    <div class="content" onclick="window.location.href='/mtl-avc-reseau/fr/pages/actualites';" style="cursor: pointer;">
+                    <div class="content" onclick="window.location.href='/mtl-avc-reseau/fr/pages/evenements-and-actualites';" style="cursor: pointer;">
                         <p class="date">{{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 150 %}
