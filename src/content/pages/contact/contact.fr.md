@@ -10,12 +10,14 @@ Pour tout simplement entrer en contact avec quelqu'un du réseau, envoyez un cou
 
 # 📧 Restez en contact par courriel
 
-Vous pouvez rejoindre le réseau de courriels des ateliers en envoyant un courriel à <a href="mailto:convergence-velo+subscribe@googlegroups.com">convergence-velo+subscribe@googlegroups.com</a> et en répondant au message de réponse automatisé.
+Vous pouvez vous inscrire au réseau courriel des ateliers en envoyant un courriel à <a href="mailto:convergence-velo+subscribe@googlegroups.com">convergence-velo+subscribe@googlegroups.com</a> et en répondant au message de réponse automatisé.
 
-# 💬 Rejoignez le canal de discussion du réseau
+# 💬 Rejoignez le canal de discussion
 
-Pour une participation plus dynamique, rejoignez le serveur Discord du réseau.
+Pour une participation plus dynamique, rejoignez le [serveur Discord](https://discord.gg/Y999xAWAXq).
 
-# 🚲 Impliquez-vous dans un atelier de vélo !
+# 🚲 Impliquez-vous dans un atelier !
 
 Les ateliers de vélo communautaires de Montréal sont toujours à la recherche de nouveaux bénévoles. Impliquez-vous en visitant un atelier près de chez vous !
+
+<img src="/imgs/BIKE_ANIMATION.gif" alt="poster"></img>

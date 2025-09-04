@@ -4,15 +4,14 @@ tags: [nav-items, index-pages]
 title: 'Mission'
 ---
 
-Le réseau promeut les bienfaits du transport actif et désire qu’il soit accessible au plus grand nombre de montréalais-es possible. Selon nous, les **ateliers de vélo communautaires (AVC)** sont essentiels à l’atteinte de cet objectif.
+BUM-BUM promeut les bienfaits du transport actif et désire qu’il soit accessible au plus grand nombre de montréalais-es possible. Selon nous, les **ateliers de vélo communautaires (AVC)** sont essentiels à l’atteinte de cet objectif.
 
 Nous oeuvrons à ce que le réseau des AVC soit :
 
 - **Accessible**, c’est-à-dire gratuit ou à peu de frais, et aussi
 adapté aux différentes capacités physiques ou psychologiques
 des gens qui le fréquentent.
-- **Inclusif**, c’est-à-dire ouvert et soucieux du bien-être des gens
-de toutes identités, provenances, cultures, classes sociales,
+- **Inclusif**, c’est-à-dire ouvert et soucieux du bien-être des gens de toutes identités, provenances, cultures, classes sociales,
 statuts migratoires, et niveaux de familiarité avec la mécanique.
 - **Participatif**, c’est-à-dire qui encourage l’implication des
 personnes usagères dans l’organisation de l’atelier.
