@@ -839,8 +839,6 @@ footer > .brands {
 
 .content .date {
 	font-family: 'Courier New', Courier, monospace, sans-serif;
-	justify-self: end;
-  	text-align: right;
 	font-size: .9rem
 }
 
