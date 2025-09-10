@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('DOM loaded');
     // TEMPORARY FIX ONLY FOR GH PAGES
-    const prefix = "/mtl-avc-reseau"
+    const prefix = "/website"
 
     const light = document.getElementById('light-toggle');
     const navWrapper = document.querySelector('.nav-items');

@@ -8,8 +8,8 @@
                 <!-- if the blogroll is being viewed from landing page, only show latest post -->
                 {% if layout == "landing.html" %}
                     {% set firstPostPrinted = true %}
-                    <!-- mtl-avc-reseau prefix only for GITHUB PAGES -->
-                    <div class="content" onclick="window.location.href='/mtl-avc-reseau/fr/pages/evenements-and-actualites';" style="cursor: pointer;">                        
+                    <!-- website prefix only for GITHUB PAGES -->
+                    <div class="content" onclick="window.location.href='/website/fr/pages/evenements-and-actualites';" style="cursor: pointer;">                        
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 150 %}
                             {{ post.content | safe }}
@@ -20,8 +20,8 @@
                     </div>
                 <!-- if viewed from anywhere else (i.e. news page), show all -->
                 {% else %}
-                    <!-- mtl-avc-reseau prefix only for GITHUB PAGES -->
-                    <div class="content" onclick="window.location.href='/mtl-avc-reseau{{ post.data.permalink }}';">
+                    <!-- website prefix only for GITHUB PAGES -->
+                    <div class="content" onclick="window.location.href='/website{{ post.data.permalink }}';">
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 300 %}
                             {{ post.content | safe }}
