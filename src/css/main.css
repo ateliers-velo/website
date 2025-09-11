@@ -347,7 +347,7 @@ p {
 	border-style: dashed;
 	border-color: var(--hover-bg-color);
 	/*outline-style: solid;*/
-	padding: 2vw 2vw 4vw 2vw;
+	padding: 2vw 2vw 2vw 2vw;
 	margin: auto;
 	outline-color: var(--hover-bg-color);
 }
@@ -408,7 +408,7 @@ p {
 }
 
 .content > ul {
-	list-style-type: "‣ ";
+	list-style-type: "❇ ";
 	list-style-position: inside;
 }
 
@@ -839,7 +839,10 @@ footer > .brands {
 
 .content .date {
 	font-family: 'Courier New', Courier, monospace, sans-serif;
-	font-size: .9rem
+	font-size: 1rem;
+	justify-content: left;
+	display: inherit;
+	padding-top: 0vh;
 }
 
 .post-content {

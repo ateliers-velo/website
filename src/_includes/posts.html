@@ -10,25 +10,25 @@
                     {% set firstPostPrinted = true %}
                     <!-- website prefix only for GITHUB PAGES -->
                     <div class="content" onclick="window.location.href='/website/fr/pages/evenements-and-actualites';" style="cursor: pointer;">                        
+                        <p class="date">✎ {{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 150 %}
                             {{ post.content | safe }}
                         {% else %}
                             {% excerpt post %}
                         {% endif %}
-                        <p class="date">{{ post.date | formatDate }}</p>
                     </div>
                 <!-- if viewed from anywhere else (i.e. news page), show all -->
                 {% else %}
                     <!-- website prefix only for GITHUB PAGES -->
                     <div class="content" onclick="window.location.href='/website{{ post.data.permalink }}';">
+                        <p class="date">✎ {{ post.date | formatDate }}</p>
                         <h1>{{ post.data.title }}</h1>
                         {% if post.content | wordcount < 300 %}
                             {{ post.content | safe }}
                         {% else %}
                             {% excerpt post %}
                         {% endif %}
-                        <p class="date">{{ post.date | formatDate }}</p>
                     </div>
                 {% endif %}
             {% endif %}
