@@ -9,7 +9,7 @@
 				<!--{% include 'list-index-pages.html' %}-->
 			</div>
 			<div class="content">
-				<p class="date">✎ {{ (date or page.date) }}</p>
+				<p class="date">✎ {{ (date or page.date) | formatDate }}</p>
 				<h1>{{ title }}</h1>
 				{{ content | main | safe }}
 			</div>
