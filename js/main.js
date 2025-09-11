@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
     // TEMPORARY FIX ONLY FOR GH PAGES
     const prefix = "/website"
-
+    /*
     const light = document.getElementById('light-toggle');
     const navWrapper = document.querySelector('.nav-items');
 
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         navWrapper.classList.toggle('activated');
     });
-    
+    */
 
     /*
     const open = document.getElementById('open');
