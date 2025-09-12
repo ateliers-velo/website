@@ -123,6 +123,32 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             
                 
                 <a class="nav-item" href="/website/fr/mission/" style="font-style: italic;">
@@ -165,6 +191,32 @@
                     
                         <a href="/website/fr/pages/carte-des-ateliers/">fr</a>
                         
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                     
                 
                     
@@ -400,10 +452,14 @@
 
                         // --- END MODIFIED ---
 
-                        // Add click event to open the URL in a new tab
+                        // Add click event to open the URL in a new tab if it contains 'http', else use PATH_PREFIX
                         el.addEventListener('click', () => {
                             if (feature.properties.url) {
-                                window.location.href = PATH_PREFIX + feature.properties.url;
+                                if (feature.properties.url.includes('http')) {
+                                    window.open(feature.properties.url, '_blank');
+                                } else {
+                                    window.location.href = PATH_PREFIX + feature.properties.url;
+                                }
                             }
                         });
 
@@ -450,6 +506,32 @@
                     
                         <a href="/website/fr/pages/carte-des-ateliers/">fr</a>
                         
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                     
                 
                     
@@ -597,14 +679,6 @@
 
 
 
-
-
-
-
-
-
-
-
     
         
         <li><a href="/website/en/pages/public-bike-repair-infra/" class="index-items">Public bike repair infra</a></li>
@@ -614,6 +688,40 @@
 
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -123,6 +123,32 @@
         
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
             
                 
                 <a class="nav-item" href="/website/fr/mission/">
@@ -170,6 +196,32 @@
                     
                         <a href="/website/en/pages/bike-shop-map/">en</a>
                         
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                     
                 
                     
@@ -399,10 +451,14 @@
 
                         // --- END MODIFIED ---
 
-                        // Add click event to open the URL in a new tab
+                        // Add click event to open the URL in a new tab if it contains 'http', else use PATH_PREFIX
                         el.addEventListener('click', () => {
                             if (feature.properties.url) {
-                                window.location.href = PATH_PREFIX + feature.properties.url;
+                                if (feature.properties.url.includes('http')) {
+                                    window.open(feature.properties.url, '_blank');
+                                } else {
+                                    window.location.href = PATH_PREFIX + feature.properties.url;
+                                }
                             }
                         });
 
@@ -460,6 +516,32 @@
                     
                         <a href="/website/en/pages/bike-shop-map/">en</a>
                         
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
                     
                 
                     
@@ -602,14 +684,6 @@
 
 
 
-
-
-
-
-
-
-
-
     
 
 
@@ -619,6 +693,40 @@
         <li><a href="/website/fr/pages/services-publiques-de-reparation/" class="index-items">Services publiques de réparation</a></li>
         
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
