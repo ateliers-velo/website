@@ -135,14 +135,6 @@ module.exports = function () {
         return data.permalink
       }
     
-    },
-    date: (data) => {
-      // If date is "git Created" and gitCreated is available, use gitCreated
-      if (data.date === "git Created" && data.gitCreated) {
-        return data.gitCreated;
-      }
-      // Otherwise, use the existing date value
-      return data.date;
-    },
+    }
   };
 };
