@@ -307,7 +307,6 @@ Let me know if you need more help!
   </div>
 </div>
 
-			<!-- Added square div here -->
 			<div id="map-container">
 				<!DOCTYPE html>
 <html lang="en">
@@ -362,132 +361,134 @@ Let me know if you need more help!
     </style>
 </head>
 <body>
-<div id="map"></div>
-<script>
-    const map = new maplibregl.Map({
-        container: 'map',
-        style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
-        center: [-73.5783148,45.5048116], // Centered on Montreal
-        zoom: 12,
-        minZoom: 11,
-        maxZoom: 16,
-        maxBounds: [
-            [-73.97503664228385, 45.38248151412239], // Southwest coordinates (longitude, latitude)
-            [-73.34553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
-    ], 
-        maplibreLogo: false
-    });
-    let popupTimeout;
-
-    const PATH_PREFIX = '/website/';
-    const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json';
-
-    map.on('load', async () => {
-        let ateliersData;
-        try {
-            const response = await fetch(geojsonUrl);
-            ateliersData = await response.json();
-            console.log('GeoJSON data loaded successfully:', ateliersData);
-        } catch (error) {
-            console.error('Error fetching or parsing GeoJSON data:', error);
-            map.once('idle', () => {
-                const errorMessageDiv = document.createElement('div');
-                errorMessageDiv.style.cssText = `
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: rgba(255, 0, 0, 0.7);
-                    color: white;
-                    padding: 15px;
-                    border-radius: 5px;
-                    z-index: 1000;
-                    text-align: center;
-                `;
-                errorMessageDiv.innerHTML = `
-                    <h3>Error loading map data!</h3>
-                    <p>Please check your network connection or the GeoJSON file path.</p>
-                    <p>Console for details: ${error.message}</p>
-                `;
-                map.getContainer().appendChild(errorMessageDiv);
+    <div id="map-container">
+        <div id="map"></div>
+        <script>
+            const map = new maplibregl.Map({
+                container: 'map',
+                style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+                center: [-73.5783148,45.5048116], // Centered on Montreal
+                zoom: 12,
+                minZoom: 11,
+                maxZoom: 16,
+                maxBounds: [
+                    [-73.97503664228385, 45.38248151412239], // Southwest coordinates (longitude, latitude)
+                    [-73.34553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
+            ], 
+                maplibreLogo: false
             });
-            return;
-        }
+            let popupTimeout;
 
-        const popup = new maplibregl.Popup({
-            closeButton: false,
-            closeOnClick: false,
-            offset: 60
-        });
+            const PATH_PREFIX = '/website/';
+            const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json';
 
-        const initialMarkerSize = 60; // Base size of the marker in pixels
-        const scaleFactor = 1.8;       // How much to scale on hover (e.g., 2 for double)
+            map.on('load', async () => {
+                let ateliersData;
+                try {
+                    const response = await fetch(geojsonUrl);
+                    ateliersData = await response.json();
+                    console.log('GeoJSON data loaded successfully:', ateliersData);
+                } catch (error) {
+                    console.error('Error fetching or parsing GeoJSON data:', error);
+                    map.once('idle', () => {
+                        const errorMessageDiv = document.createElement('div');
+                        errorMessageDiv.style.cssText = `
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: rgba(255, 0, 0, 0.7);
+                            color: white;
+                            padding: 15px;
+                            border-radius: 5px;
+                            z-index: 1000;
+                            text-align: center;
+                        `;
+                        errorMessageDiv.innerHTML = `
+                            <h3>Error loading map data!</h3>
+                            <p>Please check your network connection or the GeoJSON file path.</p>
+                            <p>Console for details: ${error.message}</p>
+                        `;
+                        map.getContainer().appendChild(errorMessageDiv);
+                    });
+                    return;
+                }
 
-        ateliersData.features.forEach((feature) => {
-            if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.nom && feature.properties.logo_path) {
-                
-                const el = document.createElement('div');
-                el.className = 'atelier-marker-wrapper'; // outer wrapper
-
-                const inner = document.createElement('div');
-                inner.className = 'atelier-marker'; // inner element that gets scaled
-                inner.style.backgroundImage = `url(${PATH_PREFIX + feature.properties.logo_path})`;
-
-                el.appendChild(inner); // nest the image inside the wrapper
-                
-                el.style.width = `${initialMarkerSize}px`;
-                el.style.height = `${initialMarkerSize}px`;
-
-                // Set initial transform to ensure it starts at scale 1, and ensure z-index
-                el.style.transform = 'scale(1)';
-                el.style.zIndex = '0'; // Default z-index
-
-                const marker = new maplibregl.Marker({
-                    element: el,
-                    anchor: 'center' // This is crucial for MapLibre to position the DOM element's center correctly
-                })
-                .setLngLat(feature.geometry.coordinates)
-                .addTo(map);
-
-                // --- MODIFIED Event listeners for popup AND scale effect ---
-                el.addEventListener('mouseenter', () => {
-                    map.getCanvas().style.cursor = 'pointer';
-                    inner.style.transform = `scale(${scaleFactor})`;
-                    el.style.zIndex = '10';
-
-                    // Delay popup appearance
-                    popupTimeout = setTimeout(() => {
-                        popup.setLngLat(feature.geometry.coordinates)
-                            .setHTML(`<strong>${feature.properties.nom}</strong>`)
-                            .addTo(map);
-                    }, 100); // 200ms = same as your CSS transition time
+                const popup = new maplibregl.Popup({
+                    closeButton: false,
+                    closeOnClick: false,
+                    offset: 60
                 });
 
+                const initialMarkerSize = 60; // Base size of the marker in pixels
+                const scaleFactor = 1.8;       // How much to scale on hover (e.g., 2 for double)
 
-                el.addEventListener('mouseleave', () => {
-                    map.getCanvas().style.cursor = '';
-                    inner.style.transform = 'scale(1)';
-                    el.style.zIndex = '0';
-                    
-                    clearTimeout(popupTimeout); // Cancel if still waiting
-                    popup.remove();
-                });
+                ateliersData.features.forEach((feature) => {
+                    if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.nom && feature.properties.logo_path) {
+                        
+                        const el = document.createElement('div');
+                        el.className = 'atelier-marker-wrapper'; // outer wrapper
 
-                // --- END MODIFIED ---
+                        const inner = document.createElement('div');
+                        inner.className = 'atelier-marker'; // inner element that gets scaled
+                        inner.style.backgroundImage = `url(${PATH_PREFIX + feature.properties.logo_path})`;
 
-                // Add click event to open the URL in a new tab
-                el.addEventListener('click', () => {
-                    if (feature.properties.url) {
-                        window.location.href = PATH_PREFIX + feature.properties.url;
+                        el.appendChild(inner); // nest the image inside the wrapper
+                        
+                        el.style.width = `${initialMarkerSize}px`;
+                        el.style.height = `${initialMarkerSize}px`;
+
+                        // Set initial transform to ensure it starts at scale 1, and ensure z-index
+                        el.style.transform = 'scale(1)';
+                        el.style.zIndex = '0'; // Default z-index
+
+                        const marker = new maplibregl.Marker({
+                            element: el,
+                            anchor: 'center' // This is crucial for MapLibre to position the DOM element's center correctly
+                        })
+                        .setLngLat(feature.geometry.coordinates)
+                        .addTo(map);
+
+                        // --- MODIFIED Event listeners for popup AND scale effect ---
+                        el.addEventListener('mouseenter', () => {
+                            map.getCanvas().style.cursor = 'pointer';
+                            inner.style.transform = `scale(${scaleFactor})`;
+                            el.style.zIndex = '10';
+
+                            // Delay popup appearance
+                            popupTimeout = setTimeout(() => {
+                                popup.setLngLat(feature.geometry.coordinates)
+                                    .setHTML(`<strong>${feature.properties.nom}</strong>`)
+                                    .addTo(map);
+                            }, 100); // 200ms = same as your CSS transition time
+                        });
+
+
+                        el.addEventListener('mouseleave', () => {
+                            map.getCanvas().style.cursor = '';
+                            inner.style.transform = 'scale(1)';
+                            el.style.zIndex = '0';
+                            
+                            clearTimeout(popupTimeout); // Cancel if still waiting
+                            popup.remove();
+                        });
+
+                        // --- END MODIFIED ---
+
+                        // Add click event to open the URL in a new tab
+                        el.addEventListener('click', () => {
+                            if (feature.properties.url) {
+                                window.location.href = PATH_PREFIX + feature.properties.url;
+                            }
+                        });
+
+                    } else {
+                        console.warn('Skipping feature due to missing geometry, nom, or logo_path:', feature);
                     }
                 });
-
-            } else {
-                console.warn('Skipping feature due to missing geometry, nom, or logo_path:', feature);
-            }
-        });
-    });
-</script>
+            });
+        </script>
+    </div>
 </body>
 </html>
 			</div>
