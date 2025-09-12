@@ -1,5 +1,6 @@
 ---
-title: "Santrovélo"
+permalink: false
+redirect: https://santrovelo.square.site/
 img: 'https://santropolroulant.org/wp-content/uploads/2015/07/santrovelo-200x200.jpg' # '/imgs/browse-heritage.png'
 logo: "/imgs/atelier-logos/BB_Santrovelo.png"
 description: "Santrovélo"
@@ -8,7 +9,6 @@ schedule: "Tuesdays, Wednesdays, Saturdays"
 public: "all"
 cost: "7 per hour"
 payment-methods: "Card / Cash"
-date: 2023-08-10 # YYYY-MM-DD, oldest appears first in tile-gallery
 ---
 <!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
 Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->

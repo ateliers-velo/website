@@ -1,14 +1,14 @@
 ---
-title: "BQAM-E"
+permalink: false
+redirect: https://bqam-e.org/
 img: 'https://bqam-e.org/wp-content/uploads/2023/01/output-17.jpg' # '/imgs/browse-heritage.png'
 logo: "/imgs/atelier-logos/BB_BQAME.png"
-description: "groupe etudiante de UQAM"
+description: "Atelier des étudiant.e.s de l'UQAM"
 location: [-73.57001538, 45.50981]
 schedule: "Mondays, Tuesdays, Wednesdays, Thursdays, Sundays"
 public: "all"
 cost: "free"
 payment-methods: "Card / Cash"
-date: 2023-08-11 # YYYY-MM-DD, oldest appears first in tile-gallery
 ---
 <!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
 Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->
