@@ -881,7 +881,7 @@ footer > .brands {
 		grid-column: 1 / -1;
 	}
 	body {
-		--font-multiplier: 2;
+		--font-multiplier: 1.5;
 	}
 	.grid-container {
 		grid-row-gap: calc(var(--font-multiplier) * 2rem);
@@ -943,6 +943,9 @@ footer > .brands {
 		width: auto;
 		height: 3rem;
 	}
+	footer li a.index-items {
+		width: 80vw;
+	}
 	footer {
 		margin-top: calc(var(--font-multiplier) * 2rem);
 	}
@@ -961,6 +964,22 @@ footer > .brands {
 	.content > h2,
 	.content > h3 {
 		text-align: center;
+	}
+	p, ul {
+		font-size: calc(var(--font-multiplier) * 1rem);
+		line-height: calc(var(--font-multiplier) * 1.4rem);
+	}
+	.content {
+		grid-template-columns: repeat(3, minmax(25vw, min-content));
+		padding: 6vw 2vw 10vw 2vw;
+		grid-row-gap: calc(var(--content-gap)*5);
+	}
+	.content li {
+		font-size: calc(var(--font-multiplier) * 1rem);
+		line-height: calc(var(--font-multiplier) * 1.4rem);
+	}
+	.content > .heading-wrapper + p, .content > h1 + p, .content > h2 + p, .content > h3 + p, .content > ul {
+		grid-area: span 1 / span 3;
 	}
 }
 @media only screen and (max-device-width: 360px) and (max-device-height: 760px) {
