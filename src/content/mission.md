@@ -22,4 +22,4 @@ Nous croyons aussi que les AVC ont un rôle qui dépasse la mécanique ou l’ac
 
 Nous voyons aussi les AVC comme faisant partie de la lutte écologique, en ce qu’ils encouragent l’économie circulaire, ainsi que l’autonomisation mobilitaire et communautaire.
 
-[Consulter notre constitution](/imgs/constitution_bum-bum_v1.0.pdf)
+[Consulter notre constitution](/imgs/constitution_v1.pdf)
