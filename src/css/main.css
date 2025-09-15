@@ -842,7 +842,7 @@ footer > .brands {
 	font-size: 1rem;
 	justify-content: left;
 	display: inherit;
-	padding-top: 0vh;
+	padding-top: 2vh;
 }
 
 .post-content {
@@ -971,7 +971,7 @@ footer > .brands {
 	}
 	.content {
 		grid-template-columns: repeat(3, minmax(25vw, min-content));
-		padding: 6vw 2vw 10vw 2vw;
+		padding: 6vw 2vw 5vw 2vw;
 		grid-row-gap: calc(var(--content-gap)*5);
 	}
 	.content li {
@@ -980,6 +980,9 @@ footer > .brands {
 	}
 	.content > .heading-wrapper + p, .content > h1 + p, .content > h2 + p, .content > h3 + p, .content > ul {
 		grid-area: span 1 / span 3;
+	}
+	.content .date {
+		padding-top: 2vh;
 	}
 }
 @media only screen and (max-device-width: 360px) and (max-device-height: 760px) {
