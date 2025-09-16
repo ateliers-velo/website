@@ -1,8 +1,11 @@
 # bumbum-website
 
-Built using Eleventy and Nunjucks, with a custom build process to generate the site in more than one language. Root redirect functionality adapted from [this code](https://gist.github.com/BrianMitchL/f93622a46f4476b7514995ff502d8d17).
+- Website URL: https://ateliers-velo.github.io/website
+- ❗ [Instructions pour créer un affichage *actualités* sur le site web](https://github.com/ateliers-velo/website/wiki#comment-cr%C3%A9er-un-post-sur-le-site-web)
 
-website URL: https://maphouse.github.io/website
+---
+
+Built using Eleventy and Nunjucks, with a custom build process to generate the site in more than one language. Root redirect functionality adapted from [this code](https://gist.github.com/BrianMitchL/f93622a46f4476b7514995ff502d8d17).
 
 ## to edit content
 
