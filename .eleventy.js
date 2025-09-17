@@ -73,8 +73,6 @@ module.exports = async function (eleventyConfig) {
   // This is the part that tells 11ty to swap to our custom config
   eleventyConfig.setLibrary("md", markdownLibrary);
 
-  
-
   // Add a collection for pages
   eleventyConfig.addCollection("content", function(collection) {
     return collection.getFilteredByGlob("src/content/**/*.md");
@@ -149,7 +147,7 @@ module.exports = async function (eleventyConfig) {
       data: '_data',
       output: 'public',
     },
-    pathPrefix: "/website/",
+    pathPrefix: "",
     templateFormats: ['html', 'md', 'njk','css'],//copy any files with these extensions to _site
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
