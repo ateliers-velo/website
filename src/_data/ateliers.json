@@ -3,8 +3,8 @@
   "name": "Ateliers",
   "features": [
   { "type": "Feature", "properties": { "nom": "The Flat Bike Collective", "logo_path": "/imgs/atelier-logos/BB_FLAT.png", "url": "https://theflat.wordpress.com/" }, "geometry": { "type": "Point", "coordinates": [ -73.578281077645997, 45.503584453359089 ] } },
-  { "type": "Feature", "properties": { "nom": "Biciklo", "logo_path": "/imgs/atelier-logos/BB_BICIKLO_A.png", "url": "https://polyfab.polymtl.ca/biciklo/inscription/" }, "geometry": { "type": "Point", "coordinates": [ -73.62340036, 45.50182965 ] } },
-  { "type": "Feature", "properties": { "nom": "Coop Bécik", "logo_path": "/imgs/atelier-logos/BB_BECYK.png", "url": "https://www.instagram.com/coopbecik_brebeuf/" }, "geometry": { "type": "Point", "coordinates": [ -73.61436957, 45.50441172 ] } },
+  { "type": "Feature", "properties": { "nom": "Biciklo", "logo_path": "/imgs/atelier-logos/BB_BICIKLO_A.png", "url": "https://polyfab.polymtl.ca/biciklo/inscription/" }, "geometry": { "type": "Point", "coordinates": [ -73.61438520986488, 45.50437737179211 ] } },
+  { "type": "Feature", "properties": { "nom": "Coop Bécik", "logo_path": "/imgs/atelier-logos/BB_BECYK.png", "url": "https://www.instagram.com/coopbecik_brebeuf/" }, "geometry": { "type": "Point", "coordinates": [ -73.62334229807892, 45.50119635993943 ] } },
   { "type": "Feature", "properties": { "nom": "Nid de Poule", "logo_path": "/imgs/atelier-logos/BB_NDP.png" }, "geometry": { "type": "Point", "coordinates": [ -73.56790402, 45.51688699 ] } },
   { "type": "Feature", "properties": { "nom": "La C.R.A.B.E.", "logo_path": "/imgs/atelier-logos/BB_CRABE.png", "url": "http://crabe.etsmtl.ca/" }, "geometry": { "type": "Point", "coordinates": [ -73.56253339, 45.49496663 ] } },
   { "type": "Feature", "properties": { "nom": "Cycle 7", "logo_path": "/imgs/atelier-logos/BB_C7.png", "url": "https://www.cycle7.ca/heures" }, "geometry": { "type": "Point", "coordinates": [ -73.55248265, 45.48111285 ] } },
