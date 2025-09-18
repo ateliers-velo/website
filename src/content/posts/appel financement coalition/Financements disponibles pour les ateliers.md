@@ -2,7 +2,7 @@ La **Coalition mobilité active Montréal (CMAM)** et la **Ville de Montréal** 
 
 Volets de financement :
 
-- Soutien aux activités : Nous financerons un total de 50 activités pour accroître la visibilité et l'accessibilité de vos services. Les activités admissibles incluent, sans s'y limiter, des journées "portes ouvertes", des soirées de réparation thématiques et des ateliers mobiles.
+- Soutien aux activités : Nous financerons un total de 50 activités pour accroître la visibilité et l'accessibilité de vos services. Les activités admissibles incluent, sans s'y limiter, des journées "portes ouvertes", l'ajout d'une soirée d'ouverture hebdomadaire, des activités de réparation thématiques et des ateliers mobiles.
 - Contribution au programme Bienvélo : Nous cherchons également des partenaires pour la réparation de 40 vélos de différentes tailles. Ces vélos seront offerts aux participants du programme Bienvélo, qui initie les nouveaux arrivants à la culture du vélo.
 
 Conditions financières : La contribution financière est fixée à 25 $ par heure, avec une allocation pour les frais connexes (pièces, nourriture, etc., selon certaines modalités), pour un maximum de 500 $ par activité. Ces financements ne seront plus disponibles après le 31 décembre 2025.
