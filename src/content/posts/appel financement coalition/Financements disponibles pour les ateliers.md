@@ -9,8 +9,4 @@ Conditions financières : La contribution financière est fixée à 25 $ par heu
 
 **Pour soumettre votre intérêt : Les ateliers intéressés sont invités à manifester leur intérêt en remplissant [ce formulaire](https://docs.google.com/forms/d/e/1FAIpQLSffxRMNfQjwQuywRRbXmGHNqTqlBvWb7s3ca2rhZ1vEp_1TCg/viewform).**
 
-![cmam](/imgs/cmam-logo-blanc-3%402x.png "cmam logo")
-
-![ville de mtl](https://upload.wikimedia.org/wikipedia/fr/9/9c/Logo_Montr%C3%A9al.svg "ville de mtl")
-
 🍑🍑
