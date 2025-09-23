@@ -1,8 +1,6 @@
 ## The Big Bike Coop Jamboree is back!  
 
-In an extended **6@8** format on Friday, October 3 ; ) 
-
-The whole Montreal bike co-op community is invited to come hang out in a festive vibe at the **Grande Roue bike shop** in Saint-Michel!  
+In an extended **6@8** format on Friday, October 3 ; ) The whole Montreal bike co-op community is invited to come hang out in a festive vibe at the **Grande Roue bike shop** in Saint-Michel!  
 
 We’ve got you covered with **vegetarian Indian food**, **a welcome beer**, and **special non-alcoholic juices**. DJ for dancing, Montreal bike co-op trivia, a quiz hosted by Besse, a piñata and other surprises!  
 
