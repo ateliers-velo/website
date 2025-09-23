@@ -21,3 +21,7 @@ Pour une participation plus dynamique, rejoignez le [serveur Discord](https://di
 Les ateliers de vélo communautaires de Montréal sont toujours à la recherche de nouveaux bénévoles. Impliquez-vous en visitant un atelier près de chez vous !
 
 <img src="/imgs/BIKE_ANIMATION.gif" alt="poster"></img>
+
+# Signaler un erreur sur ce site
+
+Ce site web est toujours en évolution. Vous pouvez signaler un erreur ou proposer une modification en vous connectant sur Github et en créant une demande [sur cette page](https://github.com/ateliers-velo/website/issues). Si vous préférez, vous pouvez en discuter avec les autres dans le canal sur Discord. Vous pourriez aussi contribuer au développement du site vous-mêmes en créant un *pull request*.
