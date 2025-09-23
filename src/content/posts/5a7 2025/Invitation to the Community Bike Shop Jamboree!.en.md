@@ -4,7 +4,7 @@ In an extended **6@8** format on Friday, October 3 ; ) The whole Montreal bike c
 
 We’ve got you covered with **vegetarian Indian food**, **a welcome beer**, and **special non-alcoholic juices**. DJ for dancing, Montreal bike co-op trivia, a quiz hosted by Besse, a piñata and other surprises!  
 
-Meet us **right there starting at 6 p.m.** or **by joining the group ride** from the Sud-ouest (check [this map](https://maps.app.goo.gl/u9d4kkXZTeCpuSUf7), starting at 4:30 p.m.). The ride will be live on [Critical Maps](https://www.criticalmaps.net/map)!  
+Meet us **right there starting at 6 p.m.** or **by joining the group ride** from the Sud-ouest (check [this map](https://maps.app.goo.gl/u9d4kkXZTeCpuSUf7), starting at 4:30 p.m.). The ride will be live on [Critical Maps](https://www.criticalmaps.net/map#13/45.5184/-73.5721)!  
 
 **A few details before you roll in**:  
 
