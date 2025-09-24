@@ -23,7 +23,7 @@
                     <!-- website prefix only for GITHUB PAGES -->
                     <div class="content" onclick="window.location.href='{{ post.data.permalink }}';">
                         <h1>{{ post.data.title }}</h1>
-                        {% if post.content | wordcount < 300 %}
+                        {% if post.content | wordcount < 1000 %}
                             {{ post.content | safe }}
                         {% else %}
                             {% excerpt post %}
