@@ -7,6 +7,8 @@ On vous gâte avec de la **bouffe indienne végétarienne** et **une bière d'ac
 
 Rendez-vous **direct là-bas à partir de 18h** ou **en vous joignant à la ride collective** à partir du Sud-ouest (vous joindre en référant à [cette carte](https://maps.app.goo.gl/u9d4kkXZTeCpuSUf7) à partir de 16h30). La ride sera publiée en direct sur [Critical Maps](https://www.criticalmaps.net/map#13/45.5184/-73.5721) !
 
+<img src="/imgs/GrandRassemblement2025BUM.jpg" alt="poster"></img>
+
 **Quelques infos avant de vous y rendre** : 
 
 - !  L'Atelier vélo Grande Roue est située au [7501 Rue François-Perrault, Montréal, QC H2A 1M1](https://maps.app.goo.gl/NYTtmSLMoipRxqn67)
