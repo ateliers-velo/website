@@ -6,6 +6,8 @@ We’ve got you covered with **vegetarian Indian food**, **a welcome beer**, and
 
 Meet us **right there starting at 6 p.m.** or **by joining the group ride** from the Sud-ouest (check [this map](https://maps.app.goo.gl/u9d4kkXZTeCpuSUf7), starting at 4:30 p.m.). The ride will be live on [Critical Maps](https://www.criticalmaps.net/map#13/45.5184/-73.5721)!  
 
+<img src="/imgs/GrandRassemblement2025BUM.jpg" alt="poster"></img>
+
 **A few details before you roll in**:  
 
 - !  Grande Roue bike shop is at [7501 Rue François-Perrault, Montréal, QC H2A 1M1](https://maps.app.goo.gl/NYTtmSLMoipRxqn67)  
