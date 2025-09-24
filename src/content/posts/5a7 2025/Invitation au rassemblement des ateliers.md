@@ -19,3 +19,4 @@ Rendez-vous **direct là-bas à partir de 18h** ou **en vous joignant à la ride
 - !!!! Motivez votre crew, passez le message, **on a hâte de tous vous retrouver/rencontrer !**
 - !!!!! Possible joy ride au parc Frédérick-Back en fin de soirée, **amenez vos phares et lumières** 🔥
 - !!!!!! Un énorme merci au Centre Loisirs Communautaire Saint-Michel pour la salle et les équipements ❤️‍🔥
+- Si possible, veuillez RSVP sur [l'événement Facebook](https://www.facebook.com/events/1120985986360669)

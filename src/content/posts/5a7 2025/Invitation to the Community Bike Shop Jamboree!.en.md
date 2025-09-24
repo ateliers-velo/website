@@ -18,3 +18,4 @@ Meet us **right there starting at 6 p.m.** or **by joining the group ride** from
 - !!!! Get your crew together, spread the word, **we can’t wait to see everyone!**  
 - !!!!! Possible night ride to Frédérick-Back Park later after the party, **bring your lights** 🔥  
 - !!!!!! Huge thanks to *Centre Loisirs Communautaire Saint-Michel* for the space and gear ❤️‍🔥
+- If possible, please RSVP on the [FB event](https://www.facebook.com/events/1120985986360669)
