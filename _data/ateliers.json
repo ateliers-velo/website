@@ -6,7 +6,7 @@
   { "type": "Feature", "properties": { "nom": "Biciklo", "logo_path": "/imgs/atelier-logos/BB_BICIKLO_A.png", "url": "https://polyfab.polymtl.ca/biciklo/inscription/" }, "geometry": { "type": "Point", "coordinates": [ -73.61438520986488, 45.50437737179211 ] } },
   { "type": "Feature", "properties": { "nom": "Coop Bécik", "logo_path": "/imgs/atelier-logos/BB_BECYK.png", "url": "https://www.instagram.com/coopbecik_brebeuf/" }, "geometry": { "type": "Point", "coordinates": [ -73.62334229807892, 45.50119635993943 ] } },
   { "type": "Feature", "properties": { "nom": "Nid de Poule", "logo_path": "/imgs/atelier-logos/BB_NDP.png" }, "geometry": { "type": "Point", "coordinates": [ -73.56790402, 45.51688699 ] } },
-  { "type": "Feature", "properties": { "nom": "La C.R.A.B.E.", "logo_path": "/imgs/atelier-logos/BB_CRABE.png", "url": "http://crabe.etsmtl.ca/" }, "geometry": { "type": "Point", "coordinates": [ -73.56253339, 45.49496663 ] } },
+  { "type": "Feature", "properties": { "nom": "Le C.R.A.B.E.", "logo_path": "/imgs/atelier-logos/BB_CRABE.png", "url": "http://crabe.etsmtl.ca/" }, "geometry": { "type": "Point", "coordinates": [ -73.56253339, 45.49496663 ] } },
   { "type": "Feature", "properties": { "nom": "Cycle 7", "logo_path": "/imgs/atelier-logos/BB_C7.png", "url": "https://www.cycle7.ca/heures" }, "geometry": { "type": "Point", "coordinates": [ -73.55248265, 45.48111285 ] } },
   { "type": "Feature", "properties": { "nom": "Right to Move / La Voie Libre", "logo_path": "/imgs/atelier-logos/BB_RTM_LVL.png", "url": "https://rtm-lvl.org/fr/heures/" }, "geometry": { "type": "Point", "coordinates": [ -73.57941043, 45.49761647 ] } },
   { "type": "Feature", "properties": { "nom": "Atelier Culture Vélo", "logo_path": "/imgs/atelier-logos/BB_ACV.png", "url": "https://www.facebook.com/atelierculturevelo/" }, "geometry": { "type": "Point", "coordinates": [ -73.63084125, 45.53506429 ] } },
@@ -20,7 +20,7 @@
   { "type": "Feature", "properties": { "nom": "Mile End Bike Garage", "logo_path": "/imgs/atelier-logos/BB_MILEEND.png", "url": "https://www.facebook.com/MileEndBikeGarage/" }, "geometry": { "type": "Point", "coordinates": [ -73.60789406, 45.52761758 ] } },
   { "type": "Feature", "properties": { "nom": "B-Shoppe", "logo_path": "/imgs/atelier-logos/BB_BCHOPPE.png", "url": "https://www.facebook.com/bchoppe/" }, "geometry": { "type": "Point", "coordinates": [ -73.53814834, 45.55187797 ] } },
   { "type": "Feature", "properties": { "nom": "Têtes de rayon", "logo_path": "/imgs/atelier-logos/BB_TDR.png", "url": "https://velo-edpahuntsic.square.site/" }, "geometry": { "type": "Point", "coordinates": [ -73.647643230015063, 45.549374529659914 ] } },
-  { "type": "Feature", "properties": { "nom": "Atelier Hoodstock", "logo_path": "/imgs/atelier-logos/BB_HOOD.png", "url": "https://atelier-velo-montrealnord.square.site/" }, "geometry": { "type": "Point", "coordinates": [ -73.64487012321497, 45.59244652222314 ] } },
+  { "type": "Feature", "properties": { "nom": "Atelier Vélo Montréal-Nord", "logo_path": "/imgs/atelier-logos/BB_HOOD.png", "url": "https://atelier-velo-montrealnord.square.site/" }, "geometry": { "type": "Point", "coordinates": [ -73.64487012321497, 45.59244652222314 ] } },
   { "type": "Feature", "properties": { "nom": "Vélogik", "logo_path": "/imgs/atelier-logos/BB_VELOGIK.png", "url": "https://www.facebook.com/velogik/" }, "geometry": { "type": "Point", "coordinates": [ -73.69110288728614, 45.51800713895457 ] } }
   ]
 }
