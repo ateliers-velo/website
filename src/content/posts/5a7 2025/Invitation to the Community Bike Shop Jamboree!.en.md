@@ -1,4 +1,4 @@
-<img src="/imgs/Affiche avec logos.png" alt="poster"></img>
+<img src="/imgs/Affiche avec logos.jpg" alt="poster"></img>
 
 ## The Big Bike Coop Jamboree is back!  
 
