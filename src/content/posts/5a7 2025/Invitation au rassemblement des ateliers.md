@@ -1,4 +1,4 @@
-<img src="/imgs/GrandRassemblement2025BUM.jpg" alt="poster"></img>
+<img src="/imgs/Affiche avec logos.png" alt="poster"></img>
 
 ## Le Grand rassemblement/Jamboree des ateliers est de retour !
 
@@ -20,3 +20,5 @@ Rendez-vous **direct là-bas à partir de 18h** ou **en vous joignant à la ride
 - !!!!! Possible joy ride au parc Frédérick-Back en fin de soirée, **amenez vos phares et lumières** 🔥
 - !!!!!! Un énorme merci au Centre Loisirs Communautaire Saint-Michel pour la salle et les équipements ❤️‍🔥
 - Si possible, veuillez RSVP sur [l'événement Facebook](https://www.facebook.com/events/1120985986360669)
+
+**Cette activité est réalisé dans le cadre du projet «Infrastructures sociales du vélo» avec la collaboration de la Ville de Montréal.**
