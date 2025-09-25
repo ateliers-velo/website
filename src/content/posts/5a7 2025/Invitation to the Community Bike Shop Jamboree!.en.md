@@ -1,4 +1,4 @@
-<img src="/imgs/GrandRassemblement2025BUM.jpg" alt="poster"></img>
+<img src="/imgs/Affiche avec logos.png" alt="poster"></img>
 
 ## The Big Bike Coop Jamboree is back!  
 
@@ -19,3 +19,5 @@ Meet us **right there starting at 6 p.m.** or **by joining the group ride** from
 - !!!!! Possible night ride to Frédérick-Back Park later after the party, **bring your lights** 🔥  
 - !!!!!! Huge thanks to *Centre Loisirs Communautaire Saint-Michel* for the space and gear ❤️‍🔥
 - If possible, please RSVP on the [FB event](https://www.facebook.com/events/1120985986360669)
+
+**Cette activité est réalisé dans le cadre du projet «Infrastructures sociales du vélo» avec la collaboration de la Ville de Montréal.**
