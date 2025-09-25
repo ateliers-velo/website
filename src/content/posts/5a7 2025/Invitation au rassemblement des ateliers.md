@@ -1,4 +1,4 @@
-<img src="/imgs/Affiche avec logos.png" alt="poster"></img>
+<img src="/imgs/Affiche avec logos.jpg" alt="poster"></img>
 
 ## Le Grand rassemblement/Jamboree des ateliers est de retour !
 
