@@ -755,19 +755,40 @@ footer > .index {
 	grid-area: span 1 / span 8;
 }
 
-footer > .brands {
-	grid-area: span 1 / span 6;
-	display: grid;
-	grid-template-columns: repeat( auto-fit, minmax(25%, 1fr) );
+footer > .brands,
+footer > .credits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
 }
 
-.brands > div {
-	display: flex;
+footer > .brands {
+	grid-area: span 1 / span 6;
 }
+
+footer > .credits {
+	grid-area: span 1 / span 2;
+}
+
+.brands > div,
+.credits > div {
+    display: flex;
+	align-items: center;    /* vertically center contents */
+    justify-content: center; /* horizontally center contents */
+}
+
+/* shared img styles */
+.brands > div > img,
+.credits > div > img {
+    margin: auto;
+    filter: grayscale(1) invert(.5);
+}
+
+/* preserve different sizing */
 .brands > div > img {
-	width: 80%;
-	margin: auto;
-	filter: grayscale(1) invert(.5);
+    width: 80%;
+}
+.credits > div > img {
+    width: 100%;
 }
 
 /* tile-gallery */
@@ -931,6 +952,15 @@ footer > .brands {
 	}
 	footer > .brands > div {
 		margin: 2vh 0 2vh 0;
+	}
+	footer > .credits {
+		grid-template-columns: 1fr;
+		grid-column: 2 / -2;
+		padding: 0;
+	}
+	footer > .credits > div {
+		margin: 2vh 0 2vh 0;
+		text-align: center;
 	}
 	footer ul {
 		padding-bottom: calc(var(--font-multiplier) * 2rem);
