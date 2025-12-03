@@ -1,22 +1,28 @@
-@font-face {
+/*@font-face {
 	font-family: 'main font';
 	src: url('./fonts/CreatoDisplay-Regular.otf') format('opentype');
 	font-weight: normal;
 	font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'MonaspaceNeon';
+    src: url('./fonts/Monaspace-Neon-Var.woff2') format('woff2');
+    font-weight: 200 800;
+    font-style: normal;
+    font-display: swap;
 }
 
 @charset "utf-8";
 
 :root {
 	background-color: var(--main-bg-color);
-	--main-font: monospace, sans-serif;
+	--main-font: 'MonaspaceNeon', sans-serif;
 }
 
 strong  {
     color: var(--link-color);
-/*    text-decoration: dashed underline var(--link-color) 1px;
-    text-underline-offset: 4px;
- */
+    font-weight: 600;
 }
 /* html types */
 
@@ -32,7 +38,7 @@ h2 {
 	font-family: var(--main-font);
 	color: var(--nav-title-color);
 	font-size: calc(var(--font-multiplier) * 1.5rem);
-	font-weight: bold;
+	font-weight: 800;
 	font-style: italic;
 	padding:0px 0px 0px 0px;
 }
@@ -49,21 +55,21 @@ h3 {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * .8rem);
-	font-weight: normal;
+	font-weight: 700;
 	font-style: italic;
 }
 h4 {
 	font-family: var(--main-font);
 	color: var(--hover-color);
 	font-size: calc(var(--font-multiplier) * .6rem);
-	font-weight: regular;
+	font-weight: 600;
 }
 p, ul {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
 	line-height: calc(var(--font-multiplier) * 1.7rem);
-	font-weight: normal;
+	font-weight: 300;
 	padding:0px 0px 0px 0px;
 	margin: 0 0 0 0;
 	overflow-wrap: break-word;
@@ -71,6 +77,7 @@ p, ul {
 
 a {
 	color: var(--link-color);
+    font-weight: 500;
 }
 
 ul {
@@ -89,10 +96,10 @@ li {
 	font-family: var(--main-font);
 	color: var(--main-text-color);
 	font-size: calc(var(--font-multiplier) * 1.2rem);
-	font-weight: normal;
 	padding:0px 0px 15px 20px;
 	text-wrap: wrap;
 	line-height: calc(var(--font-multiplier) * 1.5rem);
+    font-weight: 400;
 }
 
 li a {
