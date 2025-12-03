@@ -1,1 +1,1 @@
-Notre rencontre annuelle, qui servira à fixer nos **objectifs**, notre **budget**, et nos **comités** pour l'année 2026 est prévu pour le 29 janvier à 18h. Toute la communauté est bienvenue ! Bouffe et boisson offerts sur place.
+Notre rencontre annuelle, qui servira à fixer nos **objectifs**, notre **budget**, et nos **comités** pour l'année 2026, est prévue pour le 29 janvier à 18h. Toute la communauté est bienvenue ! Bouffe et boisson offertes sur place.
