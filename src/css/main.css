@@ -12,7 +12,12 @@
 	--main-font: monospace, sans-serif;
 }
 
-
+strong  {
+    color: var(--link-color);
+/*    text-decoration: dashed underline var(--link-color) 1px;
+    text-underline-offset: 4px;
+ */
+}
 /* html types */
 
 h1 {
