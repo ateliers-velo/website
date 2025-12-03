@@ -703,6 +703,7 @@ footer ul {
   	grid-template-rows: repeat(5, min-content);
   	grid-auto-flow: column;
 	grid-template-columns: repeat(8, 1fr);
+    grid-column-gap: 2rem;
 	padding-bottom: 3vh;
 }
 
