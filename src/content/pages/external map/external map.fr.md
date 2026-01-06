@@ -1,8 +1,8 @@
 ---
 layout: 'basic.html'
 tags: [index-pages]
-title: 'Services publiques de réparation'
-date: 2024-06-10
+title: 'Carte des stations de réparation publiques'
+date: 2000-01-05
 ---
 
 <div style="
