@@ -2,7 +2,7 @@
 layout: 'basic.html'
 tags: [index-pages]
 title: 'Public bike repair stations map'
-date: 2024-06-10
+date: 2000-01-05
 ---
 
 <div style="
