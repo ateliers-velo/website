@@ -6,7 +6,7 @@ date: 2000-01-02
 description: 'contact'
 ---
 
-Pour tout simplement entrer en contact avec quelqu'un du réseau, envoyez un courriel à <a href="mailto:convergence.velo.mtl@gmail.com">convergence.velo.mtl@gmail.com</a>. Cependant, si vous souhaitez vous impliquer davantage dans les ateliers de vélo communautaires de Montréal :
+Pour simplement entrer en contact avec un membre actif du réseau, envoyez un message à <a href="mailto:bumbumvelo@riseup.net">bumbumvelo@riseup.net</a>. Ou :
 
 # 📧 Restez en contact par courriel
 
@@ -18,7 +18,7 @@ Pour une participation plus dynamique, rejoignez le [serveur Discord](https://di
 
 # 🚲 Impliquez-vous dans un atelier !
 
-Les ateliers de vélo communautaires de Montréal sont toujours à la recherche de nouveaux bénévoles. Impliquez-vous en visitant un atelier près de chez vous !
+Les ateliers de vélo communautaires de Montréal sont toujours à la recherche de nouveaux bénévoles. Impliquez-vous en visitant un atelier [près de chez vous](/fr/pages/carte-des-ateliers) !
 
 <img src="/imgs/BIKE_ANIMATION.gif" alt="poster"></img>
 
