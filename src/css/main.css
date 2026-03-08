@@ -529,25 +529,27 @@ header a {
 	height: calc(var(--font-multiplier) * 19rem);
 }
 */
-#light {
-	position: absolute;
-	flex-direction: column;
-	height: calc(var(--font-multiplier) * 19rem);
+#light-toggle {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: var(--inactive-color);
 }
 
-
-/* Base styling */
-.icon svg {
-	fill: var(--button-color);
+#light-toggle svg {
+	width: calc(var(--font-multiplier) * 1.4rem);
+	height: calc(var(--font-multiplier) * 1.4rem);
+	fill: currentColor;
 	transition: fill 0.1s ease;
 }
 
-.nav-items.activated #light svg {
-	fill: var(--active-color);
-}
-
-.nav-items:not(.activated) #light svg {
-	fill: var(--inactive-color);
+.nav-items.activated #light-toggle {
+	color: var(--active-color);
 }
 
 

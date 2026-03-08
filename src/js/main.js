@@ -5,14 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
     // TEMPORARY FIX ONLY FOR GH PAGES
     const prefix = ""
-    /*
     const light = document.getElementById('light-toggle');
     const navWrapper = document.querySelector('.nav-items');
 
     light.addEventListener('click', function () {
         const themeStyle = document.getElementById('theme-style');
         const currentTheme = themeStyle.getAttribute('href');
-        
+
         if (currentTheme === '/css/dark-mode.css') {
             themeStyle.setAttribute('href', prefix + '/css/light-mode.css');
         } else {
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         navWrapper.classList.toggle('activated');
     });
-    */
 
     /*
     const open = document.getElementById('open');
