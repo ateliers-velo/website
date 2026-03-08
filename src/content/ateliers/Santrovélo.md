@@ -1,7 +1,7 @@
 ---
 permalink: false
 redirect: https://santrovelo.square.site/
-img: 'https://santropolroulant.org/wp-content/uploads/2015/07/santrovelo-200x200.jpg' # '/imgs/browse-heritage.png'
+img: '/imgs/sv.jpg'
 logo: "/imgs/atelier-logos/BB_Santrovelo.png"
 description: "Atelier participatif du sud du Plateau fondé en 1996"
 location: [ -73.57521853, 45.51668767 ]
