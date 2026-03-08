@@ -52,9 +52,13 @@
     <div id="map-container">
         <div id="map"></div>
         <script>
+            const mapStyle = localStorage.getItem('theme') === 'light'
+                ? 'https://tiles.basemaps.cartocdn.com/gl/positron-gl-style/style.json'
+                : 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+
             const map = new maplibregl.Map({
                 container: 'map',
-                style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+                style: mapStyle,
                 center: [-73.5783148,45.5048116], // Centered on Montreal
                 zoom: 12,
                 minZoom: 11,
@@ -66,6 +70,13 @@
                 maplibreLogo: false
             });
             let popupTimeout;
+
+            document.addEventListener('themechange', function(e) {
+                var newStyle = e.detail === 'light'
+                    ? 'https://tiles.basemaps.cartocdn.com/gl/positron-gl-style/style.json'
+                    : 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+                map.setStyle(newStyle);
+            });
 
             const PATH_PREFIX = '';
             const geojsonUrl = PATH_PREFIX + '/_data/ateliers.json';

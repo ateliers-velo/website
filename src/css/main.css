@@ -454,7 +454,7 @@ header img {
 header {
 	font-family: var(--main-font);
 	color: var(--nav-title-color);
-	calc(var(--font-multiplier) * 2.4rem)
+	size: calc(var(--font-multiplier) * 2.4rem);
 	font-weight: bold;
 	font-size: calc(var(--font-multiplier) * 1.5em);
 	margin: 0px 0px 0px 0px;
@@ -472,7 +472,7 @@ header a {
 .nav-items {
 	grid-area: span 1 / span 8;
 	display: inline-grid;
-	grid-template-columns: repeat( 8, 1fr );
+	grid-template-columns: repeat( 9, 1fr );
 	/*grid-auto-rows: auto;*/
 	place-items: stretch stretch;
 	grid-column-gap: 1vw;
@@ -542,8 +542,8 @@ header a {
 }
 
 #light-toggle svg {
-	width: calc(var(--font-multiplier) * 1.4rem);
-	height: calc(var(--font-multiplier) * 1.4rem);
+	width: calc(var(--font-multiplier) * 1.5rem);
+	height: calc(var(--font-multiplier) * 1.5rem);
 	fill: currentColor;
 	transition: fill 0.1s ease;
 }
