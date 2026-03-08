@@ -454,7 +454,7 @@ header img {
 header {
 	font-family: var(--main-font);
 	color: var(--nav-title-color);
-	calc(var(--font-multiplier) * 2.4rem)
+	size: calc(var(--font-multiplier) * 2.4rem);
 	font-weight: bold;
 	font-size: calc(var(--font-multiplier) * 1.5em);
 	margin: 0px 0px 0px 0px;
@@ -472,7 +472,7 @@ header a {
 .nav-items {
 	grid-area: span 1 / span 8;
 	display: inline-grid;
-	grid-template-columns: repeat( 8, 1fr );
+	grid-template-columns: repeat( 9, 1fr );
 	/*grid-auto-rows: auto;*/
 	place-items: stretch stretch;
 	grid-column-gap: 1vw;
@@ -529,25 +529,27 @@ header a {
 	height: calc(var(--font-multiplier) * 19rem);
 }
 */
-#light {
-	position: absolute;
-	flex-direction: column;
-	height: calc(var(--font-multiplier) * 19rem);
+#light-toggle {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: var(--inactive-color);
 }
 
-
-/* Base styling */
-.icon svg {
-	fill: var(--button-color);
+#light-toggle svg {
+	width: calc(var(--font-multiplier) * 1.5rem);
+	height: calc(var(--font-multiplier) * 1.5rem);
+	fill: currentColor;
 	transition: fill 0.1s ease;
 }
 
-.nav-items.activated #light svg {
-	fill: var(--active-color);
-}
-
-.nav-items:not(.activated) #light svg {
-	fill: var(--inactive-color);
+.nav-items.activated #light-toggle {
+	color: var(--active-color);
 }
 
 

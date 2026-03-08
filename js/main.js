@@ -5,22 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded');
     // TEMPORARY FIX ONLY FOR GH PAGES
     const prefix = ""
-    /*
     const light = document.getElementById('light-toggle');
     const navWrapper = document.querySelector('.nav-items');
+
+    if (localStorage.getItem('theme') === 'light') {
+        navWrapper.classList.add('activated');
+    }
 
     light.addEventListener('click', function () {
         const themeStyle = document.getElementById('theme-style');
         const currentTheme = themeStyle.getAttribute('href');
-        
+
         if (currentTheme === '/css/dark-mode.css') {
             themeStyle.setAttribute('href', prefix + '/css/light-mode.css');
+            localStorage.setItem('theme', 'light');
+            document.dispatchEvent(new CustomEvent('themechange', { detail: 'light' }));
         } else {
             themeStyle.setAttribute('href', prefix + '/css/dark-mode.css');
+            localStorage.setItem('theme', 'dark');
+            document.dispatchEvent(new CustomEvent('themechange', { detail: 'dark' }));
         }
         navWrapper.classList.toggle('activated');
     });
-    */
 
     /*
     const open = document.getElementById('open');
