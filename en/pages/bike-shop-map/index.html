@@ -361,13 +361,21 @@
             font-size: 1rem;
             padding: 8px 12px;
             color: #333;
-            outline-color: #333;
+            outline-color: #fff;
             outline-width: 1px;
             outline-style: solid;
             background-color: rgba(255, 255, 255, 0.9);
         }
         .maplibregl-popup-tip {
             display: none;
+        }
+
+        body.light .atelier-marker {
+            border-color: var(--caption-color);
+        }
+
+        body.light .maplibregl-popup-content {
+            outline-color: var(--caption-color);
         }
 
     </style>
@@ -395,11 +403,16 @@
             });
             let popupTimeout;
 
+            if (localStorage.getItem('theme') === 'light') {
+                document.body.classList.add('light');
+            }
+
             document.addEventListener('themechange', function(e) {
                 var newStyle = e.detail === 'light'
                     ? 'https://tiles.basemaps.cartocdn.com/gl/positron-gl-style/style.json'
                     : 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
                 map.setStyle(newStyle);
+                document.body.classList.toggle('light', e.detail === 'light');
             });
 
             const PATH_PREFIX = '';
