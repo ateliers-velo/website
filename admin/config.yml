@@ -1,0 +1,104 @@
+backend:
+  name: github
+  repo: ateliers-velo/website
+  branch: main
+  auth_type: pkce
+  app_id: Ov23liE5LOwJo96iIedR
+
+media_folder: src/imgs/uploads
+public_folder: /imgs/uploads
+site_url: https://bum.bike
+locale: fr
+
+collections:
+
+  # ─────────────────────────────────────────────────────────────
+  # POSTS — French (default language, no .fr suffix in filename)
+  # Tags and layout are inherited from src/content/posts/posts.json
+  # ─────────────────────────────────────────────────────────────
+  - name: posts_fr
+    label: "Articles (Français)"
+    label_singular: "Article (FR)"
+    description: >
+      Pour créer un article bilingue, créez d'abord la version FR ici,
+      puis créez la version EN dans "Posts (English)" avec le même dossier.
+    folder: src/content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Titre", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Contenu", name: body, widget: markdown }
+      - { label: "Image", name: img, widget: image, required: false, hint: "Image principale de l'article (optionnel)" }
+
+  # ─────────────────────────────────────────────────────────────
+  # POSTS — English
+  # Filename gets .en suffix via slug template: Title.en.md
+  # To pair with FR, use the same folder slug as the FR version
+  # ─────────────────────────────────────────────────────────────
+  - name: posts_en
+    label: "Posts (English)"
+    label_singular: "Post (EN)"
+    description: >
+      To create a bilingual post, first create the FR version, then create
+      the EN version here using the same folder as the FR version.
+    folder: src/content/posts
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.title}}.en"
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Content", name: body, widget: markdown }
+      - { label: "Image", name: img, widget: image, required: false, hint: "Optional main image for the post" }
+
+  # ─────────────────────────────────────────────────────────────
+  # ATELIERS — Bike shop pages
+  # Most ateliers redirect to external shop URLs
+  # ─────────────────────────────────────────────────────────────
+  - name: ateliers
+    label: "Ateliers"
+    label_singular: "Atelier"
+    folder: src/content/ateliers
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Nom", name: title, widget: string }
+      - { label: "URL de redirection", name: redirect, widget: string, required: false, hint: "URL externe vers le site de l'atelier (laisser vide pour une page interne)" }
+      - { label: "Image", name: img, widget: image, required: false }
+      - { label: "Logo", name: logo, widget: image, required: false }
+      - { label: "Description", name: description, widget: text, required: false }
+      - { label: "permalink", name: permalink, widget: hidden, default: false }
+      - { label: "tags", name: tags, widget: hidden, default: ateliers }
+
+  # ─────────────────────────────────────────────────────────────
+  # PAGES — Static content pages
+  # ─────────────────────────────────────────────────────────────
+  - name: pages
+    label: "Pages"
+    label_singular: "Page"
+    folder: src/content/pages
+    create: true
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: "Titre / Title", name: title, widget: string }
+      - label: "Langue / Language"
+        name: lang
+        widget: select
+        options:
+          - { label: "Français", value: fr }
+          - { label: "English", value: en }
+        default: fr
+      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Description", name: description, widget: text, required: false }
+      - label: "Layout"
+        name: layout
+        widget: select
+        options: [basic.html, gallery.html, landing.html, posts-overview.html]
+        default: basic.html
+      - { label: "Tags", name: tags, widget: list, required: false, hint: "Ex: nav-items, index-pages" }
+      - { label: "Contenu / Content", name: body, widget: markdown, required: false }
