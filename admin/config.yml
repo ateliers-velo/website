@@ -2,8 +2,6 @@ backend:
   name: github
   repo: ateliers-velo/website
   branch: main
-  auth_type: pkce
-  app_id: Ov23liE5LOwJo96iIedR
 
 media_folder: src/imgs/uploads
 public_folder: /imgs/uploads
