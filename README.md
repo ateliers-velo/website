@@ -1,5 +1,25 @@
 # bumbum-website
 
+## ✏️ Modifier le site via l'interface d'administration / Edit the site via the admin interface
+
+### Français
+
+1. Rendez-vous sur [github.com/settings/tokens](https://github.com/settings/tokens) et cliquez sur **Generate new token → Generate new token (classic)**.
+2. Donnez-lui un nom (ex. *bum.bike admin*), choisissez une expiration, et cochez la case **repo** (accès complet) ainsi que **read:user**.
+3. Cliquez **Generate token** et copiez le token affiché (il ne sera plus visible après).
+4. Rendez-vous sur [bum.bike/admin](https://bum.bike/admin) et choisissez **Sign in with GitHub using token**.
+5. Collez votre token et validez — vous avez accès à l'interface d'édition.
+
+### English
+
+1. Go to [github.com/settings/tokens](https://github.com/settings/tokens) and click **Generate new token → Generate new token (classic)**.
+2. Give it a name (e.g. *bum.bike admin*), choose an expiration, and check **repo** (full access) and **read:user**.
+3. Click **Generate token** and copy the token shown (it won't be visible again).
+4. Go to [bum.bike/admin](https://bum.bike/admin) and choose **Sign in with GitHub using token**.
+5. Paste your token and confirm — you now have access to the editing interface.
+
+---
+
 - ❗ [Instructions pour créer un post ou une page sur le site web](https://github.com/ateliers-velo/website/wiki#comment-cr%C3%A9er-un-post-sur-le-site-web)
 
 ---
