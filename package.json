@@ -9,7 +9,8 @@
     "start": "npm run watch:eleventy",
     "build": "npm run build:eleventy",
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
-    "build:prod": "npm run build:eleventy:prod"
+    "build:prod": "npm run build:eleventy:prod",
+    "sync:osm": "node scripts/sync-osm.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "slugify": "^1.6.6"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "gray-matter": "^4.0.3"
   }
 }

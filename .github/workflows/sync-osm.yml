@@ -1,0 +1,35 @@
+name: Sync OSM Data
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays at 06:00 UTC
+  workflow_dispatch:       # Manual trigger via GitHub Actions UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed to commit and push changes back to main
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.16.0'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run OSM sync
+        run: node scripts/sync-osm.js
+
+      - name: Commit and push changes if any
+        run: |
+          git diff --quiet && echo "No changes to commit." && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/ateliers/ src/_data/ateliers.json
+          git commit -m "chore: sync OSM data ($(date -u +%Y-%m-%d))"
+          git push origin main
