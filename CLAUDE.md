@@ -45,9 +45,10 @@ Default tags and layouts per content type are set in directory-level `.json` fil
 
 Sveltia CMS (headless, Git-backed) lives at `/admin/`:
 - URL: https://bum.bike/admin/
-- Auth: GitHub OAuth PKCE (requires GitHub repo write access)
+- Auth: **GitHub classic Personal Access Token (PAT)** — editors generate a token at `github.com/settings/tokens` with `repo` + `read:user` scopes, then use "Sign in with GitHub using token" at `/admin/`
 - Config: `src/admin/config.yml`
 - Saves content by committing directly to `main`, triggering the normal build
+- Editor login instructions in `README.md`
 
 ### Bilingual post workflow in CMS
 1. Create FR post in "Articles (Français)" → choose a folder slug
@@ -60,3 +61,10 @@ Sveltia CMS (headless, Git-backed) lives at `/admin/`:
 - Atelier pages with `permalink: false` are redirect stubs pointing to external shop URLs
 - The `<!--section-->` separator in content splits pages into `main` and `sidenote` sections (via Nunjucks filters)
 - Analytics: GoatCounter at `ateliers-velo.goatcounter.com`
+
+## Changelog
+
+| Date | Change |
+|------|--------|
+| 2026-03-18 | Added Sveltia CMS admin panel (`src/admin/`). Auth via GitHub classic PAT — PKCE was attempted but blocked by a GitHub limitation. OAuth proxy via Cloudflare was considered and rejected (minimize external services). PAT auth requires no infrastructure. |
+| 2026-03-18 | Added `CLAUDE.md` for Claude Code session context. |
