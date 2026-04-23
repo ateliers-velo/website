@@ -11,46 +11,48 @@ locale: fr
 collections:
 
   # ─────────────────────────────────────────────────────────────
-  # POSTS — French (default language, no .fr suffix in filename)
+  # POSTS — All articles (FR & EN together)
   # Tags and layout are inherited from src/content/posts/posts.json
+  #
+  # Language is determined by filename:
+  #   - "My Post.md"     → French (default)
+  #   - "My Post.en.md"  → English
+  #
+  # Bilingual workflow:
+  #   1. Create FR post: set Folder to your event slug, write title
+  #   2. Create EN post: set Folder to the SAME slug, append .en to filename
+  #      (e.g. slug template produces "Title.en.md")
+  #
+  # Posts in the same subfolder with 2 files are auto-paired as
+  # translations by eleventyComputed.js.
   # ─────────────────────────────────────────────────────────────
-  - name: posts_fr
-    label: "Articles (Français)"
-    label_singular: "Article (FR)"
+  - name: posts
+    label: "Articles / Posts"
+    label_singular: "Article / Post"
     description: >
-      Pour créer un article bilingue, créez d'abord la version FR ici,
-      puis créez la version EN dans "Posts (English)" avec le même dossier.
+      All posts (FR & EN). Language is determined by filename:
+      "Title.md" = FR, "Title.en.md" = EN.
+      To make a bilingual post, create both versions in the same folder.
     folder: src/content/posts
     create: true
+    nested:
+      depth: 2
+      summary: "{{title}}"
+    meta:
+      path:
+        widget: string
+        label: "Folder"
+        hint: >
+          Subfolder name for this post (e.g. "mon-evenement").
+          Use the same folder for FR and EN versions to pair them as translations.
+          Leave empty for a standalone (FR-only) post.
     extension: md
     format: frontmatter
     fields:
-      - { label: "Titre", name: title, widget: string }
+      - { label: "Title / Titre", name: title, widget: string }
       - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Contenu", name: body, widget: markdown }
-      - { label: "Image", name: img, widget: image, required: false, hint: "Image principale de l'article (optionnel)" }
-
-  # ─────────────────────────────────────────────────────────────
-  # POSTS — English
-  # Filename gets .en suffix via slug template: Title.en.md
-  # To pair with FR, use the same folder slug as the FR version
-  # ─────────────────────────────────────────────────────────────
-  - name: posts_en
-    label: "Posts (English)"
-    label_singular: "Post (EN)"
-    description: >
-      To create a bilingual post, first create the FR version, then create
-      the EN version here using the same folder as the FR version.
-    folder: src/content/posts
-    create: true
-    extension: md
-    format: frontmatter
-    slug: "{{fields.title}}.en"
-    fields:
-      - { label: "Title", name: title, widget: string }
-      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Content", name: body, widget: markdown }
-      - { label: "Image", name: img, widget: image, required: false, hint: "Optional main image for the post" }
+      - { label: "Content / Contenu", name: body, widget: markdown }
+      - { label: "Image", name: img, widget: image, required: false, hint: "Main image / Image principale (optional)" }
 
   # ─────────────────────────────────────────────────────────────
   # ATELIERS — Bike shop pages
