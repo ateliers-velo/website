@@ -67,30 +67,28 @@ collections:
       - { label: "tags", name: tags, widget: hidden, default: ateliers }
 
   # ─────────────────────────────────────────────────────────────
-  # PAGES — Static content pages
+  # PAGES — Static content pages (bilingual, in subfolders)
+  # .njk template pages (map, all posts, all shops) are not
+  # managed here — only .md content pages.
   # ─────────────────────────────────────────────────────────────
   - name: pages
     label: "Pages"
     label_singular: "Page"
     folder: src/content/pages
     create: true
+    path: "{{slug}}/{{slug}}"
+    i18n: true
     extension: md
     format: frontmatter
     fields:
-      - { label: "Titre / Title", name: title, widget: string }
-      - label: "Langue / Language"
-        name: lang
-        widget: select
-        options:
-          - { label: "Français", value: fr }
-          - { label: "English", value: en }
-        default: fr
-      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
-      - { label: "Description", name: description, widget: text, required: false }
+      - { label: "Titre / Title", name: title, widget: string, i18n: true }
+      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false, i18n: duplicate }
+      - { label: "Description", name: description, widget: text, required: false, i18n: true }
       - label: "Layout"
         name: layout
         widget: select
         options: [basic.html, gallery.html, landing.html, posts-overview.html]
         default: basic.html
-      - { label: "Tags", name: tags, widget: list, required: false, hint: "Ex: nav-items, index-pages" }
-      - { label: "Contenu / Content", name: body, widget: markdown, required: false }
+        i18n: duplicate
+      - { label: "Tags", name: tags, widget: list, required: false, hint: "Ex: nav-items, index-pages", i18n: duplicate }
+      - { label: "Contenu / Content", name: body, widget: markdown, required: false, i18n: true }
