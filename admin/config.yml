@@ -8,51 +8,43 @@ public_folder: /imgs/uploads
 site_url: https://bum.bike
 locale: fr
 
+# ─────────────────────────────────────────────────────────────
+# i18n: Sveltia CMS creates paired files per locale.
+# With omit_default_locale_from_file_path, FR files have no
+# suffix (.md) and EN files get .en.md — matching the existing
+# eleventyComputed.js filename-based language detection.
+# ─────────────────────────────────────────────────────────────
+i18n:
+  structure: multiple_files
+  locales: [fr, en]
+  default_locale: fr
+  omit_default_locale_from_file_path: true
+
 collections:
 
   # ─────────────────────────────────────────────────────────────
-  # POSTS — All articles (FR & EN together)
-  # Tags and layout are inherited from src/content/posts/posts.json
-  #
-  # Language is determined by filename:
-  #   - "My Post.md"     → French (default)
-  #   - "My Post.en.md"  → English
-  #
-  # Bilingual workflow:
-  #   1. Create FR post: set Folder to your event slug, write title
-  #   2. Create EN post: set Folder to the SAME slug, append .en to filename
-  #      (e.g. slug template produces "Title.en.md")
-  #
-  # Posts in the same subfolder with 2 files are auto-paired as
-  # translations by eleventyComputed.js.
+  # POSTS — Bilingual articles (in subfolders)
+  # path template enables subdirectory file discovery.
+  # i18n creates paired FR/EN files in the same folder,
+  # which eleventyComputed.js auto-pairs as translations.
   # ─────────────────────────────────────────────────────────────
   - name: posts
     label: "Articles / Posts"
     label_singular: "Article / Post"
     description: >
-      All posts (FR & EN). Language is determined by filename:
-      "Title.md" = FR, "Title.en.md" = EN.
-      To make a bilingual post, create both versions in the same folder.
+      Bilingual posts. Each entry has FR + EN tabs.
+      Files are stored in subfolders for translation pairing.
     folder: src/content/posts
     create: true
-    nested:
-      depth: 2
-      summary: "{{title}}"
-    meta:
-      path:
-        widget: string
-        label: "Folder"
-        hint: >
-          Subfolder name for this post (e.g. "mon-evenement").
-          Use the same folder for FR and EN versions to pair them as translations.
-          Leave empty for a standalone (FR-only) post.
+    path: "{{slug}}/{{slug}}"
+    i18n: true
     extension: md
     format: frontmatter
     fields:
-      - { label: "Title / Titre", name: title, widget: string }
-      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Content / Contenu", name: body, widget: markdown }
-      - { label: "Image", name: img, widget: image, required: false, hint: "Main image / Image principale (optional)" }
+      - { label: "Title / Titre", name: title, widget: string, i18n: true }
+      - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
+      - { label: "Content / Contenu", name: body, widget: markdown, i18n: true }
+      - { label: "Image", name: img, widget: image, required: false, i18n: duplicate }
 
   # ─────────────────────────────────────────────────────────────
   # ATELIERS — Bike shop pages
