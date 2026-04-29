@@ -49,14 +49,28 @@ Sveltia CMS (headless, Git-backed) lives at `/admin/`:
 - Config: `src/admin/config.yml`
 - Saves content by committing directly to `main`, triggering the normal build
 
+### CMS i18n integration
+The CMS uses **Sveltia CMS's native i18n** (NOT Eleventy's i18n plugin — they are independent systems):
+- Top-level `i18n` block in `config.yml`: `structure: multiple_files`, `locales: [fr, en]`, `default_locale: fr`
+- `omit_default_locale_from_file_path: true` → FR files have no suffix (`.md`), EN files get `.en.md`
+- This matches the existing `eleventyComputed.js` filename-based language detection exactly
+- Each entry in the CMS editor has **FR/EN language tabs** for side-by-side bilingual editing
+
+### Content file requirements
+- **All posts and pages must live in subfolders** — the `path: "{{slug}}/{{slug}}"` config requires this for CMS file discovery
+- Sveltia CMS does **not** support Decap CMS's `nested` collections (planned for v1.0) — `path` is the workaround
+- `.njk` template pages (map, blog listing, shop listing) are not managed by the CMS (filtered by `extension: md`)
+- Do NOT add `tags`, `layout`, or `lang` to post frontmatter — tags/layout inherited from `posts.json`, lang handled by i18n
+
 ### Bilingual post workflow in CMS
-1. Create FR post in "Articles (Français)" → choose a folder slug
-2. Create EN post in "Posts (English)" → **use the same folder slug** so Eleventy pairs them as translations
-3. Do NOT add `tags` or `layout` to post frontmatter — inherited from `posts.json`
+1. Click "New" in "Articles / Posts"
+2. Write FR content in the French tab, EN content in the English tab
+3. On save, the CMS commits two files in the same subfolder: `<slug>/<slug>.md` (FR) + `<slug>/<slug>.en.md` (EN)
+4. `eleventyComputed.js` detects 2 files in the same folder → auto-pairs them as translations
 
 ## Important Conventions
 
-- Posts are organized in per-event subfolders (e.g., `src/content/posts/my-event/Post Title.fr.md`)
+- Posts and pages are organized in per-event/topic subfolders (e.g., `src/content/posts/my-event/my-event.md`)
 - Atelier pages with `permalink: false` are redirect stubs pointing to external shop URLs
 - The `<!--section-->` separator in content splits pages into `main` and `sidenote` sections (via Nunjucks filters)
 - Analytics: GoatCounter at `ateliers-velo.goatcounter.com`
