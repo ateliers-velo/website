@@ -58,7 +58,7 @@ collections:
     extension: md
     format: frontmatter
     fields:
-      - { label: "Nom", name: title, widget: string }
+      - { label: "Nom", name: title, widget: string, required: false }
       - { label: "URL de redirection", name: redirect, widget: string, required: false, hint: "URL externe vers le site de l'atelier (laisser vide pour une page interne)" }
       - { label: "Image", name: img, widget: image, required: false }
       - { label: "Logo", name: logo, widget: image, required: false }
