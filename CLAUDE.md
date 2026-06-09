@@ -68,3 +68,4 @@ Sveltia CMS (headless, Git-backed) lives at `/admin/`:
 |------|--------|
 | 2026-03-18 | Added Sveltia CMS admin panel (`src/admin/`). Auth via GitHub classic PAT — PKCE was attempted but blocked by a GitHub limitation. OAuth proxy via Cloudflare was considered and rejected (minimize external services). PAT auth requires no infrastructure. |
 | 2026-03-18 | Added `CLAUDE.md` for Claude Code session context. |
+| 2026-03-18 | **[branch: `read-from-osm`]** Added weekly OSM sync (`scripts/sync-osm.js` + `.github/workflows/sync-osm.yml`). Queries Overpass API for `shop=bicycle` + `service:bicycle:diy=yes` in Montreal bbox. Matches shops by proximity (≤200m), writes `osm_id`/`location`/`schedule`/`website`/`address` to atelier frontmatter and updates `ateliers.json`. Protected fields never overwritten. 9/20 shops matched on first run; 11 await OSM tagging. |
