@@ -2,6 +2,12 @@
 
 ## ✏️ Modifier le site via l'interface d'administration / Edit the site via the admin interface
 
+Préparations nécessaires :
+
+- Connectez-vous à votre compte Github (https://github.com/login)
+- Assurez-vous d'être membre de l'organisme ateliers-velo. Si vous n'êtes pas encore membre, demandez dans #site-web en communiquant votre nom d'utilisateur github.
+
+
 ### Fr
 
 1. Rendez-vous sur [github.com/settings/tokens](https://github.com/settings/tokens) et cliquez sur **Generate new token → Generate new token (classic)**.
