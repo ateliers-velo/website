@@ -44,7 +44,6 @@ collections:
       - { label: "Title / Titre", name: title, widget: string, i18n: true }
       - { label: "Date", name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, i18n: duplicate }
       - { label: "Content / Contenu", name: body, widget: markdown, i18n: true }
-      - { label: "Image", name: img, widget: image, required: false, i18n: duplicate }
 
   # ─────────────────────────────────────────────────────────────
   # ATELIERS — Bike shop pages
