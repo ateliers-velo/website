@@ -3,8 +3,8 @@ backend:
   repo: ateliers-velo/website
   branch: main
 
-media_folder: /src/imgs/uploads
-public_folder: /imgs/uploads
+media_folder: /src/imgs
+public_folder: /imgs
 site_url: https://bum.bike
 locale: fr
 
@@ -37,6 +37,11 @@ collections:
     folder: src/content/posts
     create: true
     path: "{{slug}}/{{slug}}"
+    # Store uploads in the global folder, not entry-relative subfolders.
+    # A path template makes Sveltia default media to the entry folder,
+    # so set absolute collection-level paths (leading slash = repo root).
+    media_folder: "/src/imgs"
+    public_folder: "/imgs"
     i18n: true
     extension: md
     format: frontmatter
@@ -76,6 +81,8 @@ collections:
     folder: src/content/pages
     create: true
     path: "{{slug}}/{{slug}}"
+    media_folder: "/src/imgs"
+    public_folder: "/imgs"
     i18n: true
     extension: md
     format: frontmatter
