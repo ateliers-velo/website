@@ -3,7 +3,7 @@ backend:
   repo: ateliers-velo/website
   branch: main
 
-media_folder: src/imgs/uploads
+media_folder: /src/imgs/uploads
 public_folder: /imgs/uploads
 site_url: https://bum.bike
 locale: fr
