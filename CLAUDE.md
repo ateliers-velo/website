@@ -80,5 +80,6 @@ The CMS uses **Sveltia CMS's native i18n** (NOT Eleventy's i18n plugin — they 
 
 | Date | Change |
 |------|--------|
+| 2026-06-11 | Fixed CMS image uploads for posts/pages. Removed the redundant post `img` field (images now go inline in the markdown body, per-language). Root cause of broken uploads: a `path:` template makes Sveltia treat a collection as a page bundle and default media to the entry's own folder, ignoring the global `media_folder` — so uploads landed in `src/content/posts/<slug>/<slug>/` (not passthrough-copied → never published). Fix: set absolute `media_folder: /src/imgs` + `public_folder: /imgs` at the **collection level** on every `path`-template collection (posts, pages), and consolidated all images into the single `src/imgs/` folder (no separate `uploads/` subfolder). Leading slash on `media_folder` = repo root. |
 | 2026-03-18 | Added Sveltia CMS admin panel (`src/admin/`). Auth via GitHub classic PAT — PKCE was attempted but blocked by a GitHub limitation. OAuth proxy via Cloudflare was considered and rejected (minimize external services). PAT auth requires no infrastructure. |
 | 2026-03-18 | Added `CLAUDE.md` for Claude Code session context. |
