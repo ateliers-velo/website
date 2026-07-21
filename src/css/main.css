@@ -337,7 +337,7 @@ video {
 #fediwall-container {
 	width: 100%;
 	height: 70vh;
-	grid-column: span 8;
+	grid-column: 1 / -1;
 	margin: 0vh 0 0vh 0;
 }
 
