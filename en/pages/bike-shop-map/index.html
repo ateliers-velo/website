@@ -407,6 +407,28 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Ccircle cx='22' cy='20' r='6' fill='white'/%3E%3Ccircle cx='42' cy='20' r='6' fill='white'/%3E%3Cpath d='M14 20 L7 20 M10 17 L7 20 L10 23' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M50 20 L57 20 M54 17 L57 20 L54 23' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
         }
 
+        /* Replace the desktop "Use Ctrl/⌘ + scroll to zoom the map"
+           text with the modifier-key label plus a scroll icon, so
+           there's no English sentence to translate */
+        .maplibregl-cooperative-gesture-screen .maplibregl-desktop-message {
+            font-size: 0;
+        }
+        .maplibregl-cooperative-gesture-screen .maplibregl-desktop-message::before {
+            content: "Ctrl/Cmd";
+            font-size: 1.4rem;
+            color: white;
+            vertical-align: middle;
+            margin-right: 14px;
+        }
+        .maplibregl-cooperative-gesture-screen .maplibregl-desktop-message::after {
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 80px;
+            vertical-align: middle;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 64'%3E%3Crect x='4' y='4' width='32' height='56' rx='16' fill='none' stroke='white' stroke-width='2'/%3E%3Cline x1='20' y1='14' x2='20' y2='28' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M14 40 L20 34 L26 40' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 48 L20 54 L26 48' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+        }
+
         body.light .atelier-marker {
             border-color: var(--caption-color);
         }
