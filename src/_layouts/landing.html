@@ -10,7 +10,11 @@
 				{% include 'map.html' %}
 			</div>
 			<div id="landing-content" class="vertical-centre">
-				{{ content | safe }}
+				{% for p in collections.all %}
+					{% if p.data.fileNameSlug == "a-propos" and p.data.lang == lang %}
+						{{ p.content | safe }}
+					{% endif %}
+				{% endfor %}
 			</div>
 			{% include 'posts.html' %}
 		</div>
