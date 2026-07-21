@@ -349,90 +349,7 @@
     </button>
 </div>
 
-			  <!-- It doesn't work and it makes me sad :(
-Shit I have tried: 
-
-import "./main.css"; 
-
- <head>
-      <link rel="stylesheet" href="main.css">
-  </head>
-
-Before copying the CSS in the file, see below, but it still doesn't work at all
-I am clearly missing something and I can't see it or figure it out. 
-Git hub doesn't seem to recognize "marquee-move-text" as a symbol... piste?
-
-Please let me know:
-1 - what you do to get it to work 
-2 - how you figured it out
-
-Best - Gaba --> 
-
- 
-<!--
-Hi Gaba,
-
-Here's what was wrong and how I fixed it:
-
-1. The file was using React/JSX syntax (className, JS style objects, etc.), but this is a plain HTML file for Eleventy/static site, not a React app. Browsers don't understand JSX.
-2. I replaced all `className` with `class` (standard HTML).
-3. I replaced the JS style objects with valid inline CSS using the `style` attribute, e.g.:
-     style="--direction: reverse; --speed: 20s;"
-4. Now the CSS custom properties (variables) are set correctly for each marquee track.
-5. This should now work as intended, as long as the file is included in a page and the CSS is present (which it is, since it's in a <style> block at the top).
-
-How I figured it out: Browsers only understand HTML, not JSX. If you see curly braces, className, or JS objects in a .html file, that's a sign it was copied from a React/JSX context. Just use standard HTML attributes.
-
-Let me know if you need more help!
--->
-<div class="marquee-detached">
-  <div class="marquee-wrapper">
-    <div class="marquee-text fadeout-horizontal">
-      <div 
-        class="marquee-text-track"
-        style="--direction: reverse; --speed: 20s;"
-      >
-        <p>🍑🍑</p>
-        <p>BUM-BUM</p>
-        <p>🍑🍑</p>
-        <p>Bécyks Unis Montréal - Bikes Unite Montreal</p>
-        <p aria-hidden="true">🍑🍑</p>
-        <p aria-hidden="true">BUM-BUM</p>
-        <p aria-hidden="true">🍑🍑</p>
-        <p aria-hidden="true">Bécyks Unis Montréal - Bikes Unite Montreal</p>
-      </div>
-    </div>
-    <div class="marquee-text fadeout-horizontal">
-      <div
-        class="marquee-text-track"
-        style="--direction: forwards; --speed: 30s;"
-      >
-        <p>Réunions mensuelles à l'Immeuble Greenpeace. Join the Discord!</p>
-        <p>🚲</p>
-        <p aria-hidden="true">Réunions mensuelles à l'Immeuble Greenpeace Building</p>
-        <p aria-hidden="true">🚲</p>
-      </div>
-    </div>
-    <div class="marquee-text fadeout-horizontal">
-      <div
-        class="marquee-text-track"
-        style="--direction: reverse; --speed: 20s;"
-      >
-        <p>🔧</p>
-        <p>Réseau des ateliers vélo communautaires de Montréal</p>
-        <p>🔧</p>
-        <p>Montreal Community Bike Shop Network</p>
-        <p aria-hidden="true">🔧</p>
-        <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
-        <p aria-hidden="true">🔧</p>
-        <p aria-hidden="true">Montreal Community Bike Shop Network</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-			<div id="map-container">
-				<!DOCTYPE html>
+			<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset='utf-8'>
@@ -678,7 +595,88 @@ Let me know if you need more help!
 </body>
 </html>
 
-			</div>
+			  <!-- It doesn't work and it makes me sad :(
+Shit I have tried: 
+
+import "./main.css"; 
+
+ <head>
+      <link rel="stylesheet" href="main.css">
+  </head>
+
+Before copying the CSS in the file, see below, but it still doesn't work at all
+I am clearly missing something and I can't see it or figure it out. 
+Git hub doesn't seem to recognize "marquee-move-text" as a symbol... piste?
+
+Please let me know:
+1 - what you do to get it to work 
+2 - how you figured it out
+
+Best - Gaba --> 
+
+ 
+<!--
+Hi Gaba,
+
+Here's what was wrong and how I fixed it:
+
+1. The file was using React/JSX syntax (className, JS style objects, etc.), but this is a plain HTML file for Eleventy/static site, not a React app. Browsers don't understand JSX.
+2. I replaced all `className` with `class` (standard HTML).
+3. I replaced the JS style objects with valid inline CSS using the `style` attribute, e.g.:
+     style="--direction: reverse; --speed: 20s;"
+4. Now the CSS custom properties (variables) are set correctly for each marquee track.
+5. This should now work as intended, as long as the file is included in a page and the CSS is present (which it is, since it's in a <style> block at the top).
+
+How I figured it out: Browsers only understand HTML, not JSX. If you see curly braces, className, or JS objects in a .html file, that's a sign it was copied from a React/JSX context. Just use standard HTML attributes.
+
+Let me know if you need more help!
+-->
+<div class="marquee-detached">
+  <div class="marquee-wrapper">
+    <div class="marquee-text fadeout-horizontal">
+      <div 
+        class="marquee-text-track"
+        style="--direction: reverse; --speed: 20s;"
+      >
+        <p>🍑🍑</p>
+        <p>BUM-BUM</p>
+        <p>🍑🍑</p>
+        <p>Bécyks Unis Montréal - Bikes Unite Montreal</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">BUM-BUM</p>
+        <p aria-hidden="true">🍑🍑</p>
+        <p aria-hidden="true">Bécyks Unis Montréal - Bikes Unite Montreal</p>
+      </div>
+    </div>
+    <div class="marquee-text fadeout-horizontal">
+      <div
+        class="marquee-text-track"
+        style="--direction: forwards; --speed: 30s;"
+      >
+        <p>Réunions mensuelles à l'Immeuble Greenpeace. Join the Discord!</p>
+        <p>🚲</p>
+        <p aria-hidden="true">Réunions mensuelles à l'Immeuble Greenpeace Building</p>
+        <p aria-hidden="true">🚲</p>
+      </div>
+    </div>
+    <div class="marquee-text fadeout-horizontal">
+      <div
+        class="marquee-text-track"
+        style="--direction: reverse; --speed: 20s;"
+      >
+        <p>🔧</p>
+        <p>Réseau des ateliers vélo communautaires de Montréal</p>
+        <p>🔧</p>
+        <p>Montreal Community Bike Shop Network</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Réseau des ateliers vélo communautaires de Montréal</p>
+        <p aria-hidden="true">🔧</p>
+        <p aria-hidden="true">Montreal Community Bike Shop Network</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 			<div id="landing-content" class="vertical-centre">
 				
 					
