@@ -20,6 +20,13 @@
 				{% endfor %}
 			</div>
 			{% include 'posts.html' %}
+			<div id="fediwall-container">
+				{% for p in collections.all %}
+					{% if p.data.fileNameSlug == "fediwall" %}
+						<iframe src="{{ p.data.redirect }}" width="100%" height="100%" loading="lazy" title="{{ p.data.title }}"></iframe>
+					{% endif %}
+				{% endfor %}
+			</div>
 		</div>
 		{% include 'footer.html' %}
 	</body>
