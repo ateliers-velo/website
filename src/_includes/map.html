@@ -81,6 +81,22 @@
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 100'%3E%3Cpath d='M14 12 L20 4 L26 12' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='4' y='20' width='32' height='56' rx='8' fill='none' stroke='white' stroke-width='2'/%3E%3Cline x1='20' y1='30' x2='20' y2='42' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M14 84 L20 92 L26 84' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
         }
 
+        /* Force the attribution control collapsed by default on
+           smartphones, regardless of MapLibre's own compact-mode
+           auto-detection. Desktop is untouched (stays expanded).
+           Tapping the icon still reveals it via maplibregl-compact-show. */
+        @media all and (max-width: 1000px) {
+            .maplibregl-ctrl-attrib-inner {
+                display: none;
+            }
+            .maplibregl-ctrl-attrib-button {
+                display: block;
+            }
+            .maplibregl-ctrl-attrib.maplibregl-compact-show .maplibregl-ctrl-attrib-inner {
+                display: block;
+            }
+        }
+
         body.light .atelier-marker {
             border-color: var(--caption-color);
         }
@@ -111,8 +127,7 @@
                     [-73.34553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
             ],
                 maplibreLogo: false,
-                cooperativeGestures: {% if landingpage %}true{% else %}false{% endif %},
-                attributionControl: { compact: true }
+                cooperativeGestures: {% if landingpage %}true{% else %}false{% endif %}
             });
             let popupTimeout;
 
