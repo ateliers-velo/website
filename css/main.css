@@ -414,7 +414,8 @@ p {
 }
 
 
-#landing-content {
+#landing-content,
+#contact-content {
 	grid-column: span 8;
 	grid-template-columns: repeat(auto-fill, minmax(25vw, max-content));
 }
@@ -963,7 +964,8 @@ footer > .credits {
 		display: none;
 	}
 
-	#landing-content {
+	#landing-content,
+	#contact-content {
 		grid-column: 1 / -1;
 	}
 	.content p:first-child {
