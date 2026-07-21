@@ -111,7 +111,8 @@
                     [-73.34553743781728, 45.70820879537386] // Northeast coordinates (longitude, latitude)
             ],
                 maplibreLogo: false,
-                cooperativeGestures: {% if landingpage %}true{% else %}false{% endif %}
+                cooperativeGestures: {% if landingpage %}true{% else %}false{% endif %},
+                attributionControl: { compact: true }
             });
             let popupTimeout;
 

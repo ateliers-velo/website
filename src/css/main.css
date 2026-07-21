@@ -1013,7 +1013,7 @@ footer > .credits {
 	footer {
 		margin-top: calc(var(--font-multiplier) * 2rem);
 	}
-	.nav-items > a, .nav-items > div {
+	.nav-items > a, .nav-items > div, .nav-items > button {
 		grid-column: 1 / -1;
 		padding: 2vh 0 2vh 0;
 	}
