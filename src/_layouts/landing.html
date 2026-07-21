@@ -20,6 +20,16 @@
 				{% endfor %}
 			</div>
 			{% include 'posts.html' %}
+			<div id="contact-content" class="vertical-centre">
+				{% for p in collections.all %}
+					{% if p.data.fileNameSlug == "contact" and p.data.lang == lang %}
+						<div class="content">
+							<h1>{{ p.data.title }}</h1>
+							{{ p.content | safe }}
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
 		</div>
 		{% include 'footer.html' %}
 	</body>
