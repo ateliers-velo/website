@@ -12,7 +12,10 @@
 			<div id="landing-content" class="vertical-centre">
 				{% for p in collections.all %}
 					{% if p.data.fileNameSlug == "a-propos" and p.data.lang == lang %}
-						{{ p.content | safe }}
+						<div class="content" onclick="window.location.href='{{ p.data.permalink }}';" style="cursor: pointer;">
+							<h1>{{ p.data.title }}</h1>
+							{{ p.content | safe }}
+						</div>
 					{% endif %}
 				{% endfor %}
 			</div>
