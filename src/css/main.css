@@ -931,6 +931,9 @@ footer > .credits {
 	}
 }
 @media all and (max-width: 1000px) {
+	#light-toggle {
+		padding-top: 10%;
+	}
 	video {
 		grid-column: 1 / -1;
 	}
