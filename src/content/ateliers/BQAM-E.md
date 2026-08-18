@@ -1,15 +1,20 @@
 ---
-permalink: false
+title: ''
 redirect: https://bqam-e.org/
-img: 'https://bqam-e.org/wp-content/uploads/2023/01/output-17.jpg' # '/imgs/browse-heritage.png'
-logo: "/imgs/atelier-logos/BB_BQAME.png"
-description: "Atelier des étudiant.e.s de l'UQAM"
-location: [-73.57001538, 45.50981]
-schedule: "Mondays, Tuesdays, Wednesdays, Thursdays, Sundays"
-public: "all"
-cost: "free"
-payment-methods: "Card / Cash"
+img: https://bqam-e.org/wp-content/uploads/2023/01/output-17.jpg
+logo: /imgs/atelier-logos/BB_BQAME.png
+description: Centre-ville
+permalink: false
+tags: ateliers
+location:
+  - -73.57001538
+  - 45.50981
+public: all
+cost: free
+payment-methods: Card / Cash
+schedule: Mondays, Tuesdays, Wednesdays, Thursdays, Sundays
 ---
+
 <!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
 Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->
 
