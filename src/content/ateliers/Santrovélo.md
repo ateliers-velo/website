@@ -1,15 +1,20 @@
 ---
-permalink: false
+title: ''
 redirect: https://santrovelo.square.site/
-img: '/imgs/sv.jpg'
-logo: "/imgs/atelier-logos/BB_Santrovelo.png"
-description: "Atelier participatif du sud du Plateau fondé en 1996"
-location: [ -73.57521853, 45.51668767 ]
-schedule: "Tuesdays, Wednesdays, Saturdays"
-public: "all"
-cost: "7 per hour"
-payment-methods: "Card / Cash"
+img: /imgs/sv.jpg
+logo: /imgs/atelier-logos/BB_Santrovelo.png
+description: Plateau
+permalink: false
+tags: ateliers
+location:
+  - -73.57521853
+  - 45.51668767
+public: all
+cost: 7 per hour
+payment-methods: Card / Cash
+schedule: Tuesdays, Wednesdays, Saturdays
 ---
+
 <!-- No logo? I was also thinking we could put an ASCII version of the logo in the background, in palers colours or with transperancy. 
 Every one of these sections could be cube or in a large Table, the same squares could then be at the same place in every shop. GABA -->
 
