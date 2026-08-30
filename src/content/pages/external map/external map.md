@@ -1,5 +1,5 @@
 ---
-layout: 'basic.html'
+layout: 'basic_fullscrn.html'
 tags: [index-pages]
 title: 'Carte des stations de réparation publiques'
 date: 2000-01-05

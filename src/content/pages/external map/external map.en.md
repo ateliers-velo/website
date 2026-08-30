@@ -1,5 +1,5 @@
 ---
-layout: 'basic.html'
+layout: 'basic_fullscrn.html'
 tags: [index-pages]
 title: 'Public bike repair stations map'
 date: 2000-01-05
