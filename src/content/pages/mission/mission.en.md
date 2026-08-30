@@ -1,6 +1,6 @@
 ---
 title: Mission
-date: ''
+date: 2000-01-07
 description: ''
 layout: basic.html
 tags:

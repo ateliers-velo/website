@@ -2,7 +2,7 @@
 layout: 'basic.html'
 tags: [nav-items, index-pages]
 title: 'About'
-date: 2000-01-04
+date: 2000-01-05
 ---
 
 You're on the website of **BUM-BUM: Montreal's Community Bike Shop Network**.

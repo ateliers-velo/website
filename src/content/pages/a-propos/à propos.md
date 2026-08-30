@@ -2,7 +2,7 @@
 layout: 'basic.html'
 tags: [nav-items, index-pages]
 title: 'À propos'
-date: 2000-01-04
+date: 2000-01-05
 ---
 
 Vous êtes sur le site web de **BUM-BUM: le réseau des ateliers vélo communautaires de Montréal**.

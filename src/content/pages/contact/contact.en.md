@@ -2,7 +2,7 @@
 layout: 'basic.html'
 tags: [nav-items, index-pages]
 title: 'Contact'
-date: 2000-01-02
+date: 2000-01-06
 description: 'contact'
 ---
 
