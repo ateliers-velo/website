@@ -1,25 +1,24 @@
 ---
-layout: 'basic.html'
-tags: [nav-items, index-pages]
-title: 'Mission'
+title: Mission
+date: ''
+description: ''
+layout: basic.html
+tags:
+  - nav-items
+  - index-pages
 ---
 
-Le réseau (BUM-BUM) promeut les bienfaits du transport actif et désire qu’il soit accessible au plus grand nombre de montréalais-es possible. Selon nous, les **ateliers de vélo communautaires (AVC)** sont essentiels à l’atteinte de cet objectif.
+This network (BUM-BUM) promotes the benefits of active transportation and aims to make it accessible to as many Montrealers as possible. In our view, community bike shops (CBSs) are essential to achieving this goal.
 
-Nous oeuvrons à ce que le réseau des AVC soit :
+We work to ensure that the network of CBSs is:
 
-- **Accessible**, c’est-à-dire gratuit ou à peu de frais, et aussi
-adapté aux différentes capacités physiques ou psychologiques
-des gens qui le fréquentent.
-- **Inclusif**, c’est-à-dire ouvert et soucieux du bien-être des gens de toutes identités, provenances, cultures, classes sociales,
-statuts migratoires, et niveaux de familiarité avec la mécanique.
-- **Participatif**, c’est-à-dire qui encourage l’implication des
-personnes usagères dans l’organisation de l’atelier.
-- **Distribué** à l’extérieur des quartiers centraux et de façon
-spatialement équitable à travers Montréal.
+- Accessible, meaning free or low-cost, and adapted to the varying physical or psychological capacities of the people who use it.
+- Inclusive, meaning open to and mindful of the well-being of people of all identities, backgrounds, cultures, social classes, migratory statuses, and familiarity with bike mechanics.
+- Participatory, meaning it encourages users' involvement in the shop's organization and administration.
+- Distributed outside the central neighborhoods and in a spatially equitable manner across Montreal.
 
-Nous croyons aussi que les AVC ont un rôle qui dépasse la mécanique ou l’accès au transport actif. Pour plusieurs personnes, ce sont des lieux où l’on peut développer sa confiance en soi, socialiser rencontrer des gens et aussi… avoir du plaisir!
+We also believe that CBSs have a role that goes beyond mechanics or just access to active transportation. For many people, they are places where one can build self-confidence, socialize, meet people, and have fun!
 
-Nous voyons aussi les AVC comme faisant partie de la lutte écologique, en ce qu’ils encouragent l’économie circulaire, ainsi que l’autonomisation mobilitaire et communautaire.
+We also consider CBSs as central to the ecological movement because they encourage practices critical to developing a more circular economy, and promote ecological means of mobility and general community empowerment.
 
-[Consulter notre constitution](/imgs/constitution_v1.pdf)
+[See our constitution](/imgs/constitution_v1.pdf)
