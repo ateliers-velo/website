@@ -118,9 +118,9 @@
             const map = new maplibregl.Map({
                 container: 'map',
                 style: mapStyle,
-                center: [-73.5783148,45.5048116], // Centered on Montreal
-                zoom: 12,
-                minZoom: 11,
+                center: [-73.4083148, 45.5248116], // Centered on Montreal
+                zoom: 11,
+                minZoom: 8,
                 maxZoom: 16,
                 maxBounds: [
                     [-73.97503664228385, 45.38248151412239], // Southwest coordinates (longitude, latitude)
@@ -184,8 +184,8 @@
                     offset: 60
                 });
 
-                const initialMarkerSize = 60; // Base size of the marker in pixels
-                const scaleFactor = 1.8;       // How much to scale on hover (e.g., 2 for double)
+                const initialMarkerSize = 40; // Base size of the marker in pixels
+                const scaleFactor = 2;       // How much to scale on hover (e.g., 2 for double)
 
                 ateliersData.features.forEach((feature) => {
                     if (feature.geometry && feature.geometry.type === 'Point' && feature.properties && feature.properties.nom && feature.properties.logo_path) {
