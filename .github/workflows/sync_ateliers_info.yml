@@ -11,7 +11,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Needed to commit and push changes back to main
+      contents: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v7
@@ -32,7 +33,7 @@ jobs:
           echo "BRANCH_NAME=chore/sync-ateliers-info-$(date +%Y-%m-%d)" >> $GITHUB_ENV
         
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: automated file update"
