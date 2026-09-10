@@ -39,6 +39,6 @@ jobs:
           commit-message: "chore: automated file update"
           title: "(chore) Sync Ateliers Info ($(date +%Y-%m-%d))"
           body: "Monthly sync of OpenStreetMap data."
-          branch: "$BRANCH_NAME"
+          branch: ${{ env.BRANCH_NAME }}
           base: "main"
           delete-branch: true   
