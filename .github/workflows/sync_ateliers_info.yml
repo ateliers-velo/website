@@ -1,10 +1,10 @@
 name: Sync Ateliers Information
 
 on:
-#   schedule:
-#     - cron: "0 0 1 * *"
-  pull_request:
-    types: [opened, synchronize]
+  schedule:
+    - cron: "0 0 1 * *"
+#   pull_request:
+#     types: [opened, synchronize]
   workflow_dispatch:       # Manual trigger via GitHub Actions UI
 
 jobs:
@@ -36,9 +36,9 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: automated file update"
+          commit-message: "chore: Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))"
           title: "(chore) Sync Ateliers Info ($(date +%Y-%m-%d))"
-          body: "Monthly sync of OpenStreetMap data."
+          body: "Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))."
           branch: ${{ env.BRANCH_NAME }}
           base: "main"
           delete-branch: true   
