@@ -1,0 +1,46 @@
+name: Sync Ateliers Information
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:       # Manual trigger via GitHub Actions UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '18.16.0'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync
+        run: node scripts/sync_ateliers_info.js
+
+      - name: Create and store branch name
+        run: |
+          echo "BRANCH_NAME=chore/sync-ateliers-info-$(date +%Y-%m-%d)" >> $GITHUB_ENV
+        
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))"
+          title: "(chore) Sync Ateliers Info ($(date +%Y-%m-%d))"
+          body: "Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))."
+          branch: ${{ env.BRANCH_NAME }}
+          base: "main"
+          delete-branch: true   
