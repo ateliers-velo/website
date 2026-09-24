@@ -22,7 +22,7 @@
   { "type": "Feature", "properties": { "nom": "Têtes de rayon", "logo_path": "/imgs/atelier-logos/BB_TDR.png", "url": "https://velo-edpahuntsic.square.site/" }, "geometry": { "type": "Point", "coordinates": [ -73.647643230015063, 45.549374529659914 ] } },
   { "type": "Feature", "properties": { "nom": "Atelier Vélo Montréal-Nord", "logo_path": "/imgs/atelier-logos/BB_HOOD.png", "url": "https://atelier-velo-montrealnord.square.site/" }, "geometry": { "type": "Point", "coordinates": [ -73.64487012321497, 45.59244652222314 ] } },
   { "type": "Feature", "properties": { "nom": "Vélogik", "logo_path": "/imgs/atelier-logos/BB_VELOGIK.png", "url": "https://www.facebook.com/velogik/" }, "geometry": { "type": "Point", "coordinates": [ -73.69110288728614, 45.51800713895457 ] } },
-  { "type": "Feature", "properties": { "nom": "Cyclo Nord-Sud CDN", "logo_path": "/imgs/atelier-logos/BB_CYCLO_NS.png", "url": "https://urls.fr/vdWf1U" }, "geometry": { "type": "Point", "coordinates": [ -73.6317042238174, 45.50543452027958 ] } },
-  { "type": "Feature", "properties": { "nom": "Cyclo Nord-Sud NDG", "logo_path": "/imgs/atelier-logos/BB_CYCLO_NS.png", "url": "https://urls.fr/vdWf1U" }, "geometry": { "type": "Point", "coordinates": [ -73.6384655636408, 45.471877380571364 ] } }
+  { "type": "Feature", "properties": { "nom": "Cyclo Nord-Sud CDN", "logo_path": "/imgs/atelier-logos/BB_CYCLO_NS.jpg", "url": "https://urls.fr/vdWf1U" }, "geometry": { "type": "Point", "coordinates": [ -73.6317042238174, 45.50543452027958 ] } },
+  { "type": "Feature", "properties": { "nom": "Cyclo Nord-Sud NDG", "logo_path": "/imgs/atelier-logos/BB_CYCLO_NS.jpg", "url": "https://urls.fr/vdWf1U" }, "geometry": { "type": "Point", "coordinates": [ -73.6384655636408, 45.471877380571364 ] } }
   ]
 }
