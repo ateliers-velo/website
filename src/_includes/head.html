@@ -8,6 +8,18 @@
     {% else %}
         <meta name="description" content="{{ site.description[lang] }}">
     {% endif %}
+    {% set origin = "https://bum.bike" %}
+    {% set isPost = tags and "posts" in tags %}
+    {% set ogImage = "" %}
+    {% if isPost %}{% set ogImage = content | firstImage(origin) %}{% endif %}
+    {% if not ogImage %}{% set ogImage = origin + "/imgs/og-default.png" %}{% endif %}
+    <meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.title[lang] }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or site.description[lang] }}">
+    <meta property="og:url" content="{{ origin }}{{ page.url }}">
+    <meta property="og:image" content="{{ ogImage }}">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="/imgs/peach-emoji.ico" type="image/x-icon">
     <link id="theme-style" rel="stylesheet" type="text/css" href="/css/dark-mode.css" />
     <script>(function(){if(localStorage.getItem('theme')==='light'){document.getElementById('theme-style').setAttribute('href','/css/light-mode.css');}}());</script>
