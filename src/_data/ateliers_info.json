@@ -1,0 +1,71 @@
+{
+  "Mile End Bike Garage": {
+    "address": "135 Avenue Van Horne",
+    "opening_hours": "Mo-Fr 19:00-22:00",
+    "website": "https://www.facebook.com/groups/mileendbikegarage/",
+    "latitude": 45.5275483,
+    "longitude": -73.607892
+  },
+  "The Flat Bike Collective": {
+    "address": "undefined undefined",
+    "email": "theflat.bikecollective@gmail.com",
+    "opening_hours": "Mo 17:00-19:00; PH off; Th 17:00-19:00; Tu 16:00-18:00",
+    "website": "https://theflat.wordpress.com/",
+    "latitude": 45.5034862,
+    "longitude": -73.5779767
+  },
+  "Right to Move": {
+    "address": "undefined Rue Mackay",
+    "email": "righttomove@gmail.com",
+    "opening_hours": "Mo-Fr 18:00-21:00",
+    "website": "https://www.rtm-lvl.org/",
+    "latitude": 45.4976474,
+    "longitude": -73.5793642
+  },
+  "Biciklo, atelier vélo communautaire": {
+    "address": "undefined undefined",
+    "website": "https://polyfab.polymtl.ca/biciklo/",
+    "latitude": 45.5043974,
+    "longitude": -73.6143391
+  },
+  "Santrovelo": {
+    "address": "111 Rue Roy Est",
+    "email": "benevelo@santropolroulant.org",
+    "opening_hours": "Mo-We 17:30-19:30",
+    "website": "https://santropolroulant.org/en/what-is-the-roulant/collectives/santrovelo/",
+    "latitude": 45.5166343,
+    "longitude": -73.5752402
+  },
+  "Cycle 7 Coop": {
+    "address": "1900 Rue Le Ber",
+    "email": "info@cycle7.ca",
+    "opening_hours": "Tu-Fr 11:00-18:00; Sa 12:00-17:00",
+    "website": "https://www.cycle7.ca/",
+    "latitude": 45.4809303,
+    "longitude": -73.5523179
+  },
+  "Bill's Community Bike Shop": {
+    "address": "2365 Rue Grand Trunk",
+    "email": "social@saintcolumbahouse.org",
+    "opening_hours": "We-Su 12:00-18:00",
+    "website": "https://saintcolumbahouse.org/program/bills-community-bike-shop/",
+    "latitude": 45.4788934,
+    "longitude": -73.5653507
+  },
+  "The Little Red Bike Shop": {
+    "address": "undefined undefined",
+    "email": "petitvelorouge@gmail.com",
+    "opening_hours": "We-Th 18:00-20:30; Su 10:00-13:00",
+    "website": "https://www.facebook.com/petitvelorouge",
+    "latitude": 45.459514,
+    "longitude": -73.6396532
+  },
+  "Tourne à gauche": {
+    "address": "undefined undefined",
+    "email": "velo@lespacemaker.com",
+    "opening_hours": "We-Th 16:00-20:00",
+    "website": "https://www.lespacemaker.com/fr/calendriers/",
+    "latitude": 45.5391582,
+    "longitude": -73.5566231
+  }
+}
