@@ -30,17 +30,18 @@ jobs:
       - name: Sync
         run: node scripts/sync_ateliers_info.js
 
-      - name: Create and store branch name
+      - name: Store branch name and sync date
         run: |
           echo "BRANCH_NAME=chore/sync-ateliers-info-$(date +%Y-%m-%d)" >> $GITHUB_ENV
+          echo "SYNC_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
         
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))"
-          title: "(chore) Sync Ateliers Info ($(date +%Y-%m-%d))"
-          body: "Monthly sync of OpenStreetMap data ($(date +%Y-%m-%d))."
+          commit-message: "chore: Monthly sync of OpenStreetMap data (${{ env.SYNC_DATE }})"
+          title: "(chore) Sync Ateliers Info (${{ env.SYNC_DATE }})"
+          body: "Update `src/_data/ateliers_info.json` from OpenStreetMap data (Overpass API)."
           branch: ${{ env.BRANCH_NAME }}
           base: "main"
           delete-branch: true   
