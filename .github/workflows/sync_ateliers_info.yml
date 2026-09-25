@@ -3,8 +3,6 @@ name: Sync Ateliers Information
 on:
   schedule:
     - cron: "0 0 1 * *"
-  pull_request:
-    types: [opened, synchronize]
   workflow_dispatch:       # Manual trigger via GitHub Actions UI
 
 jobs:
