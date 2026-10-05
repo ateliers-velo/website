@@ -56,7 +56,7 @@ The CMS uses **Sveltia CMS's native i18n** (NOT Eleventy's i18n plugin — they 
 - `omit_default_locale_from_file_path: true` → FR files have no suffix (`.md`), EN files get `.en.md`
 - This matches the existing `eleventyComputed.js` filename-based language detection exactly
 - Each entry in the CMS editor has **FR/EN language tabs** for side-by-side bilingual editing
-- `initial_locales: default` → new entries start **FR-only**; EN is optional, enabled per entry via the editor's locale menu (otherwise Sveltia enables all locales and EN's required title/body block saving)
+- `initial_locales: default` → new entries start **FR-only**; EN is optional, enabled per entry via the editor's locale menu (otherwise Sveltia enables all locales and EN's required title/body block saving). **EN-only posts are not possible in the CMS**: Sveltia never lets you disable the default locale (FR). Eleventy handles a lone `.en.md` fine, so EN-only posts must be added by hand in git (accepted limitation, 2026-10-05)
 
 ### Content file requirements
 - **All posts and pages must live in subfolders** — the `path: "{{slug}}/{{slug}}"` config requires this for CMS file discovery
