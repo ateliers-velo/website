@@ -1,5 +1,5 @@
 ---
-title: Soirée des ateliers vélo communautaires
+title: Soirée des ateliers vélo communautaires !
 date: 2026-10-05
 description: Invitation au grand rassemblement des ateliers vélo communautaires
 ---
