@@ -19,6 +19,10 @@ i18n:
   locales: [fr, en]
   default_locale: fr
   omit_default_locale_from_file_path: true
+  # New entries start FR-only; EN is optional and can be switched on
+  # per entry from the editor's locale menu. Without this, every
+  # locale is enabled and EN's required fields block saving.
+  initial_locales: default
 
 collections:
 

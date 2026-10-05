@@ -56,6 +56,7 @@ The CMS uses **Sveltia CMS's native i18n** (NOT Eleventy's i18n plugin — they 
 - `omit_default_locale_from_file_path: true` → FR files have no suffix (`.md`), EN files get `.en.md`
 - This matches the existing `eleventyComputed.js` filename-based language detection exactly
 - Each entry in the CMS editor has **FR/EN language tabs** for side-by-side bilingual editing
+- `initial_locales: default` → new entries start **FR-only**; EN is optional, enabled per entry via the editor's locale menu (otherwise Sveltia enables all locales and EN's required title/body block saving)
 
 ### Content file requirements
 - **All posts and pages must live in subfolders** — the `path: "{{slug}}/{{slug}}"` config requires this for CMS file discovery
@@ -80,6 +81,7 @@ The CMS uses **Sveltia CMS's native i18n** (NOT Eleventy's i18n plugin — they 
 
 | Date | Change |
 |------|--------|
+| 2026-10-05 | Made EN optional in the CMS (`i18n.initial_locales: default`). Previously Sveltia enabled every locale on new entries, so the required EN title/body blocked saving FR-only posts. |
 | 2026-06-11 | Fixed CMS image uploads for posts/pages. Removed the redundant post `img` field (images now go inline in the markdown body, per-language). Root cause of broken uploads: a `path:` template makes Sveltia treat a collection as a page bundle and default media to the entry's own folder, ignoring the global `media_folder` — so uploads landed in `src/content/posts/<slug>/<slug>/` (not passthrough-copied → never published). Fix: set absolute `media_folder: /src/imgs` + `public_folder: /imgs` at the **collection level** on every `path`-template collection (posts, pages), and consolidated all images into the single `src/imgs/` folder (no separate `uploads/` subfolder). Leading slash on `media_folder` = repo root. |
 | 2026-03-18 | Added Sveltia CMS admin panel (`src/admin/`). Auth via GitHub classic PAT — PKCE was attempted but blocked by a GitHub limitation. OAuth proxy via Cloudflare was considered and rejected (minimize external services). PAT auth requires no infrastructure. |
 | 2026-03-18 | Added `CLAUDE.md` for Claude Code session context. |
