@@ -1032,6 +1032,17 @@
     </div>
 </footer>
 
+		<script>
+			// On narrow screens the navbar stacks above the post; jump past it.
+			// Skip if returning with a restored scroll position or a #hash link.
+			(function () {
+				var content = document.querySelector('.content');
+				if (!content || location.hash || window.scrollY > 0) return;
+				if (content.getBoundingClientRect().top > window.innerHeight * 0.4) {
+					content.scrollIntoView({ block: 'start' });
+				}
+			})();
+		</script>
 	</body>
 
 </html>
