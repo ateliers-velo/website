@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//BUM//bum.bike//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:soiree-ateliers-velo-2026@bum.bike
+DTSTAMP:20261006T210000Z
+DTSTART:20261023T220000Z
+DTEND:20261024T020000Z
+SUMMARY:Soirée des ateliers vélo communautaires
+LOCATION:Sain Fractal / l'Atrium\, 200 Rue Sherbrooke O\, Montréal\, QC
+DESCRIPTION:En bas de la pente\, par en arrière. Carte : https://maps.app.go
+ o.gl/7pPJxRvApMbN3VTc7\nhttps://bum.bike/fr/posts/soiree-des-ateliers-velo-co
+ mmunautaires/
+URL:https://bum.bike/fr/posts/soiree-des-ateliers-velo-communautaires/
+END:VEVENT
+END:VCALENDAR
