@@ -1038,7 +1038,10 @@ footer > .credits {
 	}
 	.content {
 		grid-template-columns: repeat(3, minmax(25vw, min-content));
-		padding: 6vw 2vw 5vw 2vw;
+		/* Border sits midway between the text and the screen edge:
+		   pull it 1.5vw into .grid-container's side padding, add it back inside. */
+		padding: 6vw 3.5vw 5vw 3.5vw;
+		margin: 0 -1.5vw;
 		grid-row-gap: calc(var(--content-gap)*5);
 	}
 	.content li {
