@@ -11,7 +11,7 @@
                     <!-- website prefix only for GITHUB PAGES -->
                     <div class="content" onclick="window.location.href='/fr/pages/evenements-and-actualites';" style="cursor: pointer;">
                         <h1>{{ post.data.title }}</h1>
-                        {% if post.content | wordcount < 150 %}
+                        {% if post.content | wordcount < 500 %}
                             {{ post.content | safe }}
                         {% else %}
                             {% excerpt post %}
