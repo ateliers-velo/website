@@ -12,7 +12,7 @@
     {% set isPost = tags and "posts" in tags %}
     {% set ogImage = "" %}
     {% if isPost %}{% set ogImage = content | firstImage(origin) %}{% endif %}
-    {% if not ogImage %}{% set ogImage = origin + "/imgs/og-peach.png" %}{% endif %}
+    {% if not ogImage %}{% set ogImage = origin + "/imgs/og-bumbum.png" %}{% endif %}
     <meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
     <meta property="og:site_name" content="{{ site.title[lang] }}">
     <meta property="og:title" content="{{ title }}">
