@@ -13,3 +13,4 @@ Cette année, en plus de célebrer la collaboration continue des ateliers pour r
 - ⏰ Vendredi le **23 octobre** à 18h-22h
 - 📍[Sain Fractal / l'Atrium (200 Sherbrooke Ouest)](https://maps.app.goo.gl/7pPJxRvApMbN3VTc7), en bas de la pente, par en arrière
 - À quoi s'attendre ? 🥙 Bouffe 🍹 Boisson 🪇 Bounce 🚲 Bikes
+- 📅 [Ajouter à mon calendrier](/attachments/soiree-ateliers-velo-2026.ics)
