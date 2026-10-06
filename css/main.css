@@ -21,7 +21,7 @@
 }
 
 .content strong  {
-    color: var(--link-color);
+    color: var(--strong-color);
     font-weight: 600;
 }
 /* html types */
