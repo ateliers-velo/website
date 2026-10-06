@@ -12,5 +12,5 @@ This year, on top of celebrating the shops' ongoing collaboration to make the wo
 
 - ⏰ Friday, **October 23**, 6–10 pm
 - 📍[Sain Fractal / l'Atrium (200 Sherbrooke West)](https://maps.app.goo.gl/7pPJxRvApMbN3VTc7), at the bottom of the slope, around the back
-- What to expect? 🥙 Food 🍹 Drinks 🪇 Bounce 🚲 Bikes
+- What to expect? 🥙 Food 🍹 Drinks 🪇 Bounce 🚲 Bikes ... NO piñata (BYOP)
 - 📅 [Add to my calendar](/attachments/soiree-ateliers-velo-2026.ics)
