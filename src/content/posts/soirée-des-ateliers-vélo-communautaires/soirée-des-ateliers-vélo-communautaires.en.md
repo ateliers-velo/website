@@ -4,13 +4,13 @@ date: 2026-10-05
 description: You're invited to the annual community bike shop jamboree!
 ---
 
-![Affiche pour l'événement](/imgs/affiche_grand_rassemblement.webp "Grand rassemblement des ateliers vélo communautaires, 2026")
+![Event poster](/imgs/affiche_grand_rassemblement.webp "Community bike shop jamboree, 2026")
 
-Toutes implique.és et alliées des ateliers vélo communautaires sont invitées à se rassembler dans une ambiance festive au centre-ville de Montréal (Place des Arts), à côté de BQAME !
+Everyone involved with and allied to Montreal's community bike shops is invited to come together for a festive evening downtown (Place des Arts), next to BQAME!
 
-Cette année, en plus de célebrer la collaboration continue des ateliers pour rendre plus accessible notre meilleure mode de transport urbain, nous allons également célébrer le lancement du **Calendrier des mécanos 2027** (de retour pour la première fois depuis 7 ans) ainsi que les **10 ans de l'atelier culture vélo** (Jarry) !
+This year, on top of celebrating the shops' ongoing collaboration to make our best mode of urban transport more accessible, we'll also be celebrating the launch of the **2027 Mechanics' Calendar** (back for the first time in 7 years) and the **10th anniversary of l'atelier Culture Vélo** (Jarry)!
 
-- ⏰ Vendredi le **23 octobre** à 18h-22h
-- 📍[Sain Fractal / l'Atrium (200 Sherbrooke Ouest)](https://maps.app.goo.gl/7pPJxRvApMbN3VTc7), en bas de la pente, par en arrière
-- À quoi s'attendre ? 🥙 Bouffe 🍹 Boisson 🪇 Bounce 🚲 Bikes
-- 📅 [Ajouter à mon calendrier](/attachments/soiree-ateliers-velo-2026.ics)
+- ⏰ Friday, **October 23**, 6–10 pm
+- 📍[Sain Fractal / l'Atrium (200 Sherbrooke West)](https://maps.app.goo.gl/7pPJxRvApMbN3VTc7), at the bottom of the slope, around the back
+- What to expect? 🥙 Food 🍹 Drinks 🪇 Bounce 🚲 Bikes
+- 📅 [Add to my calendar](/attachments/soiree-ateliers-velo-2026.ics)
