@@ -11,6 +11,6 @@ Toutes implique.és et alliées des ateliers vélo communautaires sont invitées
 Cette année, en plus de célebrer la collaboration continue des ateliers pour rendre plus accessible notre meilleure mode de transport urbain, nous allons également célébrer le lancement du **Calendrier des mécanos 2027** (de retour pour la première fois depuis 7 ans) ainsi que les **10 ans de l'atelier culture vélo** (Jarry) !
 
 - ⏰ Vendredi le **23 octobre** à 18h-22h
-- 📍[Sain Fractal / l'Atrium (200 Sherbrooke Ouest)](https://maps.app.goo.gl/7pPJxRvApMbN3VTc7), en bas de la pente, par en arrière
+- 📍[Sain Fractal / l'Atrium (200 Sherbrooke Ouest)](https://www.google.com/maps/place/45%C2%B030'34.5%22N+73%C2%B034'11.3%22W/@45.508375,-73.5687701,345a,35y,318.37h,23.36t/data=!3m1!1e3!4m4!3m3!8m2!3d45.5095833!4d-73.5698056?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D), en bas de la pente, par en arrière
 - À quoi s'attendre ? 🥙 Bouffe 🍹 Boisson 🪇 Bounce 🚲 Bikes ... PAS de piñata (BYOP)
 - 📅 [Ajouter à mon calendrier](/attachments/soiree-ateliers-velo-2026.ics)
