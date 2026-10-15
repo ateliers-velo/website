@@ -13,4 +13,5 @@ Cette année, en plus de célebrer la collaboration continue des ateliers pour r
 - ⏰ Vendredi le **23 octobre** à 18h-22h
 - 📍[Sain Fractal / l'Atrium (200 Sherbrooke Ouest)](https://www.google.com/maps/place/45%C2%B030'34.5%22N+73%C2%B034'11.3%22W/@45.508375,-73.5687701,345a,35y,318.37h,23.36t/data=!3m1!1e3!4m4!3m3!8m2!3d45.5095833!4d-73.5698056?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D), en bas de la pente, par en arrière
 - À quoi s'attendre ? 🥙 Bouffe 🍹 Boisson 🪇 Bounce 🚲 Bikes ... PAS de piñata (BYOP)
+- 💸 [Cliquez ici](https://www.zeffy.com/fr-CA/ticketing/grand-rassemblement-des-ateliers-communautaire-2026-le-retour-du-calendrier-des-mecanos) pour acheter un calendrier à prix réduit ou solidaire
 - 📅 [Ajouter à mon calendrier](/attachments/soiree-ateliers-velo-2026.ics)
