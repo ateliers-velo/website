@@ -15,3 +15,5 @@ Cette année, en plus de célebrer la collaboration continue des ateliers pour r
 - À quoi s'attendre ? 🥙 Bouffe 🍹 Boisson 🪇 Bounce 🚲 Bikes ... PAS de piñata (BYOP)
 - 💸 [Cliquez ici](https://www.zeffy.com/fr-CA/ticketing/grand-rassemblement-des-ateliers-communautaire-2026-le-retour-du-calendrier-des-mecanos) pour acheter un calendrier à prix réduit ou solidaire
 - 📅 [Ajouter à mon calendrier](/attachments/soiree-ateliers-velo-2026.ics)
+
+PS. à 17h pile, tous sont bienvenues à se joindre au ride collectif festif qui partira de l'[atelier culture vélo](https://maps.app.goo.gl/H9Y2oR8vbM2g8uEa9) en direction de BQAM-E !
