@@ -133,8 +133,26 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter('firstImage', (content, origin) => {
     const m = (content || '').match(/<img[^>]+src="([^"]+)"/);
     if (!m) return '';
-    const src = m[1].replace(/ /g, '%20');
+    let src = m[1].replace(/ /g, '%20');
+    // Discord (and others) don't render WebP previews; point at the JPG copy made below
+    src = src.replace(/^\/imgs\/(.+)\.webp$/i, '/imgs/og/$1.jpg');
     return /^https?:\/\//.test(src) ? src : origin + src;
+  });
+  // JPG copies of every WebP in src/imgs, for og:image only (originals untouched)
+  eleventyConfig.on('eleventy.after', async ({ dir }) => {
+    const sharp = require('sharp');
+    const outDir = path.join(dir.output, 'imgs', 'og');
+    fs.mkdirSync(outDir, { recursive: true });
+    for (const f of fs.readdirSync('src/imgs').filter(f => /\.webp$/i.test(f))) {
+      const src = path.join('src/imgs', f);
+      const out = path.join(outDir, f.replace(/\.webp$/i, '.jpg'));
+      if (fs.existsSync(out) && fs.statSync(out).mtimeMs >= fs.statSync(src).mtimeMs) continue;
+      await sharp(src)
+        .resize({ width: 1200, withoutEnlargement: true })
+        .flatten({ background: '#ffffff' })
+        .jpeg({ quality: 85 })
+        .toFile(out);
+    }
   });
   eleventyConfig.addFilter('main', (content) => {
     const separator = '<!--section-->';
