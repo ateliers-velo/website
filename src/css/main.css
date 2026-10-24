@@ -1023,6 +1023,17 @@ footer > .credits {
 	.tile-gallery {
 		grid-template-columns: repeat(1, 1fr);
 	}
+	.tile-gallery > a > div > div {
+		padding: 0 14%;
+	}
+	#gallery-content .tile-gallery h1 {
+		font-size: 2.2rem;
+	}
+	#gallery-content .tile-gallery p {
+		font-size: 1.3rem;
+		line-height: 1.3;
+		text-align: center;
+	}
 	video {
 		width: 100%;
 	}
